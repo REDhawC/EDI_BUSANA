@@ -1,0 +1,42 @@
+
+--- Job Amazon transport(1).gms Start 09/26/23 20:54:13 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    Q:\GAMS\44\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms"
+    PageSize 0
+    ScrDir C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\225a\
+    SysDir Q:\GAMS\44\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Course License                                 S230704|0002AO-GEN
+          University of Edinburgh, Business School                  DCE2899
+          C:\Users\redhawc\Documents\GAMS\gamslice.txt
+          License Admin: Douglas Alem, douglas.alem@ed.ac.uk               
+          Course license for use within the course and related course work
+Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
+GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- Amazon transport(1).gms(1) 2 Mb 1 Error
+*** Error 409 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- Amazon transport(1).gms(4) 2 Mb 2 Errors
+*** Error 216 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms
+    No previous "ontext"
+--- Amazon transport(1).gms(66) 3 Mb 3 Errors
+*** Error 257 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms
+    Solve statement not checked because of previous errors
+--- Amazon transport(1).gms(67) 3 Mb 4 Errors
+*** Error 141 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement. Suppress with $onImplicitAssign.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- Amazon transport(1).gms(71) 3 Mb 4 Errors
+*** Status: Compilation error(s)
+--- Job Amazon transport(1).gms Stop 09/26/23 20:54:13 elapsed 0:00:00.030
