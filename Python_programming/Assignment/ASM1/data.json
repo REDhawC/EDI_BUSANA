@@ -1,0 +1,5320 @@
+{
+    "NHS Ayrshire and Arran": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 49,
+                    "treated": 48
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 33,
+                    "treated": 31
+                },
+                "Head & Neck": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lung": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Lymphoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Melanoma": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Ovarian": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Upper GI": {
+                    "diagnosed": 40,
+                    "treated": 40
+                },
+                "Urological": {
+                    "diagnosed": 69,
+                    "treated": 69
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 262,
+            "Cancer_total_number_treated": 259,
+            "Covid_stats": {
+                "new_positive": 1044,
+                "new_deaths": 161,
+                "first_infections": 1044,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 49,
+                    "treated": 48
+                },
+                "Colorectal": {
+                    "diagnosed": 28,
+                    "treated": 27
+                },
+                "Head & Neck": {
+                    "diagnosed": 26,
+                    "treated": 26
+                },
+                "Lung": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Lymphoma": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Melanoma": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Ovarian": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Upper GI": {
+                    "diagnosed": 43,
+                    "treated": 42
+                },
+                "Urological": {
+                    "diagnosed": 32,
+                    "treated": 31
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 5
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 228,
+            "Cancer_total_number_treated": 224,
+            "Covid_stats": {
+                "new_positive": 505,
+                "new_deaths": 2,
+                "first_infections": 501,
+                "reinfections": 4
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 92,
+                    "treated": 91
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Colorectal": {
+                    "diagnosed": 46,
+                    "treated": 46
+                },
+                "Head & Neck": {
+                    "diagnosed": 25,
+                    "treated": 25
+                },
+                "Lung": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Lymphoma": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Melanoma": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Upper GI": {
+                    "diagnosed": 46,
+                    "treated": 46
+                },
+                "Urological": {
+                    "diagnosed": 57,
+                    "treated": 57
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 317,
+            "Cancer_total_number_treated": 316,
+            "Covid_stats": {
+                "new_positive": 7973,
+                "new_deaths": 272,
+                "first_infections": 7963,
+                "reinfections": 10
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 112,
+                    "treated": 108
+                },
+                "Cervical": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Colorectal": {
+                    "diagnosed": 49,
+                    "treated": 47
+                },
+                "Head & Neck": {
+                    "diagnosed": 21,
+                    "treated": 20
+                },
+                "Lung": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Lymphoma": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Melanoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Urological": {
+                    "diagnosed": 44,
+                    "treated": 44
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 315,
+            "Cancer_total_number_treated": 308,
+            "Covid_stats": {
+                "new_positive": 6866,
+                "new_deaths": 263,
+                "first_infections": 6826,
+                "reinfections": 40
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 114,
+                    "treated": 110
+                },
+                "Colorectal": {
+                    "diagnosed": 59,
+                    "treated": 57
+                },
+                "Head & Neck": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lung": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Lymphoma": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Melanoma": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Upper GI": {
+                    "diagnosed": 55,
+                    "treated": 54
+                },
+                "Urological": {
+                    "diagnosed": 50,
+                    "treated": 50
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 5
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 350,
+            "Cancer_total_number_treated": 343,
+            "Covid_stats": {
+                "new_positive": 4699,
+                "new_deaths": 12,
+                "first_infections": 4650,
+                "reinfections": 49
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 104,
+                    "treated": 95
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 65,
+                    "treated": 64
+                },
+                "Head & Neck": {
+                    "diagnosed": 24,
+                    "treated": 21
+                },
+                "Lung": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Lymphoma": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Melanoma": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Upper GI": {
+                    "diagnosed": 49,
+                    "treated": 48
+                },
+                "Urological": {
+                    "diagnosed": 36,
+                    "treated": 35
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 324,
+            "Cancer_total_number_treated": 308,
+            "Covid_stats": {
+                "new_positive": 19350,
+                "new_deaths": 88,
+                "first_infections": 19165,
+                "reinfections": 185
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 120,
+                    "treated": 119
+                },
+                "Colorectal": {
+                    "diagnosed": 62,
+                    "treated": 61
+                },
+                "Head & Neck": {
+                    "diagnosed": 22,
+                    "treated": 19
+                },
+                "Lung": {
+                    "diagnosed": 52,
+                    "treated": 52
+                },
+                "Lymphoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Melanoma": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Ovarian": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Upper GI": {
+                    "diagnosed": 46,
+                    "treated": 44
+                },
+                "Urological": {
+                    "diagnosed": 47,
+                    "treated": 45
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000015",
+            "Name": "NHS Ayrshire and Arran",
+            "Cancer_total_number_diagnosed": 392,
+            "Cancer_total_number_treated": 383,
+            "Covid_stats": {
+                "new_positive": 29488,
+                "new_deaths": 148,
+                "first_infections": 28234,
+                "reinfections": 1254
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Borders": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Colorectal": {
+                    "diagnosed": 31,
+                    "treated": 30
+                },
+                "Head & Neck": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lung": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Lymphoma": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Melanoma": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Urological": {
+                    "diagnosed": 26,
+                    "treated": 25
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 133,
+            "Cancer_total_number_treated": 131,
+            "Covid_stats": {
+                "new_positive": 241,
+                "new_deaths": 30,
+                "first_infections": 241,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Colorectal": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Head & Neck": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Lung": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Lymphoma": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Melanoma": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Urological": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 95,
+            "Cancer_total_number_treated": 95,
+            "Covid_stats": {
+                "new_positive": 113,
+                "new_deaths": 1,
+                "first_infections": 112,
+                "reinfections": 1
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Colorectal": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Head & Neck": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Lymphoma": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Urological": {
+                    "diagnosed": 13,
+                    "treated": 13
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 80,
+            "Cancer_total_number_treated": 80,
+            "Covid_stats": {
+                "new_positive": 1237,
+                "new_deaths": 25,
+                "first_infections": 1236,
+                "reinfections": 1
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 22,
+                    "treated": 22
+                },
+                "Lung": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Lymphoma": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Melanoma": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Urological": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Head & Neck": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 103,
+            "Cancer_total_number_treated": 103,
+            "Covid_stats": {
+                "new_positive": 1070,
+                "new_deaths": 38,
+                "first_infections": 1070,
+                "reinfections": 0
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Colorectal": {
+                    "diagnosed": 22,
+                    "treated": 22
+                },
+                "Head & Neck": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lung": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Lymphoma": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Melanoma": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Upper GI": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Urological": {
+                    "diagnosed": 17,
+                    "treated": 17
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 111,
+            "Cancer_total_number_treated": 111,
+            "Covid_stats": {
+                "new_positive": 780,
+                "new_deaths": 1,
+                "first_infections": 769,
+                "reinfections": 11
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 22,
+                    "treated": 22
+                },
+                "Colorectal": {
+                    "diagnosed": 13,
+                    "treated": 10
+                },
+                "Head & Neck": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Lymphoma": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Melanoma": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Urological": {
+                    "diagnosed": 21,
+                    "treated": 21
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 105,
+            "Cancer_total_number_treated": 102,
+            "Covid_stats": {
+                "new_positive": 4067,
+                "new_deaths": 27,
+                "first_infections": 4051,
+                "reinfections": 16
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 28,
+                    "treated": 27
+                },
+                "Head & Neck": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lung": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Urological": {
+                    "diagnosed": 19,
+                    "treated": 19
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000016",
+            "Name": "NHS Borders",
+            "Cancer_total_number_diagnosed": 104,
+            "Cancer_total_number_treated": 103,
+            "Covid_stats": {
+                "new_positive": 7670,
+                "new_deaths": 23,
+                "first_infections": 7461,
+                "reinfections": 209
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Dumfries and Galloway": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 22,
+                    "treated": 22
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 22,
+                    "treated": 22
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Lung": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Lymphoma": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Melanoma": {
+                    "diagnosed": 5,
+                    "treated": 4
+                },
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Upper GI": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Urological": {
+                    "diagnosed": 64,
+                    "treated": 61
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 170,
+            "Cancer_total_number_treated": 166,
+            "Covid_stats": {
+                "new_positive": 190,
+                "new_deaths": 30,
+                "first_infections": 190,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Melanoma": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 36,
+                    "treated": 36
+                },
+                "Urological": {
+                    "diagnosed": 43,
+                    "treated": 43
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 156,
+            "Cancer_total_number_treated": 156,
+            "Covid_stats": {
+                "new_positive": 132,
+                "new_deaths": 1,
+                "first_infections": 131,
+                "reinfections": 1
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Colorectal": {
+                    "diagnosed": 24,
+                    "treated": 23
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Lung": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Lymphoma": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Melanoma": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Urological": {
+                    "diagnosed": 54,
+                    "treated": 52
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 170,
+            "Cancer_total_number_treated": 167,
+            "Covid_stats": {
+                "new_positive": 1594,
+                "new_deaths": 29,
+                "first_infections": 1593,
+                "reinfections": 1
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 32,
+                    "treated": 31
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Melanoma": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Ovarian": {
+                    "diagnosed": 6,
+                    "treated": 5
+                },
+                "Upper GI": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Urological": {
+                    "diagnosed": 61,
+                    "treated": 58
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 173,
+            "Cancer_total_number_treated": 168,
+            "Covid_stats": {
+                "new_positive": 2099,
+                "new_deaths": 73,
+                "first_infections": 2094,
+                "reinfections": 5
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Colorectal": {
+                    "diagnosed": 33,
+                    "treated": 33
+                },
+                "Head & Neck": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Lung": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Lymphoma": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Upper GI": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Urological": {
+                    "diagnosed": 37,
+                    "treated": 35
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 163,
+            "Cancer_total_number_treated": 161,
+            "Covid_stats": {
+                "new_positive": 608,
+                "new_deaths": 0,
+                "first_infections": 594,
+                "reinfections": 14
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 29,
+                    "treated": 28
+                },
+                "Head & Neck": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 31,
+                    "treated": 31
+                },
+                "Urological": {
+                    "diagnosed": 53,
+                    "treated": 51
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 184,
+            "Cancer_total_number_treated": 181,
+            "Covid_stats": {
+                "new_positive": 6407,
+                "new_deaths": 20,
+                "first_infections": 6371,
+                "reinfections": 36
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 34,
+                    "treated": 32
+                },
+                "Lung": {
+                    "diagnosed": 40,
+                    "treated": 40
+                },
+                "Lymphoma": {
+                    "diagnosed": 5,
+                    "treated": 4
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 35,
+                    "treated": 34
+                },
+                "Urological": {
+                    "diagnosed": 49,
+                    "treated": 48
+                },
+                "Head & Neck": {
+                    "diagnosed": 6,
+                    "treated": 6
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000017",
+            "Name": "NHS Dumfries and Galloway",
+            "Cancer_total_number_diagnosed": 208,
+            "Cancer_total_number_treated": 203,
+            "Covid_stats": {
+                "new_positive": 9878,
+                "new_deaths": 28,
+                "first_infections": 9637,
+                "reinfections": 241
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Forth Valley": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 46,
+                    "treated": 46
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 27,
+                    "treated": 26
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 10,
+                    "treated": 9
+                },
+                "Lymphoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Melanoma": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Upper GI": {
+                    "diagnosed": 37,
+                    "treated": 37
+                },
+                "Urological": {
+                    "diagnosed": 72,
+                    "treated": 72
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 239,
+            "Cancer_total_number_treated": 237,
+            "Covid_stats": {
+                "new_positive": 886,
+                "new_deaths": 124,
+                "first_infections": 886,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 43,
+                    "treated": 42
+                },
+                "Colorectal": {
+                    "diagnosed": 24,
+                    "treated": 23
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lung": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Lymphoma": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Melanoma": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 27,
+                    "treated": 27
+                },
+                "Urological": {
+                    "diagnosed": 84,
+                    "treated": 84
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 222,
+            "Cancer_total_number_treated": 219,
+            "Covid_stats": {
+                "new_positive": 418,
+                "new_deaths": 2,
+                "first_infections": 415,
+                "reinfections": 3
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 55,
+                    "treated": 55
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 46,
+                    "treated": 45
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lung": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Lymphoma": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Melanoma": {
+                    "diagnosed": 14,
+                    "treated": 13
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Urological": {
+                    "diagnosed": 96,
+                    "treated": 95
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 239,
+            "Cancer_total_number_treated": 236,
+            "Covid_stats": {
+                "new_positive": 4397,
+                "new_deaths": 96,
+                "first_infections": 4382,
+                "reinfections": 15
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 40,
+                    "treated": 40
+                },
+                "Colorectal": {
+                    "diagnosed": 51,
+                    "treated": 51
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lung": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Lymphoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Melanoma": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Upper GI": {
+                    "diagnosed": 49,
+                    "treated": 49
+                },
+                "Urological": {
+                    "diagnosed": 95,
+                    "treated": 93
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 283,
+            "Cancer_total_number_treated": 281,
+            "Covid_stats": {
+                "new_positive": 6282,
+                "new_deaths": 218,
+                "first_infections": 6256,
+                "reinfections": 26
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 53,
+                    "treated": 52
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Colorectal": {
+                    "diagnosed": 49,
+                    "treated": 46
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lung": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Lymphoma": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Melanoma": {
+                    "diagnosed": 15,
+                    "treated": 14
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 48,
+                    "treated": 48
+                },
+                "Urological": {
+                    "diagnosed": 78,
+                    "treated": 75
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 287,
+            "Cancer_total_number_treated": 279,
+            "Covid_stats": {
+                "new_positive": 3207,
+                "new_deaths": 10,
+                "first_infections": 3162,
+                "reinfections": 45
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 50,
+                    "treated": 48
+                },
+                "Cervical": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Colorectal": {
+                    "diagnosed": 53,
+                    "treated": 51
+                },
+                "Head & Neck": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lymphoma": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Melanoma": {
+                    "diagnosed": 13,
+                    "treated": 12
+                },
+                "Ovarian": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 40,
+                    "treated": 40
+                },
+                "Urological": {
+                    "diagnosed": 80,
+                    "treated": 74
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 279,
+            "Cancer_total_number_treated": 268,
+            "Covid_stats": {
+                "new_positive": 15307,
+                "new_deaths": 49,
+                "first_infections": 15166,
+                "reinfections": 141
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 52,
+                    "treated": 52
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 49,
+                    "treated": 49
+                },
+                "Head & Neck": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Lung": {
+                    "diagnosed": 71,
+                    "treated": 66
+                },
+                "Lymphoma": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Melanoma": {
+                    "diagnosed": 33,
+                    "treated": 32
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 41,
+                    "treated": 41
+                },
+                "Urological": {
+                    "diagnosed": 118,
+                    "treated": 116
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000019",
+            "Name": "NHS Forth Valley",
+            "Cancer_total_number_diagnosed": 398,
+            "Cancer_total_number_treated": 388,
+            "Covid_stats": {
+                "new_positive": 26871,
+                "new_deaths": 87,
+                "first_infections": 26030,
+                "reinfections": 841
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Grampian": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 113,
+                    "treated": 105
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 81,
+                    "treated": 69
+                },
+                "Head & Neck": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Lung": {
+                    "diagnosed": 97,
+                    "treated": 96
+                },
+                "Lymphoma": {
+                    "diagnosed": 31,
+                    "treated": 30
+                },
+                "Melanoma": {
+                    "diagnosed": 26,
+                    "treated": 26
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 80,
+                    "treated": 80
+                },
+                "Urological": {
+                    "diagnosed": 165,
+                    "treated": 155
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 625,
+            "Cancer_total_number_treated": 592,
+            "Covid_stats": {
+                "new_positive": 1296,
+                "new_deaths": 150,
+                "first_infections": 1296,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 77,
+                    "treated": 75
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 59,
+                    "treated": 59
+                },
+                "Head & Neck": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Lung": {
+                    "diagnosed": 91,
+                    "treated": 91
+                },
+                "Lymphoma": {
+                    "diagnosed": 34,
+                    "treated": 34
+                },
+                "Melanoma": {
+                    "diagnosed": 34,
+                    "treated": 34
+                },
+                "Ovarian": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Upper GI": {
+                    "diagnosed": 57,
+                    "treated": 57
+                },
+                "Urological": {
+                    "diagnosed": 153,
+                    "treated": 142
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 543,
+            "Cancer_total_number_treated": 530,
+            "Covid_stats": {
+                "new_positive": 900,
+                "new_deaths": 3,
+                "first_infections": 897,
+                "reinfections": 3
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 114,
+                    "treated": 113
+                },
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 66,
+                    "treated": 64
+                },
+                "Head & Neck": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 32,
+                    "treated": 32
+                },
+                "Melanoma": {
+                    "diagnosed": 34,
+                    "treated": 34
+                },
+                "Ovarian": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Upper GI": {
+                    "diagnosed": 70,
+                    "treated": 70
+                },
+                "Urological": {
+                    "diagnosed": 172,
+                    "treated": 170
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 524,
+            "Cancer_total_number_treated": 519,
+            "Covid_stats": {
+                "new_positive": 5850,
+                "new_deaths": 116,
+                "first_infections": 5835,
+                "reinfections": 15
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 104,
+                    "treated": 96
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 73,
+                    "treated": 71
+                },
+                "Head & Neck": {
+                    "diagnosed": 26,
+                    "treated": 26
+                },
+                "Lung": {
+                    "diagnosed": 91,
+                    "treated": 91
+                },
+                "Lymphoma": {
+                    "diagnosed": 31,
+                    "treated": 31
+                },
+                "Melanoma": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Ovarian": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Upper GI": {
+                    "diagnosed": 73,
+                    "treated": 73
+                },
+                "Urological": {
+                    "diagnosed": 177,
+                    "treated": 173
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 624,
+            "Cancer_total_number_treated": 610,
+            "Covid_stats": {
+                "new_positive": 6005,
+                "new_deaths": 186,
+                "first_infections": 5974,
+                "reinfections": 31
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 121,
+                    "treated": 117
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 6
+                },
+                "Colorectal": {
+                    "diagnosed": 90,
+                    "treated": 83
+                },
+                "Head & Neck": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lung": {
+                    "diagnosed": 118,
+                    "treated": 116
+                },
+                "Lymphoma": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Melanoma": {
+                    "diagnosed": 29,
+                    "treated": 29
+                },
+                "Ovarian": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Upper GI": {
+                    "diagnosed": 68,
+                    "treated": 68
+                },
+                "Urological": {
+                    "diagnosed": 225,
+                    "treated": 217
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 714,
+            "Cancer_total_number_treated": 692,
+            "Covid_stats": {
+                "new_positive": 4140,
+                "new_deaths": 8,
+                "first_infections": 4091,
+                "reinfections": 49
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 103,
+                    "treated": 86
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 93,
+                    "treated": 85
+                },
+                "Head & Neck": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Lung": {
+                    "diagnosed": 94,
+                    "treated": 92
+                },
+                "Lymphoma": {
+                    "diagnosed": 47,
+                    "treated": 47
+                },
+                "Melanoma": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Ovarian": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Upper GI": {
+                    "diagnosed": 67,
+                    "treated": 67
+                },
+                "Urological": {
+                    "diagnosed": 201,
+                    "treated": 192
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 696,
+            "Cancer_total_number_treated": 660,
+            "Covid_stats": {
+                "new_positive": 20832,
+                "new_deaths": 45,
+                "first_infections": 20713,
+                "reinfections": 119
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 156,
+                    "treated": 119
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 113,
+                    "treated": 103
+                },
+                "Head & Neck": {
+                    "diagnosed": 25,
+                    "treated": 25
+                },
+                "Lung": {
+                    "diagnosed": 83,
+                    "treated": 82
+                },
+                "Lymphoma": {
+                    "diagnosed": 36,
+                    "treated": 36
+                },
+                "Melanoma": {
+                    "diagnosed": 41,
+                    "treated": 40
+                },
+                "Ovarian": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Upper GI": {
+                    "diagnosed": 77,
+                    "treated": 77
+                },
+                "Urological": {
+                    "diagnosed": 166,
+                    "treated": 150
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000020",
+            "Name": "NHS Grampian",
+            "Cancer_total_number_diagnosed": 718,
+            "Cancer_total_number_treated": 653,
+            "Covid_stats": {
+                "new_positive": 37923,
+                "new_deaths": 91,
+                "first_infections": 37151,
+                "reinfections": 772
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Highland": [
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 76,
+                    "treated": 73
+                },
+                "Breast": {
+                    "diagnosed": 51,
+                    "treated": 45
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 36,
+                    "treated": 35
+                },
+                "Head & Neck": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lymphoma": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 11
+                },
+                "Upper GI": {
+                    "diagnosed": 33,
+                    "treated": 33
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 245,
+            "Cancer_total_number_treated": 234,
+            "Covid_stats": {
+                "new_positive": 311,
+                "new_deaths": 60,
+                "first_infections": 311,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 63,
+                    "treated": 56
+                },
+                "Breast": {
+                    "diagnosed": 54,
+                    "treated": 52
+                },
+                "Colorectal": {
+                    "diagnosed": 27,
+                    "treated": 26
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Melanoma": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Upper GI": {
+                    "diagnosed": 28,
+                    "treated": 28
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 212,
+            "Cancer_total_number_treated": 202,
+            "Covid_stats": {
+                "new_positive": 307,
+                "new_deaths": 1,
+                "first_infections": 307,
+                "reinfections": 0
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Ovarian": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Urological": {
+                    "diagnosed": 78,
+                    "treated": 72
+                },
+                "Breast": {
+                    "diagnosed": 54,
+                    "treated": 48
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 50,
+                    "treated": 48
+                },
+                "Head & Neck": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Lung": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Lymphoma": {
+                    "diagnosed": 13,
+                    "treated": 12
+                },
+                "Melanoma": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Upper GI": {
+                    "diagnosed": 40,
+                    "treated": 39
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 278,
+            "Cancer_total_number_treated": 262,
+            "Covid_stats": {
+                "new_positive": 1648,
+                "new_deaths": 21,
+                "first_infections": 1646,
+                "reinfections": 2
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 71,
+                    "treated": 68
+                },
+                "Breast": {
+                    "diagnosed": 59,
+                    "treated": 54
+                },
+                "Colorectal": {
+                    "diagnosed": 54,
+                    "treated": 48
+                },
+                "Head & Neck": {
+                    "diagnosed": 9,
+                    "treated": 8
+                },
+                "Lymphoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Melanoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Upper GI": {
+                    "diagnosed": 36,
+                    "treated": 35
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 275,
+            "Cancer_total_number_treated": 259,
+            "Covid_stats": {
+                "new_positive": 2545,
+                "new_deaths": 82,
+                "first_infections": 2538,
+                "reinfections": 7
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Urological": {
+                    "diagnosed": 103,
+                    "treated": 95
+                },
+                "Breast": {
+                    "diagnosed": 66,
+                    "treated": 64
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 58,
+                    "treated": 57
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Lung": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lymphoma": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Melanoma": {
+                    "diagnosed": 20,
+                    "treated": 19
+                },
+                "Upper GI": {
+                    "diagnosed": 42,
+                    "treated": 41
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 325,
+            "Cancer_total_number_treated": 312,
+            "Covid_stats": {
+                "new_positive": 1772,
+                "new_deaths": 0,
+                "first_infections": 1764,
+                "reinfections": 8
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Ovarian": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Urological": {
+                    "diagnosed": 88,
+                    "treated": 84
+                },
+                "Breast": {
+                    "diagnosed": 67,
+                    "treated": 61
+                },
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 58,
+                    "treated": 55
+                },
+                "Head & Neck": {
+                    "diagnosed": 15,
+                    "treated": 14
+                },
+                "Lymphoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Melanoma": {
+                    "diagnosed": 30,
+                    "treated": 29
+                },
+                "Upper GI": {
+                    "diagnosed": 42,
+                    "treated": 42
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 333,
+            "Cancer_total_number_treated": 318,
+            "Covid_stats": {
+                "new_positive": 12443,
+                "new_deaths": 36,
+                "first_infections": 12390,
+                "reinfections": 53
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 48,
+                    "treated": 48
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Urological": {
+                    "diagnosed": 93,
+                    "treated": 90
+                },
+                "Breast": {
+                    "diagnosed": 72,
+                    "treated": 62
+                },
+                "Colorectal": {
+                    "diagnosed": 60,
+                    "treated": 59
+                },
+                "Head & Neck": {
+                    "diagnosed": 11,
+                    "treated": 10
+                },
+                "Lymphoma": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Melanoma": {
+                    "diagnosed": 23,
+                    "treated": 22
+                },
+                "Upper GI": {
+                    "diagnosed": 36,
+                    "treated": 34
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000022",
+            "Name": "NHS Highland",
+            "Cancer_total_number_diagnosed": 360,
+            "Cancer_total_number_treated": 342,
+            "Covid_stats": {
+                "new_positive": 18428,
+                "new_deaths": 46,
+                "first_infections": 17995,
+                "reinfections": 433
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Lothian": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 172,
+                    "treated": 172
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 105,
+                    "treated": 96
+                },
+                "Head & Neck": {
+                    "diagnosed": 35,
+                    "treated": 35
+                },
+                "Lung": {
+                    "diagnosed": 150,
+                    "treated": 149
+                },
+                "Lymphoma": {
+                    "diagnosed": 49,
+                    "treated": 49
+                },
+                "Melanoma": {
+                    "diagnosed": 13,
+                    "treated": 12
+                },
+                "Ovarian": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Upper GI": {
+                    "diagnosed": 93,
+                    "treated": 93
+                },
+                "Urological": {
+                    "diagnosed": 187,
+                    "treated": 167
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 829,
+            "Cancer_total_number_treated": 798,
+            "Covid_stats": {
+                "new_positive": 2789,
+                "new_deaths": 461,
+                "first_infections": 2789,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 148,
+                    "treated": 148
+                },
+                "Cervical": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Colorectal": {
+                    "diagnosed": 95,
+                    "treated": 92
+                },
+                "Head & Neck": {
+                    "diagnosed": 45,
+                    "treated": 45
+                },
+                "Lung": {
+                    "diagnosed": 161,
+                    "treated": 161
+                },
+                "Lymphoma": {
+                    "diagnosed": 40,
+                    "treated": 39
+                },
+                "Melanoma": {
+                    "diagnosed": 25,
+                    "treated": 25
+                },
+                "Ovarian": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Upper GI": {
+                    "diagnosed": 93,
+                    "treated": 93
+                },
+                "Urological": {
+                    "diagnosed": 147,
+                    "treated": 139
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 783,
+            "Cancer_total_number_treated": 771,
+            "Covid_stats": {
+                "new_positive": 1953,
+                "new_deaths": 1,
+                "first_infections": 1947,
+                "reinfections": 6
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 203,
+                    "treated": 203
+                },
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 109,
+                    "treated": 107
+                },
+                "Head & Neck": {
+                    "diagnosed": 47,
+                    "treated": 47
+                },
+                "Lung": {
+                    "diagnosed": 181,
+                    "treated": 181
+                },
+                "Lymphoma": {
+                    "diagnosed": 33,
+                    "treated": 33
+                },
+                "Melanoma": {
+                    "diagnosed": 31,
+                    "treated": 31
+                },
+                "Ovarian": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Upper GI": {
+                    "diagnosed": 102,
+                    "treated": 101
+                },
+                "Urological": {
+                    "diagnosed": 190,
+                    "treated": 179
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 920,
+            "Cancer_total_number_treated": 906,
+            "Covid_stats": {
+                "new_positive": 14065,
+                "new_deaths": 308,
+                "first_infections": 14046,
+                "reinfections": 19
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 221,
+                    "treated": 221
+                },
+                "Cervical": {
+                    "diagnosed": 10,
+                    "treated": 9
+                },
+                "Colorectal": {
+                    "diagnosed": 119,
+                    "treated": 117
+                },
+                "Head & Neck": {
+                    "diagnosed": 39,
+                    "treated": 39
+                },
+                "Lung": {
+                    "diagnosed": 168,
+                    "treated": 167
+                },
+                "Lymphoma": {
+                    "diagnosed": 34,
+                    "treated": 33
+                },
+                "Melanoma": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Ovarian": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Upper GI": {
+                    "diagnosed": 105,
+                    "treated": 105
+                },
+                "Urological": {
+                    "diagnosed": 187,
+                    "treated": 174
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 916,
+            "Cancer_total_number_treated": 898,
+            "Covid_stats": {
+                "new_positive": 11422,
+                "new_deaths": 315,
+                "first_infections": 11371,
+                "reinfections": 51
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 241,
+                    "treated": 241
+                },
+                "Cervical": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Colorectal": {
+                    "diagnosed": 125,
+                    "treated": 123
+                },
+                "Head & Neck": {
+                    "diagnosed": 61,
+                    "treated": 61
+                },
+                "Lung": {
+                    "diagnosed": 141,
+                    "treated": 141
+                },
+                "Lymphoma": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Melanoma": {
+                    "diagnosed": 53,
+                    "treated": 53
+                },
+                "Ovarian": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Upper GI": {
+                    "diagnosed": 107,
+                    "treated": 107
+                },
+                "Urological": {
+                    "diagnosed": 163,
+                    "treated": 154
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 955,
+            "Cancer_total_number_treated": 944,
+            "Covid_stats": {
+                "new_positive": 15316,
+                "new_deaths": 13,
+                "first_infections": 15174,
+                "reinfections": 142
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 254,
+                    "treated": 254
+                },
+                "Cervical": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Colorectal": {
+                    "diagnosed": 149,
+                    "treated": 142
+                },
+                "Head & Neck": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Lung": {
+                    "diagnosed": 177,
+                    "treated": 177
+                },
+                "Lymphoma": {
+                    "diagnosed": 37,
+                    "treated": 36
+                },
+                "Melanoma": {
+                    "diagnosed": 56,
+                    "treated": 54
+                },
+                "Ovarian": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Upper GI": {
+                    "diagnosed": 114,
+                    "treated": 113
+                },
+                "Urological": {
+                    "diagnosed": 188,
+                    "treated": 172
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 1046,
+            "Cancer_total_number_treated": 1019,
+            "Covid_stats": {
+                "new_positive": 48063,
+                "new_deaths": 159,
+                "first_infections": 47755,
+                "reinfections": 308
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 293,
+                    "treated": 293
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 150,
+                    "treated": 141
+                },
+                "Head & Neck": {
+                    "diagnosed": 38,
+                    "treated": 38
+                },
+                "Lung": {
+                    "diagnosed": 152,
+                    "treated": 152
+                },
+                "Lymphoma": {
+                    "diagnosed": 35,
+                    "treated": 35
+                },
+                "Melanoma": {
+                    "diagnosed": 44,
+                    "treated": 44
+                },
+                "Ovarian": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Upper GI": {
+                    "diagnosed": 106,
+                    "treated": 106
+                },
+                "Urological": {
+                    "diagnosed": 214,
+                    "treated": 207
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000024",
+            "Name": "NHS Lothian",
+            "Cancer_total_number_diagnosed": 1051,
+            "Cancer_total_number_treated": 1035,
+            "Covid_stats": {
+                "new_positive": 70250,
+                "new_deaths": 145,
+                "first_infections": 67419,
+                "reinfections": 2831
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Orkney": [
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Urological": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 9,
+            "Cancer_total_number_treated": 9,
+            "Covid_stats": {
+                "new_positive": 6,
+                "new_deaths": 1,
+                "first_infections": 6,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Lung": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Upper GI": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Urological": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 17,
+            "Cancer_total_number_treated": 17,
+            "Covid_stats": {
+                "new_positive": 15,
+                "new_deaths": 0,
+                "first_infections": 15,
+                "reinfections": 0
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Urological": {
+                    "diagnosed": 7,
+                    "treated": 6
+                },
+                "Breast": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 20,
+            "Cancer_total_number_treated": 19,
+            "Covid_stats": {
+                "new_positive": 14,
+                "new_deaths": 1,
+                "first_infections": 14,
+                "reinfections": 0
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Urological": {
+                    "diagnosed": 3,
+                    "treated": 2
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 14,
+            "Cancer_total_number_treated": 13,
+            "Covid_stats": {
+                "new_positive": 35,
+                "new_deaths": 1,
+                "first_infections": 35,
+                "reinfections": 0
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 0
+                },
+                "Lung": {
+                    "diagnosed": 2,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 6,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 17,
+            "Cancer_total_number_treated": 13,
+            "Covid_stats": {
+                "new_positive": 23,
+                "new_deaths": 0,
+                "first_infections": 23,
+                "reinfections": 0
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 0
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Urological": {
+                    "diagnosed": 2,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 7,
+            "Cancer_total_number_treated": 5,
+            "Covid_stats": {
+                "new_positive": 230,
+                "new_deaths": 6,
+                "first_infections": 230,
+                "reinfections": 0
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 6,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000025",
+            "Name": "NHS Orkney",
+            "Cancer_total_number_diagnosed": 13,
+            "Cancer_total_number_treated": 11,
+            "Covid_stats": {
+                "new_positive": 1146,
+                "new_deaths": 2,
+                "first_infections": 1145,
+                "reinfections": 1
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Shetland": [
+        {
+            "Cancer_types": {
+                "Urological": {
+                    "diagnosed": 4,
+                    "treated": 2
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Breast": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Melanoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 14,
+            "Cancer_total_number_treated": 12,
+            "Covid_stats": {
+                "new_positive": 18,
+                "new_deaths": 5,
+                "first_infections": 18,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Upper GI": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Breast": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Urological": {
+                    "diagnosed": 4,
+                    "treated": 4
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 23,
+            "Cancer_total_number_treated": 23,
+            "Covid_stats": {
+                "new_positive": 6,
+                "new_deaths": 0,
+                "first_infections": 6,
+                "reinfections": 0
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Urological": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Breast": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 21,
+            "Cancer_total_number_treated": 21,
+            "Covid_stats": {
+                "new_positive": 87,
+                "new_deaths": 1,
+                "first_infections": 87,
+                "reinfections": 0
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Lymphoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Breast": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 14,
+            "Cancer_total_number_treated": 14,
+            "Covid_stats": {
+                "new_positive": 84,
+                "new_deaths": 3,
+                "first_infections": 84,
+                "reinfections": 0
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 8,
+                    "treated": 8
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 23,
+            "Cancer_total_number_treated": 23,
+            "Covid_stats": {
+                "new_positive": 37,
+                "new_deaths": 0,
+                "first_infections": 36,
+                "reinfections": 1
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Urological": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Breast": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 7,
+                    "treated": 7
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 26,
+            "Cancer_total_number_treated": 26,
+            "Covid_stats": {
+                "new_positive": 385,
+                "new_deaths": 2,
+                "first_infections": 385,
+                "reinfections": 0
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Breast": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Urological": {
+                    "diagnosed": 8,
+                    "treated": 8
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000026",
+            "Name": "NHS Shetland",
+            "Cancer_total_number_diagnosed": 28,
+            "Cancer_total_number_treated": 28,
+            "Covid_stats": {
+                "new_positive": 743,
+                "new_deaths": 0,
+                "first_infections": 740,
+                "reinfections": 3
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Western Isles": [
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 5,
+                    "treated": 4
+                },
+                "Head & Neck": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Lung": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lymphoma": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 26,
+            "Cancer_total_number_treated": 25,
+            "Covid_stats": {
+                "new_positive": 4,
+                "new_deaths": 0,
+                "first_infections": 4,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Upper GI": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Urological": {
+                    "diagnosed": 5,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 16,
+            "Cancer_total_number_treated": 15,
+            "Covid_stats": {
+                "new_positive": 31,
+                "new_deaths": 0,
+                "first_infections": 31,
+                "reinfections": 0
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Head & Neck": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Lymphoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 7,
+                    "treated": 6
+                },
+                "Urological": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Lung": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 26,
+            "Cancer_total_number_treated": 25,
+            "Covid_stats": {
+                "new_positive": 68,
+                "new_deaths": 2,
+                "first_infections": 68,
+                "reinfections": 0
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lung": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Urological": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 23,
+            "Cancer_total_number_treated": 23,
+            "Covid_stats": {
+                "new_positive": 189,
+                "new_deaths": 6,
+                "first_infections": 189,
+                "reinfections": 0
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Lung": {
+                    "diagnosed": 6,
+                    "treated": 5
+                },
+                "Lymphoma": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Breast": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 36,
+            "Cancer_total_number_treated": 35,
+            "Covid_stats": {
+                "new_positive": 12,
+                "new_deaths": 1,
+                "first_infections": 10,
+                "reinfections": 2
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Urological": {
+                    "diagnosed": 15,
+                    "treated": 14
+                },
+                "Colorectal": {
+                    "diagnosed": 14,
+                    "treated": 13
+                },
+                "Lung": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Lymphoma": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Upper GI": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Head & Neck": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 45,
+            "Cancer_total_number_treated": 43,
+            "Covid_stats": {
+                "new_positive": 499,
+                "new_deaths": 4,
+                "first_infections": 494,
+                "reinfections": 5
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Colorectal": {
+                    "diagnosed": 13,
+                    "treated": 12
+                },
+                "Lung": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Upper GI": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Urological": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Ovarian": {
+                    "diagnosed": 1,
+                    "treated": 1
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000028",
+            "Name": "NHS Western Isles",
+            "Cancer_total_number_diagnosed": 38,
+            "Cancer_total_number_treated": 37,
+            "Covid_stats": {
+                "new_positive": 1262,
+                "new_deaths": 10,
+                "first_infections": 1246,
+                "reinfections": 16
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Fife": [
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 40,
+                    "treated": 38
+                },
+                "Head & Neck": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Lung": {
+                    "diagnosed": 65,
+                    "treated": 65
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 43,
+                    "treated": 43
+                },
+                "Urological": {
+                    "diagnosed": 91,
+                    "treated": 82
+                },
+                "Breast": {
+                    "diagnosed": 45,
+                    "treated": 42
+                },
+                "Lymphoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Melanoma": {
+                    "diagnosed": 9,
+                    "treated": 9
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 328,
+            "Cancer_total_number_treated": 314,
+            "Covid_stats": {
+                "new_positive": 792,
+                "new_deaths": 118,
+                "first_infections": 792,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 46,
+                    "treated": 46
+                },
+                "Head & Neck": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Lung": {
+                    "diagnosed": 87,
+                    "treated": 86
+                },
+                "Lymphoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Ovarian": {
+                    "diagnosed": 12,
+                    "treated": 12
+                },
+                "Upper GI": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Urological": {
+                    "diagnosed": 65,
+                    "treated": 60
+                },
+                "Breast": {
+                    "diagnosed": 51,
+                    "treated": 51
+                },
+                "Melanoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 347,
+            "Cancer_total_number_treated": 340,
+            "Covid_stats": {
+                "new_positive": 450,
+                "new_deaths": 1,
+                "first_infections": 445,
+                "reinfections": 5
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 51,
+                    "treated": 51
+                },
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 44,
+                    "treated": 44
+                },
+                "Head & Neck": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Lung": {
+                    "diagnosed": 62,
+                    "treated": 62
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Upper GI": {
+                    "diagnosed": 44,
+                    "treated": 44
+                },
+                "Urological": {
+                    "diagnosed": 115,
+                    "treated": 112
+                },
+                "Lymphoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 372,
+            "Cancer_total_number_treated": 369,
+            "Covid_stats": {
+                "new_positive": 5203,
+                "new_deaths": 105,
+                "first_infections": 5194,
+                "reinfections": 9
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Colorectal": {
+                    "diagnosed": 51,
+                    "treated": 51
+                },
+                "Head & Neck": {
+                    "diagnosed": 14,
+                    "treated": 13
+                },
+                "Lung": {
+                    "diagnosed": 54,
+                    "treated": 54
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Upper GI": {
+                    "diagnosed": 36,
+                    "treated": 36
+                },
+                "Urological": {
+                    "diagnosed": 87,
+                    "treated": 86
+                },
+                "Breast": {
+                    "diagnosed": 62,
+                    "treated": 60
+                },
+                "Lymphoma": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Melanoma": {
+                    "diagnosed": 13,
+                    "treated": 13
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 342,
+            "Cancer_total_number_treated": 338,
+            "Covid_stats": {
+                "new_positive": 4289,
+                "new_deaths": 147,
+                "first_infections": 4278,
+                "reinfections": 11
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 47,
+                    "treated": 47
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Colorectal": {
+                    "diagnosed": 56,
+                    "treated": 56
+                },
+                "Head & Neck": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lung": {
+                    "diagnosed": 75,
+                    "treated": 75
+                },
+                "Lymphoma": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Ovarian": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Upper GI": {
+                    "diagnosed": 48,
+                    "treated": 47
+                },
+                "Urological": {
+                    "diagnosed": 105,
+                    "treated": 103
+                },
+                "Melanoma": {
+                    "diagnosed": 12,
+                    "treated": 12
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 390,
+            "Cancer_total_number_treated": 387,
+            "Covid_stats": {
+                "new_positive": 4080,
+                "new_deaths": 3,
+                "first_infections": 4054,
+                "reinfections": 26
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Colorectal": {
+                    "diagnosed": 63,
+                    "treated": 63
+                },
+                "Head & Neck": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Lung": {
+                    "diagnosed": 89,
+                    "treated": 89
+                },
+                "Lymphoma": {
+                    "diagnosed": 27,
+                    "treated": 27
+                },
+                "Ovarian": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Upper GI": {
+                    "diagnosed": 42,
+                    "treated": 42
+                },
+                "Urological": {
+                    "diagnosed": 99,
+                    "treated": 96
+                },
+                "Breast": {
+                    "diagnosed": 52,
+                    "treated": 51
+                },
+                "Melanoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 417,
+            "Cancer_total_number_treated": 413,
+            "Covid_stats": {
+                "new_positive": 19784,
+                "new_deaths": 58,
+                "first_infections": 19662,
+                "reinfections": 122
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 52,
+                    "treated": 52
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 53,
+                    "treated": 53
+                },
+                "Head & Neck": {
+                    "diagnosed": 20,
+                    "treated": 18
+                },
+                "Lung": {
+                    "diagnosed": 62,
+                    "treated": 62
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Upper GI": {
+                    "diagnosed": 46,
+                    "treated": 46
+                },
+                "Urological": {
+                    "diagnosed": 98,
+                    "treated": 98
+                },
+                "Lymphoma": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Melanoma": {
+                    "diagnosed": 16,
+                    "treated": 16
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000029",
+            "Name": "NHS Fife",
+            "Cancer_total_number_diagnosed": 381,
+            "Cancer_total_number_treated": 378,
+            "Covid_stats": {
+                "new_positive": 28099,
+                "new_deaths": 106,
+                "first_infections": 27186,
+                "reinfections": 913
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Tayside": [
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 77,
+                    "treated": 76
+                },
+                "Breast": {
+                    "diagnosed": 82,
+                    "treated": 82
+                },
+                "Cervical": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Colorectal": {
+                    "diagnosed": 57,
+                    "treated": 56
+                },
+                "Head & Neck": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Lymphoma": {
+                    "diagnosed": 20,
+                    "treated": 20
+                },
+                "Melanoma": {
+                    "diagnosed": 19,
+                    "treated": 18
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Upper GI": {
+                    "diagnosed": 55,
+                    "treated": 54
+                },
+                "Urological": {
+                    "diagnosed": 80,
+                    "treated": 79
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 430,
+            "Cancer_total_number_treated": 425,
+            "Covid_stats": {
+                "new_positive": 1467,
+                "new_deaths": 198,
+                "first_infections": 1467,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 63,
+                    "treated": 62
+                },
+                "Lung": {
+                    "diagnosed": 81,
+                    "treated": 81
+                },
+                "Breast": {
+                    "diagnosed": 74,
+                    "treated": 74
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 68,
+                    "treated": 68
+                },
+                "Head & Neck": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Lymphoma": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Melanoma": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Upper GI": {
+                    "diagnosed": 56,
+                    "treated": 56
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 391,
+            "Cancer_total_number_treated": 390,
+            "Covid_stats": {
+                "new_positive": 792,
+                "new_deaths": 1,
+                "first_infections": 789,
+                "reinfections": 3
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                },
+                "Lung": {
+                    "diagnosed": 77,
+                    "treated": 76
+                },
+                "Urological": {
+                    "diagnosed": 99,
+                    "treated": 99
+                },
+                "Breast": {
+                    "diagnosed": 90,
+                    "treated": 88
+                },
+                "Cervical": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 61,
+                    "treated": 61
+                },
+                "Head & Neck": {
+                    "diagnosed": 29,
+                    "treated": 29
+                },
+                "Lymphoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Melanoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Upper GI": {
+                    "diagnosed": 58,
+                    "treated": 58
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 454,
+            "Cancer_total_number_treated": 451,
+            "Covid_stats": {
+                "new_positive": 6102,
+                "new_deaths": 135,
+                "first_infections": 6092,
+                "reinfections": 10
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Lung": {
+                    "diagnosed": 89,
+                    "treated": 87
+                },
+                "Upper GI": {
+                    "diagnosed": 50,
+                    "treated": 49
+                },
+                "Urological": {
+                    "diagnosed": 79,
+                    "treated": 76
+                },
+                "Breast": {
+                    "diagnosed": 91,
+                    "treated": 90
+                },
+                "Colorectal": {
+                    "diagnosed": 3,
+                    "treated": 3
+                },
+                "Head & Neck": {
+                    "diagnosed": 14,
+                    "treated": 13
+                },
+                "Lymphoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Melanoma": {
+                    "diagnosed": 17,
+                    "treated": 17
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 368,
+            "Cancer_total_number_treated": 360,
+            "Covid_stats": {
+                "new_positive": 5614,
+                "new_deaths": 235,
+                "first_infections": 5595,
+                "reinfections": 19
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 97,
+                    "treated": 97
+                },
+                "Ovarian": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Urological": {
+                    "diagnosed": 113,
+                    "treated": 104
+                },
+                "Lymphoma": {
+                    "diagnosed": 36,
+                    "treated": 36
+                },
+                "Breast": {
+                    "diagnosed": 101,
+                    "treated": 100
+                },
+                "Cervical": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Colorectal": {
+                    "diagnosed": 85,
+                    "treated": 85
+                },
+                "Head & Neck": {
+                    "diagnosed": 24,
+                    "treated": 22
+                },
+                "Melanoma": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Upper GI": {
+                    "diagnosed": 61,
+                    "treated": 61
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 555,
+            "Cancer_total_number_treated": 543,
+            "Covid_stats": {
+                "new_positive": 6947,
+                "new_deaths": 14,
+                "first_infections": 6867,
+                "reinfections": 80
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 83,
+                    "treated": 83
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Urological": {
+                    "diagnosed": 128,
+                    "treated": 123
+                },
+                "Upper GI": {
+                    "diagnosed": 69,
+                    "treated": 68
+                },
+                "Breast": {
+                    "diagnosed": 109,
+                    "treated": 109
+                },
+                "Cervical": {
+                    "diagnosed": 2,
+                    "treated": 1
+                },
+                "Colorectal": {
+                    "diagnosed": 61,
+                    "treated": 61
+                },
+                "Head & Neck": {
+                    "diagnosed": 22,
+                    "treated": 21
+                },
+                "Lymphoma": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Melanoma": {
+                    "diagnosed": 24,
+                    "treated": 18
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 530,
+            "Cancer_total_number_treated": 516,
+            "Covid_stats": {
+                "new_positive": 18780,
+                "new_deaths": 94,
+                "first_infections": 18643,
+                "reinfections": 137
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 83,
+                    "treated": 81
+                },
+                "Urological": {
+                    "diagnosed": 106,
+                    "treated": 105
+                },
+                "Breast": {
+                    "diagnosed": 120,
+                    "treated": 118
+                },
+                "Cervical": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Colorectal": {
+                    "diagnosed": 84,
+                    "treated": 82
+                },
+                "Head & Neck": {
+                    "diagnosed": 32,
+                    "treated": 32
+                },
+                "Lymphoma": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Melanoma": {
+                    "diagnosed": 23,
+                    "treated": 19
+                },
+                "Ovarian": {
+                    "diagnosed": 6,
+                    "treated": 6
+                },
+                "Upper GI": {
+                    "diagnosed": 49,
+                    "treated": 49
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000030",
+            "Name": "NHS Tayside",
+            "Cancer_total_number_diagnosed": 533,
+            "Cancer_total_number_treated": 522,
+            "Covid_stats": {
+                "new_positive": 27226,
+                "new_deaths": 93,
+                "first_infections": 26162,
+                "reinfections": 1064
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Greater Glasgow and Clyde": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 212,
+                    "treated": 208
+                },
+                "Upper GI": {
+                    "diagnosed": 111,
+                    "treated": 111
+                },
+                "Cervical": {
+                    "diagnosed": 12,
+                    "treated": 11
+                },
+                "Colorectal": {
+                    "diagnosed": 108,
+                    "treated": 102
+                },
+                "Head & Neck": {
+                    "diagnosed": 78,
+                    "treated": 78
+                },
+                "Lung": {
+                    "diagnosed": 50,
+                    "treated": 49
+                },
+                "Lymphoma": {
+                    "diagnosed": 32,
+                    "treated": 32
+                },
+                "Melanoma": {
+                    "diagnosed": 59,
+                    "treated": 56
+                },
+                "Ovarian": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Urological": {
+                    "diagnosed": 288,
+                    "treated": 273
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 969,
+            "Cancer_total_number_treated": 939,
+            "Covid_stats": {
+                "new_positive": 4185,
+                "new_deaths": 686,
+                "first_infections": 4185,
+                "reinfections": 0
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Urological": {
+                    "diagnosed": 263,
+                    "treated": 251
+                },
+                "Upper GI": {
+                    "diagnosed": 135,
+                    "treated": 131
+                },
+                "Breast": {
+                    "diagnosed": 233,
+                    "treated": 232
+                },
+                "Cervical": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Head & Neck": {
+                    "diagnosed": 60,
+                    "treated": 59
+                },
+                "Lung": {
+                    "diagnosed": 41,
+                    "treated": 41
+                },
+                "Lymphoma": {
+                    "diagnosed": 64,
+                    "treated": 64
+                },
+                "Melanoma": {
+                    "diagnosed": 75,
+                    "treated": 74
+                },
+                "Ovarian": {
+                    "diagnosed": 27,
+                    "treated": 27
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 907,
+            "Cancer_total_number_treated": 888,
+            "Covid_stats": {
+                "new_positive": 4760,
+                "new_deaths": 14,
+                "first_infections": 4752,
+                "reinfections": 8
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 350,
+                    "treated": 345
+                },
+                "Upper GI": {
+                    "diagnosed": 117,
+                    "treated": 116
+                },
+                "Cervical": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Colorectal": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Head & Neck": {
+                    "diagnosed": 74,
+                    "treated": 74
+                },
+                "Lung": {
+                    "diagnosed": 47,
+                    "treated": 47
+                },
+                "Lymphoma": {
+                    "diagnosed": 35,
+                    "treated": 35
+                },
+                "Melanoma": {
+                    "diagnosed": 70,
+                    "treated": 70
+                },
+                "Ovarian": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Urological": {
+                    "diagnosed": 294,
+                    "treated": 284
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 1026,
+            "Cancer_total_number_treated": 1010,
+            "Covid_stats": {
+                "new_positive": 33142,
+                "new_deaths": 745,
+                "first_infections": 33111,
+                "reinfections": 31
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Urological": {
+                    "diagnosed": 304,
+                    "treated": 291
+                },
+                "Cervical": {
+                    "diagnosed": 12,
+                    "treated": 11
+                },
+                "Colorectal": {
+                    "diagnosed": 2,
+                    "treated": 2
+                },
+                "Head & Neck": {
+                    "diagnosed": 65,
+                    "treated": 63
+                },
+                "Lung": {
+                    "diagnosed": 53,
+                    "treated": 53
+                },
+                "Lymphoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Melanoma": {
+                    "diagnosed": 1,
+                    "treated": 1
+                },
+                "Ovarian": {
+                    "diagnosed": 24,
+                    "treated": 23
+                },
+                "Upper GI": {
+                    "diagnosed": 137,
+                    "treated": 128
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 601,
+            "Cancer_total_number_treated": 575,
+            "Covid_stats": {
+                "new_positive": 25217,
+                "new_deaths": 709,
+                "first_infections": 25102,
+                "reinfections": 115
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 357,
+                    "treated": 351
+                },
+                "Upper GI": {
+                    "diagnosed": 144,
+                    "treated": 142
+                },
+                "Cervical": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Colorectal": {
+                    "diagnosed": 163,
+                    "treated": 161
+                },
+                "Head & Neck": {
+                    "diagnosed": 81,
+                    "treated": 79
+                },
+                "Lung": {
+                    "diagnosed": 48,
+                    "treated": 48
+                },
+                "Lymphoma": {
+                    "diagnosed": 29,
+                    "treated": 29
+                },
+                "Melanoma": {
+                    "diagnosed": 102,
+                    "treated": 102
+                },
+                "Ovarian": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Urological": {
+                    "diagnosed": 374,
+                    "treated": 359
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 1326,
+            "Cancer_total_number_treated": 1299,
+            "Covid_stats": {
+                "new_positive": 19524,
+                "new_deaths": 33,
+                "first_infections": 19289,
+                "reinfections": 235
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 370,
+                    "treated": 357
+                },
+                "Upper GI": {
+                    "diagnosed": 170,
+                    "treated": 168
+                },
+                "Urological": {
+                    "diagnosed": 312,
+                    "treated": 287
+                },
+                "Cervical": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Colorectal": {
+                    "diagnosed": 200,
+                    "treated": 192
+                },
+                "Head & Neck": {
+                    "diagnosed": 98,
+                    "treated": 98
+                },
+                "Lung": {
+                    "diagnosed": 44,
+                    "treated": 44
+                },
+                "Lymphoma": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Melanoma": {
+                    "diagnosed": 89,
+                    "treated": 88
+                },
+                "Ovarian": {
+                    "diagnosed": 11,
+                    "treated": 10
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 1327,
+            "Cancer_total_number_treated": 1277,
+            "Covid_stats": {
+                "new_positive": 76268,
+                "new_deaths": 262,
+                "first_infections": 75476,
+                "reinfections": 792
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Lung": {
+                    "diagnosed": 303,
+                    "treated": 301
+                },
+                "Upper GI": {
+                    "diagnosed": 177,
+                    "treated": 176
+                },
+                "Breast": {
+                    "diagnosed": 349,
+                    "treated": 331
+                },
+                "Cervical": {
+                    "diagnosed": 7,
+                    "treated": 7
+                },
+                "Colorectal": {
+                    "diagnosed": 195,
+                    "treated": 189
+                },
+                "Head & Neck": {
+                    "diagnosed": 62,
+                    "treated": 62
+                },
+                "Lymphoma": {
+                    "diagnosed": 39,
+                    "treated": 39
+                },
+                "Melanoma": {
+                    "diagnosed": 107,
+                    "treated": 106
+                },
+                "Ovarian": {
+                    "diagnosed": 26,
+                    "treated": 25
+                },
+                "Urological": {
+                    "diagnosed": 337,
+                    "treated": 331
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000031",
+            "Name": "NHS Greater Glasgow and Clyde",
+            "Cancer_total_number_diagnosed": 1602,
+            "Cancer_total_number_treated": 1567,
+            "Covid_stats": {
+                "new_positive": 95237,
+                "new_deaths": 268,
+                "first_infections": 89061,
+                "reinfections": 6176
+            },
+            "Time": "2021-4"
+        }
+    ],
+    "NHS Lanarkshire": [
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 50,
+                    "treated": 50
+                },
+                "Cervical": {
+                    "diagnosed": 15,
+                    "treated": 14
+                },
+                "Colorectal": {
+                    "diagnosed": 51,
+                    "treated": 45
+                },
+                "Head & Neck": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Lung": {
+                    "diagnosed": 14,
+                    "treated": 14
+                },
+                "Lymphoma": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Ovarian": {
+                    "diagnosed": 10,
+                    "treated": 10
+                },
+                "Upper GI": {
+                    "diagnosed": 53,
+                    "treated": 53
+                },
+                "Urological": {
+                    "diagnosed": 74,
+                    "treated": 71
+                },
+                "Melanoma": {
+                    "diagnosed": 26,
+                    "treated": 26
+                }
+            },
+            "Year": "2020",
+            "Quarter": "2",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 339,
+            "Cancer_total_number_treated": 329,
+            "Covid_stats": {
+                "new_positive": 2422,
+                "new_deaths": 335,
+                "first_infections": 2421,
+                "reinfections": 1
+            },
+            "Time": "2020-2"
+        },
+        {
+            "Cancer_types": {
+                "Upper GI": {
+                    "diagnosed": 54,
+                    "treated": 54
+                },
+                "Urological": {
+                    "diagnosed": 57,
+                    "treated": 56
+                },
+                "Breast": {
+                    "diagnosed": 80,
+                    "treated": 80
+                },
+                "Cervical": {
+                    "diagnosed": 4,
+                    "treated": 4
+                },
+                "Colorectal": {
+                    "diagnosed": 74,
+                    "treated": 70
+                },
+                "Head & Neck": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Lung": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Lymphoma": {
+                    "diagnosed": 31,
+                    "treated": 31
+                },
+                "Melanoma": {
+                    "diagnosed": 34,
+                    "treated": 34
+                },
+                "Ovarian": {
+                    "diagnosed": 5,
+                    "treated": 5
+                }
+            },
+            "Year": "2020",
+            "Quarter": "3",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 384,
+            "Cancer_total_number_treated": 379,
+            "Covid_stats": {
+                "new_positive": 1874,
+                "new_deaths": 15,
+                "first_infections": 1868,
+                "reinfections": 6
+            },
+            "Time": "2020-3"
+        },
+        {
+            "Cancer_types": {
+                "Cervical": {
+                    "diagnosed": 18,
+                    "treated": 18
+                },
+                "Colorectal": {
+                    "diagnosed": 81,
+                    "treated": 79
+                },
+                "Head & Neck": {
+                    "diagnosed": 27,
+                    "treated": 26
+                },
+                "Lung": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Lymphoma": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Upper GI": {
+                    "diagnosed": 68,
+                    "treated": 68
+                },
+                "Urological": {
+                    "diagnosed": 64,
+                    "treated": 61
+                },
+                "Breast": {
+                    "diagnosed": 97,
+                    "treated": 94
+                },
+                "Melanoma": {
+                    "diagnosed": 35,
+                    "treated": 34
+                }
+            },
+            "Year": "2020",
+            "Quarter": "4",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 434,
+            "Cancer_total_number_treated": 424,
+            "Covid_stats": {
+                "new_positive": 20497,
+                "new_deaths": 474,
+                "first_infections": 20474,
+                "reinfections": 23
+            },
+            "Time": "2020-4"
+        },
+        {
+            "Cancer_types": {
+                "Upper GI": {
+                    "diagnosed": 71,
+                    "treated": 69
+                },
+                "Breast": {
+                    "diagnosed": 83,
+                    "treated": 83
+                },
+                "Cervical": {
+                    "diagnosed": 9,
+                    "treated": 8
+                },
+                "Colorectal": {
+                    "diagnosed": 75,
+                    "treated": 72
+                },
+                "Head & Neck": {
+                    "diagnosed": 39,
+                    "treated": 39
+                },
+                "Lung": {
+                    "diagnosed": 19,
+                    "treated": 19
+                },
+                "Lymphoma": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Melanoma": {
+                    "diagnosed": 42,
+                    "treated": 41
+                },
+                "Ovarian": {
+                    "diagnosed": 11,
+                    "treated": 11
+                },
+                "Urological": {
+                    "diagnosed": 90,
+                    "treated": 88
+                }
+            },
+            "Year": "2021",
+            "Quarter": "1",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 460,
+            "Cancer_total_number_treated": 451,
+            "Covid_stats": {
+                "new_positive": 14867,
+                "new_deaths": 471,
+                "first_infections": 14803,
+                "reinfections": 64
+            },
+            "Time": "2021-1"
+        },
+        {
+            "Cancer_types": {
+                "Upper GI": {
+                    "diagnosed": 77,
+                    "treated": 77
+                },
+                "Breast": {
+                    "diagnosed": 89,
+                    "treated": 88
+                },
+                "Cervical": {
+                    "diagnosed": 19,
+                    "treated": 18
+                },
+                "Colorectal": {
+                    "diagnosed": 85,
+                    "treated": 85
+                },
+                "Head & Neck": {
+                    "diagnosed": 27,
+                    "treated": 27
+                },
+                "Lung": {
+                    "diagnosed": 16,
+                    "treated": 16
+                },
+                "Lymphoma": {
+                    "diagnosed": 27,
+                    "treated": 27
+                },
+                "Ovarian": {
+                    "diagnosed": 8,
+                    "treated": 8
+                },
+                "Urological": {
+                    "diagnosed": 104,
+                    "treated": 100
+                },
+                "Melanoma": {
+                    "diagnosed": 27,
+                    "treated": 27
+                }
+            },
+            "Year": "2021",
+            "Quarter": "2",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 479,
+            "Cancer_total_number_treated": 473,
+            "Covid_stats": {
+                "new_positive": 8274,
+                "new_deaths": 24,
+                "first_infections": 8150,
+                "reinfections": 124
+            },
+            "Time": "2021-2"
+        },
+        {
+            "Cancer_types": {
+                "Breast": {
+                    "diagnosed": 99,
+                    "treated": 98
+                },
+                "Cervical": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Colorectal": {
+                    "diagnosed": 93,
+                    "treated": 90
+                },
+                "Head & Neck": {
+                    "diagnosed": 23,
+                    "treated": 23
+                },
+                "Lung": {
+                    "diagnosed": 13,
+                    "treated": 13
+                },
+                "Lymphoma": {
+                    "diagnosed": 28,
+                    "treated": 28
+                },
+                "Melanoma": {
+                    "diagnosed": 35,
+                    "treated": 35
+                },
+                "Ovarian": {
+                    "diagnosed": 15,
+                    "treated": 15
+                },
+                "Upper GI": {
+                    "diagnosed": 53,
+                    "treated": 53
+                },
+                "Urological": {
+                    "diagnosed": 89,
+                    "treated": 84
+                }
+            },
+            "Year": "2021",
+            "Quarter": "3",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 461,
+            "Cancer_total_number_treated": 452,
+            "Covid_stats": {
+                "new_positive": 44255,
+                "new_deaths": 128,
+                "first_infections": 43789,
+                "reinfections": 466
+            },
+            "Time": "2021-3"
+        },
+        {
+            "Cancer_types": {
+                "Upper GI": {
+                    "diagnosed": 47,
+                    "treated": 47
+                },
+                "Cervical": {
+                    "diagnosed": 10,
+                    "treated": 9
+                },
+                "Colorectal": {
+                    "diagnosed": 124,
+                    "treated": 121
+                },
+                "Head & Neck": {
+                    "diagnosed": 24,
+                    "treated": 24
+                },
+                "Lung": {
+                    "diagnosed": 107,
+                    "treated": 105
+                },
+                "Lymphoma": {
+                    "diagnosed": 21,
+                    "treated": 21
+                },
+                "Melanoma": {
+                    "diagnosed": 43,
+                    "treated": 43
+                },
+                "Ovarian": {
+                    "diagnosed": 9,
+                    "treated": 9
+                },
+                "Urological": {
+                    "diagnosed": 96,
+                    "treated": 95
+                },
+                "Breast": {
+                    "diagnosed": 84,
+                    "treated": 83
+                }
+            },
+            "Year": "2021",
+            "Quarter": "4",
+            "Board_id": "S08000032",
+            "Name": "NHS Lanarkshire",
+            "Cancer_total_number_diagnosed": 565,
+            "Cancer_total_number_treated": 557,
+            "Covid_stats": {
+                "new_positive": 60287,
+                "new_deaths": 145,
+                "first_infections": 56994,
+                "reinfections": 3293
+            },
+            "Time": "2021-4"
+        }
+    ]
+}
