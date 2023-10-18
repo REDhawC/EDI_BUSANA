@@ -1,0 +1,36 @@
+
+--- Job mobilePhone.gms Start 10/13/23 19:34:41 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    Q:\GAMS\44\gmsprmNT.txt
+    C:\Users\redhawc\Documents\GAMS\gamsconfig.yaml
+--- GAMS Parameters defined
+    Input C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\mobilePhone.gms
+    PageSize 0
+    ScrDir C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\225a\
+    SysDir Q:\GAMS\44\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Course License                                 S230704|0002AO-GEN
+          University of Edinburgh, Business School                  DCE2899
+          C:\Users\redhawc\Documents\GAMS\gamslice.txt
+          License Admin: Douglas Alem, douglas.alem@ed.ac.uk               
+          Course license for use within the course and related course work
+Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
+GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- mobilePhone.gms(58) 3 Mb 2 Errors
+*** Error  71 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\mobilePhone.gms
+    The symbol shown has been declared as an equation, but no
+       Symbolic equation (..) was found. hint - look for commas in the
+       Documentation text for the equations. use quotes around the
+       Text or eliminate the commas.
+*** Error 256 in C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\mobilePhone.gms
+    Error(s) in analyzing solve statement.
+*** The following LP errors were detected in model mobile:
+     71 capacity is an undefined equation
+--- mobilePhone.gms(60) 3 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job mobilePhone.gms Stop 10/13/23 19:34:41 elapsed 0:00:00.020

@@ -1,0 +1,12 @@
+引入: 结合英国失业率
+
+大问题:什么因素影响薪资高低
+
+Methodology: Description 画概率分布图 anova检验 和 linear regression
+
+步骤: 
+	1.background,significance, research questions (175-200) (zhaoxinyi)
+	2.data source and presentation(150-200)(xinqianru)
+	3. methodology,concepts and approaches(450-500)(hao+zhangjielu)
+	4.analysis, finding and discussion(450-500)(xinqianru)
+	5.limitation and further research(75-100)(zhangjielu)

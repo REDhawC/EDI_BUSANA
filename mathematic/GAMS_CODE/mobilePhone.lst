@@ -1,0 +1,299 @@
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      This code refers to the production planning problem Computer lab 13/10/2023
+   4   
+   5   
+   6  Set t weeks /week1*week4/;
+   7   
+   8  Parameter c(t) production cost
+   9  /
+  10  week1 79
+  11  week2 80
+  12  week3 81
+  13  week4 82
+  14  /;
+  15   
+  16  Parameter h(t) holding cost;
+  17  h(t) = 0.01 * c(t);
+  18   
+  19  Parameter d(t) demand
+  20  /
+  21  week1 2500
+  22  week2 2500
+  23  week3 2500
+  24  week4 2500
+  25  /;
+  26   
+  27  Parameter cap(t) capacity
+  28  /
+  29  week1 3000
+  30  week2 3000
+  31  week3 3000
+  32  week4 1000
+  33  /;
+  34   
+  35  Variables
+  36  x(t) produciton level,
+  37  inv(t) inventory level,
+  38  z objective value
+  39  ;
+  40   
+  41  *Postive -> non-Negative Variable
+  42  Positive variables  x,inv;
+  43  Free variable z;
+  44   
+  45  Equations
+  46  ObjFunction       objective function
+  47  demand(t)  capacity constraint
+  48  capacity(t)  demand constraint
+  49  ;
+  50   
+  51  ObjFunction.. z =e= sum(t,c(t)*x(t) + h(t)*inv(t));
+  52  demand(t).. x(t) + inv(t-1) =e= d(t) + inv(t);
+  53  capacity(t).. x(t) =l= cap(t);
+  54  * =l= -> 'larger' than or equal to
+  55   
+  56  Model mobile /all/;
+  57  * Model mobile /ObjFunction，demand,capacity/;
+  58  Solve mobile using LP minimizing z;
+  59  Display x.l, x.m,inv.l,inv.m;
+  60  *x.l -> primal ; x.m -> marginal cost
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE mobile Using LP From line 58
+
+
+---- ObjFunction  =E=  objective function
+
+ObjFunction..  - 79*x(week1) - 80*x(week2) - 81*x(week3) - 82*x(week4) - 0.79*inv(week1) - 0.8*inv(week2) - 0.81*inv(week3) - 0.82*inv(week4) + z =E= 0 ; (LHS = 0)
+     
+
+---- demand  =E=  capacity constraint
+
+demand(week1)..  x(week1) - inv(week1) =E= 2500 ; (LHS = 0, INFES = 2500 ****)
+     
+demand(week2)..  x(week2) + inv(week1) - inv(week2) =E= 2500 ; (LHS = 0, INFES = 2500 ****)
+     
+demand(week3)..  x(week3) + inv(week2) - inv(week3) =E= 2500 ; (LHS = 0, INFES = 2500 ****)
+     
+REMAINING ENTRY SKIPPED
+
+
+---- capacity  =L=  demand constraint
+
+capacity(week1)..  x(week1) =L= 3000 ; (LHS = 0)
+     
+capacity(week2)..  x(week2) =L= 3000 ; (LHS = 0)
+     
+capacity(week3)..  x(week3) =L= 3000 ; (LHS = 0)
+     
+REMAINING ENTRY SKIPPED
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE mobile Using LP From line 58
+
+
+---- x  produciton level
+
+x(week1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -79       ObjFunction
+        1       demand(week1)
+        1       capacity(week1)
+
+x(week2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -80       ObjFunction
+        1       demand(week2)
+        1       capacity(week2)
+
+x(week3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -81       ObjFunction
+        1       demand(week3)
+        1       capacity(week3)
+
+REMAINING ENTRY SKIPPED
+
+---- inv  inventory level
+
+inv(week1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.79    ObjFunction
+       -1       demand(week1)
+        1       demand(week2)
+
+inv(week2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.8     ObjFunction
+       -1       demand(week2)
+        1       demand(week3)
+
+inv(week3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -0.81    ObjFunction
+       -1       demand(week3)
+        1       demand(week4)
+
+REMAINING ENTRY SKIPPED
+
+---- z  objective value
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       ObjFunction
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE mobile Using LP From line 58
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+03, 3.000E+03] - Zero values observed as well
+Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+Matrix    [min, max] : [ 7.900E-01, 8.200E+01]
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE mobile Using LP From line 58
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            9
+BLOCKS OF VARIABLES           3     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            24
+
+
+GENERATION TIME      =        0.016 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE mobile Using LP From line 58
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   mobile              OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  58
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE           804410.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.01 ticks)
+
+
+Optimal solution found
+Objective:       804410.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU ObjFuncti~          .              .              .             1.0000      
+
+  ObjFunction  objective function
+
+---- EQU demand  capacity constraint
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+week1      2500.0000      2500.0000      2500.0000        79.6000      
+week2      2500.0000      2500.0000      2500.0000        80.3900      
+week3      2500.0000      2500.0000      2500.0000        81.1900      
+week4      2500.0000      2500.0000      2500.0000        82.0000      
+
+---- EQU capacity  demand constraint
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+week1        -INF         3000.0000      3000.0000        -0.6000      
+week2        -INF         3000.0000      3000.0000        -0.3900      
+week3        -INF         3000.0000      3000.0000        -0.1900      
+week4        -INF         1000.0000      1000.0000          .          
+
+---- VAR x  produciton level
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+week1          .          3000.0000        +INF             .          
+week2          .          3000.0000        +INF             .          
+week3          .          3000.0000        +INF             .          
+week4          .          1000.0000        +INF             .          
+
+---- VAR inv  inventory level
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+week1          .           500.0000        +INF             .          
+week2          .          1000.0000        +INF             .          
+week3          .          1500.0000        +INF             .          
+week4          .              .            +INF           82.8200      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF       804410.0000        +INF             .          
+
+  z  objective value
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 10/13/23 19:34:57 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----     59 VARIABLE x.L  produciton level
+
+week1 3000.000,    week2 3000.000,    week3 3000.000,    week4 1000.000
+
+
+----     59 VARIABLE x.M  produciton level
+
+                      ( ALL       0.000 )
+
+
+----     59 VARIABLE inv.L  inventory level
+
+week1  500.000,    week2 1000.000,    week3 1500.000
+
+
+----     59 VARIABLE inv.M  inventory level
+
+week4 82.820
+
+
+
+EXECUTION TIME       =        0.032 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+
+
+USER: Course License                                 S230704|0002AO-GEN
+      University of Edinburgh, Business School                  DCE2899
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\mobilePhone.gms
+Output     C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\mobilePhone.lst

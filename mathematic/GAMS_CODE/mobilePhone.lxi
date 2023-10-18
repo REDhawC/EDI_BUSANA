@@ -1,0 +1,23 @@
+B 3 C o m p i l a t i o n
+B 69 Equation Listing    SOLVE mobile Using LP From line 58
+D 72 ObjFunction
+D 77 demand
+D 88 capacity
+B 100 Column Listing      SOLVE mobile Using LP From line 58
+E 103 x
+E 125 inv
+E 147 z
+B 155 Range Statistics    SOLVE mobile Using LP From line 58
+B 166 Model Statistics    SOLVE mobile Using LP From line 58
+B 179 Solution Report     SOLVE mobile Using LP From line 58
+F 212 ObjFunction
+F 216 demand
+F 225 capacity
+G 234 x
+G 243 inv
+G 254 z
+B 264 E x e c u t i o n
+I 264 x
+I 270 x
+I 275 inv
+I 280 inv
