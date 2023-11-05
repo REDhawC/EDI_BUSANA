@@ -1,0 +1,1154 @@
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      A Location-Allocation Problem for Disaster Preparedness in Brazil
+   5   Option optcr = 0.00;
+   6   
+   7   Set i  warehouses  /AC,AL,AP,AM,BA,CE,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO/;
+   8   Set j  demand zoes /AC,AL,AP,AM,BA,CE,ES,GO,MA,MT,MS,MG,PA,PB,PR,PE,PI,RJ,RN,RS,RO,RR,SC,SP,SE,TO/;
+   9   Alias(j,jj); // This creates an identical copy of set j
+  10   
+  11   Parameter d(j) estimated number of victims' needs per year (in units of relief aid items)
+  12   /AC  21050.000,    AL  23339.000,    AP   1186.000,    AM 169946.000
+  13    BA  64799.000,    CE  85137.000,    ES  63471.000,    GO   2546.000
+  14    MA 236059.000,    MT   5741.000,    MS   8808.000,    MG  85236.000
+  15    PA  52595.000,    PB  39015.000,    PR  56465.000,    PE 122130.000
+  16    PI  76199.000,    RJ  97111.000,    RN  33141.000,    RS 154597.000
+  17    RO  20001.000,    RR    456.000,    SC 189100.000,    SP  51271.000
+  18    SE   5204.000,    TO    820.000
+  19   /;
+  20   
+  21   Parameter cap(i) yearly capacity of each warehouse located at i (units of relief aid items);
+  22    cap(i) = 250000;
+  23   
+  24   Parameter fixed_cost(i) fixed cost for establishing & operating a warehouse at location i (US$ dollars);
+  25    fixed_cost(i) = 40000;
+  26   
+  27   Table distance(i,j) road distances between warehouse & demand zones
+  28                 AC          AL          AP          AM          BA          CE          ES          GO          MA          MT          MS          MG          PA          PB          PR          PE          PI          RJ          RN          RS           RO
+  29           AC                4989.770    4473.070    1401.560    4540.370    5212.750    4063.920    2896.520    4238.210    1966.300    2668.300    3553.810    3990.120    5347.330    3665.110    5231.760    4148.440    3890.150    5516.090    4404.200     514.470
+  30           AL    4992.700                2844.120    5366.280     580.310     945.760    1617.580    2093.380    1568.110    3023.530    2821.940    1802.250    2043.470     375.760    2785.680     260.180    1137.950    2078.110     544.520    3514.790    4479.180
+  31           AP    4476.350    2843.780                3072.590    2930.000    2098.920    3528.000    2318.530    1138.920    2341.230    3045.360    3016.210     525.720    2848.510    3636.020    2831.770    1471.810    3442.620    2605.500    4365.140    3959.270
+  32           AM    1405.910    5370.740    3072.210                4921.330    5593.710    4444.880    3277.490    4619.170    2347.260    3049.260    3934.780    4371.080    5728.290    4046.080    5612.720    4529.400    4271.110    5897.060    4785.160     888.840
+  33           BA    4544.220     599.680    2930.180    4917.800                1205.350    1169.390    1644.900    1654.170    2575.050    2373.460    1353.770    2129.530     957.240    2337.200     841.660    1224.010    1629.630    1126.000    3066.310    4030.700
+  34           CE    5213.530    1030.320    2101.080    5587.110    1205.460                2175.020    2314.210     897.560    3244.360    3152.790    2327.800    1537.850     668.740    3311.230     772.880     592.070    2603.660     516.240    4040.340    4700.010
+  35           ES    4071.030    1617.420    3530.080    4444.610    1168.410    2172.230                1389.800    2621.050    2101.860    1944.350     517.390    3096.420    1974.980    1348.280    1859.400    2190.900     517.060    2143.740    2077.390    3557.510
+  36           GO    2900.150    2093.990    2319.470    3273.720    1644.590    2316.970    1388.750                2017.420     930.980     839.410     876.960    1963.280    2451.550    1320.220    2335.970    1881.230    1338.280    2620.310    2049.330    2386.620
+  37           MA    4246.420    1569.930    1139.750    4620.000    1656.150     896.520    2625.720    2018.080                2695.310    2852.840    2778.500     576.530    1555.600    3335.570    1659.730     434.570    3054.350    1403.090    4064.680    3732.900
+  38           MT    1971.330    3026.770    2341.480    2344.910    2577.370    3249.750    2100.910     933.520    2696.340                 705.290    1590.810    2499.270    3384.330    1702.110    3268.750    2546.240    1927.150    3553.090    2441.200    1457.810
+  39           MS    2671.740    3370.150    3042.070    3045.310    2920.750    3155.080    1951.410     838.850    2851.630     702.570                1573.930    2797.500    3727.710    1000.200    3612.130    2719.340    1441.250    3896.470    1739.290    2158.220
+  40           MG    3558.000    1803.110    3017.490    3931.570    1353.710    2329.630     517.000     877.210    2778.450    1588.830    1573.480                2661.300    2160.670     987.780    2045.100    2348.290     438.750    2329.430    1716.900    3044.480
+  41           PA    3995.210    2044.320     526.340    4368.790    2130.540    1536.080    3100.110    1961.580     576.080    2495.300    2796.350    2659.260                2049.050    3279.080    2032.310     908.970    3085.680    2042.660    4008.190    3481.690
+  42           PB    5337.300     374.220    2851.270    5710.880     924.910     668.730    1962.180    2437.980    1575.610    3368.130    3166.540    2146.850    2050.620                3130.280     116.770    1145.100    2422.710     180.120    3859.390    4823.780
+  43           PR    3668.040    2793.630    3639.690    4041.620    2344.230    3320.150    1354.490    1323.150    3337.640    1698.870    1000.450     997.410    3283.500    3151.190                3035.610    3031.850     844.330    3319.950     742.570    3154.520
+  44           PE    5221.110     258.030    2832.850    5594.690     808.720     773.290    1845.990    2321.790    1680.170    3251.940    3050.340    2030.660    2032.200     115.920    3014.090                1126.680    2306.520     284.680    3743.200    4707.590
+  45           PI    4154.390    1138.200    1470.870    4527.960    1224.420     592.220    2193.990    1880.980     432.280    2544.090    2719.560    2346.770     907.640    1142.930    3033.900    1126.180                2622.620    1099.110    3763.010    3640.870
+  46           RJ    3891.930    2077.150    3445.560    4265.510    1627.750    2603.660     556.490    1340.090    3052.480    1922.760    1434.580     439.510    3089.370    2434.710     838.500    2319.130    2622.330                2603.470    1567.610    3378.410
+  47           RN    5504.980     541.900    2625.800    5878.560    1092.590     515.410    2129.860    2605.660    1422.290    3535.810    3334.220    2314.530    2062.570     180.310    3297.960     284.450    1115.930    2590.390                4027.070    4991.460
+  48           RS    4091.820    3521.050    4367.100    4465.400    3071.640    4047.560    2081.900    2050.560    4065.050    2122.650    1424.230    1724.820    4010.910    3878.600     741.290    3763.030    3759.260    1571.740    4047.370                3578.300
+  49           RO     517.300    4482.070    3959.300     887.790    4032.670    4705.040    3556.210    2388.820    3730.500    1458.590    2160.590    3046.110    3482.410    4839.630    3157.410    4724.050    3640.730    3382.450    5008.390    3896.490
+  50           RR    2185.960    6150.780    2295.620     782.200    5701.380    6373.760    5224.920    4057.530    5399.210    3127.310    3829.300    4714.820    2806.590    6508.340    4826.120    6392.760    5309.440    5051.160    6677.100    5565.200    1668.880
+  51           SC    3968.250    3081.870    3927.930    4341.820    2632.470    3608.380    1642.720    1611.380    3625.870    1999.080    1300.660    1285.650    3571.730    3439.430     302.120    3323.850    3320.080    1132.560    3608.190     456.720    3454.730
+  52           SP    3503.390    2385.420    3256.410    3876.960    1936.010    2911.930     946.270     939.860    2954.350    1534.220    1009.310     589.190    2900.220    2742.970     404.440    2627.400    2648.570     436.110    2911.740    1133.550    2989.860
+  53           SE    4737.270     268.980    2836.910    5110.850     324.880    1112.080    1362.150    1837.950    1560.900    2768.100    2566.510    1546.820    2036.260     626.530    2530.250     510.960    1130.750    1822.680     795.300    3259.360    4223.750
+  54           TO    3474.320    1892.100    1562.860    3847.900    1442.700    1699.650    2037.400     827.920    1260.810    1505.150    1662.690    1525.600    1206.670    2249.660    2145.420    2134.080    1110.710    1952.010    2057.900    2874.530    2960.800
+  55   
+  56   +                   RR          SC          SP          SE          TO
+  57   
+  58           AC    2183.020    3964.370    3499.560    4733.880    3469.970
+  59           AL    6147.740    3074.970    2386.860     270.600    1890.610
+  60           AP    2295.510    3925.310    3252.230    2837.340    1561.090
+  61           AM     782.160    4345.340    3880.520    5114.850    3850.930
+  62           BA    5699.260    2626.490    1938.380     343.790    1442.130
+  63           CE    6368.570    3600.520    2912.410    1112.790    1698.690
+  64           ES    5226.070    1637.560     940.100    1361.530    2038.650
+  65           GO    4055.180    1609.510     936.430    1838.100     828.040
+  66           MA    5401.460    3624.860    2951.780    1563.490    1260.640
+  67           MT    3126.370    2001.370    1536.550    2770.880    1506.960
+  68           MS    3826.770    1299.460    1009.110    3114.260    1662.250
+  69           MG    4713.030    1277.070     588.960    1547.220    1526.060
+  70           PA    2807.200    3568.370    2895.290    2037.880    1204.150
+  71           PB    6492.330    3419.570    2731.460     615.190    2235.210
+  72           PR    4823.070     302.740     401.540    2537.740    2148.260
+  73           PE    6376.140    3303.370    2615.270     499.000    2119.020
+  74           PI    5309.420    3323.190    2650.110    1131.760    1109.420
+  75           RJ    5046.960    1127.790     430.330    1821.260    1954.130
+  76           RN    6660.020    3587.250    2899.140     782.880    2402.890
+  77           RS    5246.850     456.970    1128.950    3265.160    2875.670
+  78           RO    1669.250    3456.670    2991.850    4226.180    2962.260
+  79           RR                5125.380    4660.560    5894.890    4630.970
+  80           SC    5123.280                 689.780    2825.980    2436.490
+  81           SP    4658.420     693.730                2129.530    1764.980
+  82           SE    5892.310    2819.540    2131.430                1635.180
+  83           TO    4629.360    2434.700    1761.630    1636.210
+  84           ;
+  85   
+  86   Scalar fuel diesel cost (US$) /1/;
+  87   Scalar efficiency efficiency (km per litre) /5/;
+  88   Parameter c(i,j) shipping cost from i to j;
+  89    c(i,j) = (fuel/efficiency)*distance(i,j);
+  90  Scalar investment investment level /1000000/; // Plan A
+  91  * Scalar investment investment level /500000/; // Plan B
+  92  Scalar max_number_depots maximum number of depots to set-up /20/; // Plan A
+  93  * Scalar max_number_depots maximum number of depots to set-up /15/; // Plan B
+  94   
+  95   Variables
+  96    Z      Optimal value
+  97    Y(i)   Binary variable to indicate whether warehouse is set-up at location i
+  98    X(i,j) quantity of relief aid items shipped from i to j
+  99   Positive variables X;
+ 100   Binary variable Y;
+ 101   Equations
+ 102    of       objective function
+ 103    constr1  capacity constraint & logical constraint
+ 104    constr2  victims' needs constraint
+ 105    constr3  investment level
+ 106    constr4  maximum number of warehouses to set-up
+ 107    constr5 fairness
+ 108  ;
+ 109   
+ 110    of..  z =e= sum((i,j),x(i,j));
+ 111    constr1(i)..  sum(j, X(i,j)) =l= cap(i)*Y(i);
+ 112    constr2(j)..  sum(i,X(i,j)) =l= d(j);
+ 113    constr3..  sum(i,fixed_cost(i)*Y(i)) + sum((i, j),c(i,j)*X(i,j))  =l= investment;
+ 114    constr4..  sum(i,Y(i)) =l= max_number_depots;
+ 115    constr5(j)..  sum(i,X(i,j)) =g= 0.6*d(j);
+ 116   
+ 117   Model LocationAllocation /of,constr1,constr2,constr3,constr4/;
+ 118   Parameter service_rate(j); Scalar global; // Based on the output
+ 119   Solve LocationAllocation using MIP  maximizing z;
+ 120    service_rate(j)$(d(j)<>0) = (sum(i,X.l(i,j))/d(j))*100;
+ 121    service_rate(j)$(d(j)<>0 and (sum(i,X.l(i,j))=0)) = eps;
+ 122    service_rate(j)$(d(j)=0) = 1;
+ 123    global = (1/card(j))*sum(j,service_rate(j));
+ 124    Display Y.l, X.l, Z.l,service_rate, global;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE LocationAllocation Using MIP From line 119
+
+
+---- of  =E=  objective function
+
+of..  Z - X(AC,AC) - X(AC,AL) - X(AC,AP) - X(AC,AM) - X(AC,BA) - X(AC,CE) - X(AC,ES) - X(AC,GO) - X(AC,MA) - X(AC,MT) - X(AC,MS) - X(AC,MG) - X(AC,PA) - X(AC,PB) - X(AC,PR) - X(AC,PE) - X(AC,PI) - X(AC,RJ) - X(AC,RN) - X(AC,RS) - X(AC,RO) - X(AC,RR) - X(AC,SC) - X(AC,SP) - X(AC,SE) - X(AC,TO) - X(AL,AC) - X(AL,AL) - X(AL,AP) - X(AL,AM) - X(AL,BA) - X(AL,CE) - X(AL,ES) - X(AL,GO) - X(AL,MA) - X(AL,MT) - X(AL,MS) - X(AL,MG) - X(AL,PA) - X(AL,PB) - X(AL,PR) - X(AL,PE) - X(AL,PI) - X(AL,RJ) - X(AL,RN) - X(AL,RS) - X(AL,RO) - X(AL,RR) - X(AL,SC) - X(AL,SP) - X(AL,SE) - X(AL,TO) - X(AP,AC) - X(AP,AL) - X(AP,AP) - X(AP,AM) - X(AP,BA) - X(AP,CE) - X(AP,ES) - X(AP,GO) - X(AP,MA) - X(AP,MT) - X(AP,MS) - X(AP,MG) - X(AP,PA) - X(AP,PB) - X(AP,PR) - X(AP,PE) - X(AP,PI) - X(AP,RJ) - X(AP,RN) - X(AP,RS) - X(AP,RO) - X(AP,RR) - X(AP,SC) - X(AP,SP) - X(AP,SE) - X(AP,TO) - X(AM,AC) - X(AM,AL) - X(AM,AP) - X(AM,AM) - X(AM,BA) - X(AM,CE) - X(AM,ES) - X(AM,GO) - X(AM,MA) - X(AM,MT) - X(AM,MS) - X(AM,MG) - X(AM,PA) - X(AM,PB) - X(AM,PR) - X(AM,PE) - X(AM,PI) - X(AM,RJ) - X(AM,RN) - X(AM,RS) - X(AM,RO) - X(AM,RR) - X(AM,SC) - X(AM,SP) - X(AM,SE) - X(AM,TO) - X(BA,AC) - X(BA,AL) - X(BA,AP) - X(BA,AM) - X(BA,BA) - X(BA,CE) - X(BA,ES) - X(BA,GO) - X(BA,MA) - X(BA,MT) - X(BA,MS) - X(BA,MG) - X(BA,PA) - X(BA,PB) - X(BA,PR) - X(BA,PE) - X(BA,PI) - X(BA,RJ) - X(BA,RN) - X(BA,RS) - X(BA,RO) - X(BA,RR) - X(BA,SC) - X(BA,SP) - X(BA,SE) - X(BA,TO) - X(CE,AC) - X(CE,AL) - X(CE,AP) - X(CE,AM) - X(CE,BA) - X(CE,CE) - X(CE,ES) - X(CE,GO) - X(CE,MA) - X(CE,MT) - X(CE,MS) - X(CE,MG) - X(CE,PA) - X(CE,PB) - X(CE,PR) - X(CE,PE) - X(CE,PI) - X(CE,RJ) - X(CE,RN) - X(CE,RS) - X(CE,RO) - X(CE,RR) - X(CE,SC) - X(CE,SP) - X(CE,SE) - X(CE,TO) - X(ES,AC) - X(ES,AL) - X(ES,AP) - X(ES,AM) - X(ES,BA) - X(ES,CE) - X(ES,ES) - X(ES,GO) - X(ES,MA) - X(ES,MT) - X(ES,MS) - X(ES,MG) - X(ES,PA) - X(ES,PB) - X(ES,PR) - X(ES,PE) - X(ES,PI) - X(ES,RJ) - X(ES,RN) - X(ES,RS) - X(ES,RO) - X(ES,RR) - X(ES,SC) - X(ES,SP) - X(ES,SE) - X(ES,TO) - X(GO,AC) - X(GO,AL) - X(GO,AP) - X(GO,AM) - X(GO,BA) - X(GO,CE) - X(GO,ES) - X(GO,GO) - X(GO,MA) - X(GO,MT) - X(GO,MS) - X(GO,MG) - X(GO,PA) - X(GO,PB) - X(GO,PR) - X(GO,PE) - X(GO,PI) - X(GO,RJ) - X(GO,RN) - X(GO,RS) - X(GO,RO) - X(GO,RR) - X(GO,SC) - X(GO,SP) - X(GO,SE) - X(GO,TO) - X(MA,AC) - X(MA,AL) - X(MA,AP) - X(MA,AM) - X(MA,BA) - X(MA,CE) - X(MA,ES) - X(MA,GO) - X(MA,MA) - X(MA,MT) - X(MA,MS) - X(MA,MG) - X(MA,PA) - X(MA,PB) - X(MA,PR) - X(MA,PE) - X(MA,PI) - X(MA,RJ) - X(MA,RN) - X(MA,RS) - X(MA,RO) - X(MA,RR) - X(MA,SC) - X(MA,SP) - X(MA,SE) - X(MA,TO) - X(MT,AC) - X(MT,AL) - X(MT,AP) - X(MT,AM) - X(MT,BA) - X(MT,CE) - X(MT,ES) - X(MT,GO) - X(MT,MA) - X(MT,MT) - X(MT,MS) - X(MT,MG) - X(MT,PA) - X(MT,PB) - X(MT,PR) - X(MT,PE) - X(MT,PI) - X(MT,RJ) - X(MT,RN) - X(MT,RS) - X(MT,RO) - X(MT,RR) - X(MT,SC) - X(MT,SP) - X(MT,SE) - X(MT,TO) - X(MS,AC) - X(MS,AL) - X(MS,AP) - X(MS,AM) - X(MS,BA) - X(MS,CE) - X(MS,ES) - X(MS,GO) - X(MS,MA) - X(MS,MT) - X(MS,MS) - X(MS,MG) - X(MS,PA) - X(MS,PB) - X(MS,PR) - X(MS,PE) - X(MS,PI) - X(MS,RJ) - X(MS,RN) - X(MS,RS) - X(MS,RO) - X(MS,RR) - X(MS,SC) - X(MS,SP) - X(MS,SE) - X(MS,TO) - X(MG,AC) - X(MG,AL) - X(MG,AP) - X(MG,AM) - X(MG,BA) - X(MG,CE) - X(MG,ES) - X(MG,GO) - X(MG,MA) - X(MG,MT) - X(MG,MS) - X(MG,MG) - X(MG,PA) - X(MG,PB) - X(MG,PR) - X(MG,PE) - X(MG,PI) - X(MG,RJ) - X(MG,RN) - X(MG,RS) - X(MG,RO) - X(MG,RR) - X(MG,SC) - X(MG,SP) - X(MG,SE) - X(MG,TO) - X(PA,AC) - X(PA,AL) - X(PA,AP) - X(PA,AM) - X(PA,BA) - X(PA,CE) - X(PA,ES) - X(PA,GO) - X(PA,MA) - X(PA,MT) - X(PA,MS) - X(PA,MG) - X(PA,PA) - X(PA,PB) - X(PA,PR) - X(PA,PE) - X(PA,PI) - X(PA,RJ) - X(PA,RN) - X(PA,RS) - X(PA,RO) - X(PA,RR) - X(PA,SC) - X(PA,SP) - X(PA,SE) - X(PA,TO) - X(PB,AC) - X(PB,AL) - X(PB,AP) - X(PB,AM) - X(PB,BA) - X(PB,CE) - X(PB,ES) - X(PB,GO) - X(PB,MA) - X(PB,MT) - X(PB,MS) - X(PB,MG) - X(PB,PA) - X(PB,PB) - X(PB,PR) - X(PB,PE) - X(PB,PI) - X(PB,RJ) - X(PB,RN) - X(PB,RS) - X(PB,RO) - X(PB,RR) - X(PB,SC) - X(PB,SP) - X(PB,SE) - X(PB,TO) - X(PR,AC) - X(PR,AL) - X(PR,AP) - X(PR,AM) - X(PR,BA) - X(PR,CE) - X(PR,ES) - X(PR,GO) - X(PR,MA) - X(PR,MT) - X(PR,MS) - X(PR,MG) - X(PR,PA) - X(PR,PB) - X(PR,PR) - X(PR,PE) - X(PR,PI) - X(PR,RJ) - X(PR,RN) - X(PR,RS) - X(PR,RO) - X(PR,RR) - X(PR,SC) - X(PR,SP) - X(PR,SE) - X(PR,TO) - X(PE,AC) - X(PE,AL) - X(PE,AP) - X(PE,AM) - X(PE,BA) - X(PE,CE) - X(PE,ES) - X(PE,GO) - X(PE,MA) - X(PE,MT) - X(PE,MS) - X(PE,MG) - X(PE,PA) - X(PE,PB) - X(PE,PR) - X(PE,PE) - X(PE,PI) - X(PE,RJ) - X(PE,RN) - X(PE,RS) - X(PE,RO) - X(PE,RR) - X(PE,SC) - X(PE,SP) - X(PE,SE) - X(PE,TO) - X(PI,AC) - X(PI,AL) - X(PI,AP) - X(PI,AM) - X(PI,BA) - X(PI,CE) - X(PI,ES) - X(PI,GO) - X(PI,MA) - X(PI,MT) - X(PI,MS) - X(PI,MG) - X(PI,PA) - X(PI,PB) - X(PI,PR) - X(PI,PE) - X(PI,PI) - X(PI,RJ) - X(PI,RN) - X(PI,RS) - X(PI,RO) - X(PI,RR) - X(PI,SC) - X(PI,SP) - X(PI,SE) - X(PI,TO) - X(RJ,AC) - X(RJ,AL) - X(RJ,AP) - X(RJ,AM) - X(RJ,BA) - X(RJ,CE) - X(RJ,ES) - X(RJ,GO) - X(RJ,MA) - X(RJ,MT) - X(RJ,MS) - X(RJ,MG) - X(RJ,PA) - X(RJ,PB) - X(RJ,PR) - X(RJ,PE) - X(RJ,PI) - X(RJ,RJ) - X(RJ,RN) - X(RJ,RS) - X(RJ,RO) - X(RJ,RR) - X(RJ,SC) - X(RJ,SP) - X(RJ,SE) - X(RJ,TO) - X(RN,AC) - X(RN,AL) - X(RN,AP) - X(RN,AM) - X(RN,BA) - X(RN,CE) - X(RN,ES) - X(RN,GO) - X(RN,MA) - X(RN,MT) - X(RN,MS) - X(RN,MG) - X(RN,PA) - X(RN,PB) - X(RN,PR) - X(RN,PE) - X(RN,PI) - X(RN,RJ) - X(RN,RN) - X(RN,RS) - X(RN,RO) - X(RN,RR) - X(RN,SC) - X(RN,SP) - X(RN,SE) - X(RN,TO) - X(RS,AC) - X(RS,AL) - X(RS,AP) - X(RS,AM) - X(RS,BA) - X(RS,CE) - X(RS,ES) - X(RS,GO) - X(RS,MA) - X(RS,MT) - X(RS,MS) - X(RS,MG) - X(RS,PA) - X(RS,PB) - X(RS,PR) - X(RS,PE) - X(RS,PI) - X(RS,RJ) - X(RS,RN) - X(RS,RS) - X(RS,RO) - X(RS,RR) - X(RS,SC) - X(RS,SP) - X(RS,SE) - X(RS,TO) - X(RO,AC) - X(RO,AL) - X(RO,AP) - X(RO,AM) - X(RO,BA) - X(RO,CE) - X(RO,ES) - X(RO,GO) - X(RO,MA) - X(RO,MT) - X(RO,MS) - X(RO,MG) - X(RO,PA) - X(RO,PB) - X(RO,PR) - X(RO,PE) - X(RO,PI) - X(RO,RJ) - X(RO,RN) - X(RO,RS) - X(RO,RO) - X(RO,RR) - X(RO,SC) - X(RO,SP) - X(RO,SE) - X(RO,TO) - X(RR,AC) - X(RR,AL) - X(RR,AP) - X(RR,AM) - X(RR,BA) - X(RR,CE) - X(RR,ES) - X(RR,GO) - X(RR,MA) - X(RR,MT) - X(RR,MS) - X(RR,MG) - X(RR,PA) - X(RR,PB) - X(RR,PR) - X(RR,PE) - X(RR,PI) - X(RR,RJ) - X(RR,RN) - X(RR,RS) - X(RR,RO) - X(RR,RR) - X(RR,SC) - X(RR,SP) - X(RR,SE) - X(RR,TO) - X(SC,AC) - X(SC,AL) - X(SC,AP) - X(SC,AM) - X(SC,BA) - X(SC,CE) - X(SC,ES) - X(SC,GO) - X(SC,MA) - X(SC,MT) - X(SC,MS) - X(SC,MG) - X(SC,PA) - X(SC,PB) - X(SC,PR) - X(SC,PE) - X(SC,PI) - X(SC,RJ) - X(SC,RN) - X(SC,RS) - X(SC,RO) - X(SC,RR) - X(SC,SC) - X(SC,SP) - X(SC,SE) - X(SC,TO) - X(SP,AC) - X(SP,AL) - X(SP,AP) - X(SP,AM) - X(SP,BA) - X(SP,CE) - X(SP,ES) - X(SP,GO) - X(SP,MA) - X(SP,MT) - X(SP,MS) - X(SP,MG) - X(SP,PA) - X(SP,PB) - X(SP,PR) - X(SP,PE) - X(SP,PI) - X(SP,RJ) - X(SP,RN) - X(SP,RS) - X(SP,RO) - X(SP,RR) - X(SP,SC) - X(SP,SP) - X(SP,SE) - X(SP,TO) - X(SE,AC) - X(SE,AL) - X(SE,AP) - X(SE,AM) - X(SE,BA) - X(SE,CE) - X(SE,ES) - X(SE,GO) - X(SE,MA) - X(SE,MT) - X(SE,MS) - X(SE,MG) - X(SE,PA) - X(SE,PB) - X(SE,PR) - X(SE,PE) - X(SE,PI) - X(SE,RJ) - X(SE,RN) - X(SE,RS) - X(SE,RO) - X(SE,RR) - X(SE,SC) - X(SE,SP) - X(SE,SE) - X(SE,TO) - X(TO,AC) - X(TO,AL) - X(TO,AP) - X(TO,AM) - X(TO,BA) - X(TO,CE) - X(TO,ES) - X(TO,GO) - X(TO,MA) - X(TO,MT) - X(TO,MS) - X(TO,MG) - X(TO,PA) - X(TO,PB) - X(TO,PR) - X(TO,PE) - X(TO,PI) - X(TO,RJ) - X(TO,RN) - X(TO,RS) - X(TO,RO) - X(TO,RR) - X(TO,SC) - X(TO,SP) - X(TO,SE) - X(TO,TO) =E= 0 ; (LHS = 0)
+     
+
+---- constr1  =L=  capacity constraint & logical constraint
+
+constr1(AC)..  - 250000*Y(AC) + X(AC,AC) + X(AC,AL) + X(AC,AP) + X(AC,AM) + X(AC,BA) + X(AC,CE) + X(AC,ES) + X(AC,GO) + X(AC,MA) + X(AC,MT) + X(AC,MS) + X(AC,MG) + X(AC,PA) + X(AC,PB) + X(AC,PR) + X(AC,PE) + X(AC,PI) + X(AC,RJ) + X(AC,RN) + X(AC,RS) + X(AC,RO) + X(AC,RR) + X(AC,SC) + X(AC,SP) + X(AC,SE) + X(AC,TO) =L= 0 ; (LHS = 0)
+     
+constr1(AL)..  - 250000*Y(AL) + X(AL,AC) + X(AL,AL) + X(AL,AP) + X(AL,AM) + X(AL,BA) + X(AL,CE) + X(AL,ES) + X(AL,GO) + X(AL,MA) + X(AL,MT) + X(AL,MS) + X(AL,MG) + X(AL,PA) + X(AL,PB) + X(AL,PR) + X(AL,PE) + X(AL,PI) + X(AL,RJ) + X(AL,RN) + X(AL,RS) + X(AL,RO) + X(AL,RR) + X(AL,SC) + X(AL,SP) + X(AL,SE) + X(AL,TO) =L= 0 ; (LHS = 0)
+     
+constr1(AP)..  - 250000*Y(AP) + X(AP,AC) + X(AP,AL) + X(AP,AP) + X(AP,AM) + X(AP,BA) + X(AP,CE) + X(AP,ES) + X(AP,GO) + X(AP,MA) + X(AP,MT) + X(AP,MS) + X(AP,MG) + X(AP,PA) + X(AP,PB) + X(AP,PR) + X(AP,PE) + X(AP,PI) + X(AP,RJ) + X(AP,RN) + X(AP,RS) + X(AP,RO) + X(AP,RR) + X(AP,SC) + X(AP,SP) + X(AP,SE) + X(AP,TO) =L= 0 ; (LHS = 0)
+     
+REMAINING 23 ENTRIES SKIPPED
+
+
+---- constr2  =L=  victims' needs constraint
+
+constr2(AC)..  X(AC,AC) + X(AL,AC) + X(AP,AC) + X(AM,AC) + X(BA,AC) + X(CE,AC) + X(ES,AC) + X(GO,AC) + X(MA,AC) + X(MT,AC) + X(MS,AC) + X(MG,AC) + X(PA,AC) + X(PB,AC) + X(PR,AC) + X(PE,AC) + X(PI,AC) + X(RJ,AC) + X(RN,AC) + X(RS,AC) + X(RO,AC) + X(RR,AC) + X(SC,AC) + X(SP,AC) + X(SE,AC) + X(TO,AC) =L= 21050 ; (LHS = 0)
+     
+constr2(AL)..  X(AC,AL) + X(AL,AL) + X(AP,AL) + X(AM,AL) + X(BA,AL) + X(CE,AL) + X(ES,AL) + X(GO,AL) + X(MA,AL) + X(MT,AL) + X(MS,AL) + X(MG,AL) + X(PA,AL) + X(PB,AL) + X(PR,AL) + X(PE,AL) + X(PI,AL) + X(RJ,AL) + X(RN,AL) + X(RS,AL) + X(RO,AL) + X(RR,AL) + X(SC,AL) + X(SP,AL) + X(SE,AL) + X(TO,AL) =L= 23339 ; (LHS = 0)
+     
+constr2(AP)..  X(AC,AP) + X(AL,AP) + X(AP,AP) + X(AM,AP) + X(BA,AP) + X(CE,AP) + X(ES,AP) + X(GO,AP) + X(MA,AP) + X(MT,AP) + X(MS,AP) + X(MG,AP) + X(PA,AP) + X(PB,AP) + X(PR,AP) + X(PE,AP) + X(PI,AP) + X(RJ,AP) + X(RN,AP) + X(RS,AP) + X(RO,AP) + X(RR,AP) + X(SC,AP) + X(SP,AP) + X(SE,AP) + X(TO,AP) =L= 1186 ; (LHS = 0)
+     
+REMAINING 23 ENTRIES SKIPPED
+
+
+---- constr3  =L=  investment level
+
+constr3..  40000*Y(AC) + 40000*Y(AL) + 40000*Y(AP) + 40000*Y(AM) + 40000*Y(BA) + 40000*Y(CE) + 40000*Y(ES) + 40000*Y(GO) + 40000*Y(MA) + 40000*Y(MT) + 40000*Y(MS) + 40000*Y(MG) + 40000*Y(PA) + 40000*Y(PB) + 40000*Y(PR) + 40000*Y(PE) + 40000*Y(PI) + 40000*Y(RJ) + 40000*Y(RN) + 40000*Y(RS) + 40000*Y(RO) + 40000*Y(RR) + 40000*Y(SC) + 40000*Y(SP) + 40000*Y(SE) + 40000*Y(TO) + 997.954*X(AC,AL) + 894.614*X(AC,AP) + 280.312*X(AC,AM) + 908.074*X(AC,BA) + 1042.55*X(AC,CE) + 812.784*X(AC,ES) + 579.304*X(AC,GO) + 847.642*X(AC,MA) + 393.26*X(AC,MT) + 533.66*X(AC,MS) + 710.762*X(AC,MG) + 798.024*X(AC,PA) + 1069.466*X(AC,PB) + 733.022*X(AC,PR) + 1046.352*X(AC,PE) + 829.688*X(AC,PI) + 778.03*X(AC,RJ) + 1103.218*X(AC,RN) + 880.84*X(AC,RS) + 102.894*X(AC,RO) + 436.604*X(AC,RR) + 792.874*X(AC,SC) + 699.912*X(AC,SP) + 946.776*X(AC,SE) + 693.994*X(AC,TO) + 998.54*X(AL,AC) + 568.824*X(AL,AP) + 1073.256*X(AL,AM) + 116.062*X(AL,BA) + 189.152*X(AL,CE) + 323.516*X(AL,ES) + 418.676*X(AL,GO) + 313.622*X(AL,MA) + 604.706*X(AL,MT) + 564.388*X(AL,MS) + 360.45*X(AL,MG) + 408.694*X(AL,PA) + 75.152*X(AL,PB) + 557.136*X(AL,PR) + 52.036*X(AL,PE) + 227.59*X(AL,PI) + 415.622*X(AL,RJ) + 108.904*X(AL,RN) + 702.958*X(AL,RS) + 895.836*X(AL,RO) + 1229.548*X(AL,RR) + 614.994*X(AL,SC) + 477.372*X(AL,SP) + 54.12*X(AL,SE) + 378.122*X(AL,TO) + 895.27*X(AP,AC) + 568.756*X(AP,AL) + 614.518*X(AP,AM) + 586*X(AP,BA) + 419.784*X(AP,CE) + 705.6*X(AP,ES) + 463.706*X(AP,GO) + 227.784*X(AP,MA) + 468.246*X(AP,MT) + 609.072*X(AP,MS) + 603.242*X(AP,MG) + 105.144*X(AP,PA) + 569.702*X(AP,PB) + 727.204*X(AP,PR) + 566.354*X(AP,PE) + 294.362*X(AP,PI) + 688.524*X(AP,RJ) + 521.1*X(AP,RN) + 873.028*X(AP,RS) + 791.854*X(AP,RO) + 459.102*X(AP,RR) + 785.062*X(AP,SC) + 650.446*X(AP,SP) + 567.468*X(AP,SE) + 312.218*X(AP,TO) + 281.182*X(AM,AC) + 1074.148*X(AM,AL) + 614.442*X(AM,AP) + 984.266*X(AM,BA) + 1118.742*X(AM,CE) + 888.976*X(AM,ES) + 655.498*X(AM,GO) + 923.834*X(AM,MA) + 469.452*X(AM,MT) + 609.852*X(AM,MS) + 786.956*X(AM,MG) + 874.216*X(AM,PA) + 1145.658*X(AM,PB) + 809.216*X(AM,PR) + 1122.544*X(AM,PE) + 905.88*X(AM,PI) + 854.222*X(AM,RJ) + 1179.412*X(AM,RN) + 957.032*X(AM,RS) + 177.768*X(AM,RO) + 156.432*X(AM,RR) + 869.068*X(AM,SC) + 776.104*X(AM,SP) + 1022.97*X(AM,SE) + 770.186*X(AM,TO) + 908.844*X(BA,AC) + 119.936*X(BA,AL) + 586.036*X(BA,AP) + 983.56*X(BA,AM) + 241.07*X(BA,CE) + 233.878*X(BA,ES) + 328.98*X(BA,GO) + 330.834*X(BA,MA) + 515.01*X(BA,MT) + 474.692*X(BA,MS) + 270.754*X(BA,MG) + 425.906*X(BA,PA) + 191.448*X(BA,PB) + 467.44*X(BA,PR) + 168.332*X(BA,PE) + 244.802*X(BA,PI) + 325.926*X(BA,RJ) + 225.2*X(BA,RN) + 613.262*X(BA,RS) + 806.14*X(BA,RO) + 1139.852*X(BA,RR) + 525.298*X(BA,SC) + 387.676*X(BA,SP) + 68.758*X(BA,SE) + 288.426*X(BA,TO) + 1042.706*X(CE,AC) + 206.064*X(CE,AL) + 420.216*X(CE,AP) + 1117.422*X(CE,AM) + 241.092*X(CE,BA) + 435.004*X(CE,ES) + 462.842*X(CE,GO) + 179.512*X(CE,MA) + 648.872*X(CE,MT) + 630.558*X(CE,MS) + 465.56*X(CE,MG) + 307.57*X(CE,PA) + 133.748*X(CE,PB) + 662.246*X(CE,PR) + 154.576*X(CE,PE) + 118.414*X(CE,PI) + 520.732*X(CE,RJ) + 103.248*X(CE,RN) + 808.068*X(CE,RS) + 940.002*X(CE,RO) + 1273.714*X(CE,RR) + 720.104*X(CE,SC) + 582.482*X(CE,SP) + 222.558*X(CE,SE) + 339.738*X(CE,TO) + 814.206*X(ES,AC) + 323.484*X(ES,AL) + 706.016*X(ES,AP) + 888.922*X(ES,AM) + 233.682*X(ES,BA) + 434.446*X(ES,CE) + 277.96*X(ES,GO) + 524.21*X(ES,MA) + 420.372*X(ES,MT) + 388.87*X(ES,MS) + 103.478*X(ES,MG) + 619.284*X(ES,PA) + 394.996*X(ES,PB) + 269.656*X(ES,PR) + 371.88*X(ES,PE) + 438.18*X(ES,PI) + 103.412*X(ES,RJ) + 428.748*X(ES,RN) + 415.478*X(ES,RS) + 711.502*X(ES,RO) + 1045.214*X(ES,RR) + 327.512*X(ES,SC) + 188.02*X(ES,SP) + 272.306*X(ES,SE) + 407.73*X(ES,TO) + 580.03*X(GO,AC) + 418.798*X(GO,AL) + 463.894*X(GO,AP) + 654.744*X(GO,AM) + 328.918*X(GO,BA) + 463.394*X(GO,CE) + 277.75*X(GO,ES) + 403.484*X(GO,MA) + 186.196*X(GO,MT) + 167.882*X(GO,MS) + 175.392*X(GO,MG) + 392.656*X(GO,PA) + 490.31*X(GO,PB) + 264.044*X(GO,PR) + 467.194*X(GO,PE) + 376.246*X(GO,PI) + 267.656*X(GO,RJ) + 524.062*X(GO,RN) + 409.866*X(GO,RS) + 477.324*X(GO,RO) + 811.036*X(GO,RR) + 321.902*X(GO,SC) + 187.286*X(GO,SP) + 367.62*X(GO,SE) + 165.608*X(GO,TO) + 849.284*X(MA,AC) + 313.986*X(MA,AL) + 227.95*X(MA,AP) + 924*X(MA,AM) + 331.23*X(MA,BA) + 179.304*X(MA,CE) + 525.144*X(MA,ES) + 403.616*X(MA,GO) + 539.062*X(MA,MT) + 570.568*X(MA,MS) + 555.7*X(MA,MG) + 115.306*X(MA,PA) + 311.12*X(MA,PB) + 667.114*X(MA,PR) + 331.946*X(MA,PE) + 86.914*X(MA,PI) + 610.87*X(MA,RJ) + 280.618*X(MA,RN) + 812.936*X(MA,RS) + 746.58*X(MA,RO) + 1080.292*X(MA,RR) + 724.972*X(MA,SC) + 590.356*X(MA,SP) + 312.698*X(MA,SE) + 252.128*X(MA,TO) + 394.266*X(MT,AC) + 605.354*X(MT,AL) + 468.296*X(MT,AP) + 468.982*X(MT,AM) + 515.474*X(MT,BA) + 649.95*X(MT,CE) + 420.182*X(MT,ES) + 186.704*X(MT,GO) + 539.268*X(MT,MA) + 141.058*X(MT,MS) + 318.162*X(MT,MG) + 499.854*X(MT,PA) + 676.866*X(MT,PB) + 340.422*X(MT,PR) + 653.75*X(MT,PE) + 509.248*X(MT,PI) + 385.43*X(MT,RJ) + 710.618*X(MT,RN) + 488.24*X(MT,RS) + 291.562*X(MT,RO) + 625.274*X(MT,RR) + 400.274*X(MT,SC) + 307.31*X(MT,SP) + 554.176*X(MT,SE) + 301.392*X(MT,TO) + 534.348*X(MS,AC) + 674.03*X(MS,AL) + 608.414*X(MS,AP) + 609.062*X(MS,AM) + 584.15*X(MS,BA) + 631.016*X(MS,CE) + 390.282*X(MS,ES) + 167.77*X(MS,GO) + 570.326*X(MS,MA) + 140.514*X(MS,MT) + 314.786*X(MS,MG) + 559.5*X(MS,PA) + 745.542*X(MS,PB) + 200.04*X(MS,PR) + 722.426*X(MS,PE) + 543.868*X(MS,PI) + 288.25*X(MS,RJ) + 779.294*X(MS,RN) + 347.858*X(MS,RS) + 431.644*X(MS,RO) + 765.354*X(MS,RR) + 259.892*X(MS,SC) + 201.822*X(MS,SP) + 622.852*X(MS,SE) + 332.45*X(MS,TO) + 711.6*X(MG,AC) + 360.622*X(MG,AL) + 603.498*X(MG,AP) + 786.314*X(MG,AM) + 270.742*X(MG,BA) + 465.926*X(MG,CE) + 103.4*X(MG,ES) + 175.442*X(MG,GO) + 555.69*X(MG,MA) + 317.766*X(MG,MT) + 314.696*X(MG,MS) + 532.26*X(MG,PA) + 432.134*X(MG,PB) + 197.556*X(MG,PR) + 409.02*X(MG,PE) + 469.658*X(MG,PI) + 87.75*X(MG,RJ) + 465.886*X(MG,RN) + 343.38*X(MG,RS) + 608.896*X(MG,RO) + 942.606*X(MG,RR) + 255.414*X(MG,SC) + 117.792*X(MG,SP) + 309.444*X(MG,SE) + 305.212*X(MG,TO) + 799.042*X(PA,AC) + 408.864*X(PA,AL) + 105.268*X(PA,AP) + 873.758*X(PA,AM) + 426.108*X(PA,BA) + 307.216*X(PA,CE) + 620.022*X(PA,ES) + 392.316*X(PA,GO) + 115.216*X(PA,MA) + 499.06*X(PA,MT) + 559.27*X(PA,MS) + 531.852*X(PA,MG) + 409.81*X(PA,PB) + 655.816*X(PA,PR) + 406.462*X(PA,PE) + 181.794*X(PA,PI) + 617.136*X(PA,RJ) + 408.532*X(PA,RN) + 801.638*X(PA,RS) + 696.338*X(PA,RO) + 561.44*X(PA,RR) + 713.674*X(PA,SC) + 579.058*X(PA,SP) + 407.576*X(PA,SE) + 240.83*X(PA,TO) + 1067.46*X(PB,AC) + 74.844*X(PB,AL) + 570.254*X(PB,AP) + 1142.176*X(PB,AM) + 184.982*X(PB,BA) + 133.746*X(PB,CE) + 392.436*X(PB,ES) + 487.596*X(PB,GO) + 315.122*X(PB,MA) + 673.626*X(PB,MT) + 633.308*X(PB,MS) + 429.37*X(PB,MG) + 410.124*X(PB,PA) + 626.056*X(PB,PR) + 23.354*X(PB,PE) + 229.02*X(PB,PI) + 484.542*X(PB,RJ) + 36.024*X(PB,RN) + 771.878*X(PB,RS) + 964.756*X(PB,RO) + 1298.466*X(PB,RR) + 683.914*X(PB,SC) + 546.292*X(PB,SP) + 123.038*X(PB,SE) + 447.042*X(PB,TO) + 733.608*X(PR,AC) + 558.726*X(PR,AL) + 727.938*X(PR,AP) + 808.324*X(PR,AM) + 468.846*X(PR,BA) + 664.03*X(PR,CE) + 270.898*X(PR,ES) + 264.63*X(PR,GO) + 667.528*X(PR,MA) + 339.774*X(PR,MT) + 200.09*X(PR,MS) + 199.482*X(PR,MG) + 656.7*X(PR,PA) + 630.238*X(PR,PB) + 607.122*X(PR,PE) + 606.37*X(PR,PI) + 168.866*X(PR,RJ) + 663.99*X(PR,RN) + 148.514*X(PR,RS) + 630.904*X(PR,RO) + 964.614*X(PR,RR) + 60.548*X(PR,SC) + 80.308*X(PR,SP) + 507.548*X(PR,SE) + 429.652*X(PR,TO) + 1044.222*X(PE,AC) + 51.606*X(PE,AL) + 566.57*X(PE,AP) + 1118.938*X(PE,AM) + 161.744*X(PE,BA) + 154.658*X(PE,CE) + 369.198*X(PE,ES) + 464.358*X(PE,GO) + 336.034*X(PE,MA) + 650.388*X(PE,MT) + 610.068*X(PE,MS) + 406.132*X(PE,MG) + 406.44*X(PE,PA) + 23.184*X(PE,PB) + 602.818*X(PE,PR) + 225.336*X(PE,PI) + 461.304*X(PE,RJ) + 56.936*X(PE,RN) + 748.64*X(PE,RS) + 941.518*X(PE,RO) + 1275.228*X(PE,RR) + 660.674*X(PE,SC) + 523.054*X(PE,SP) + 99.8*X(PE,SE) + 423.804*X(PE,TO) + 830.878*X(PI,AC) + 227.64*X(PI,AL) + 294.174*X(PI,AP) + 905.592*X(PI,AM) + 244.884*X(PI,BA) + 118.444*X(PI,CE) + 438.798*X(PI,ES) + 376.196*X(PI,GO) + 86.456*X(PI,MA) + 508.818*X(PI,MT) + 543.912*X(PI,MS) + 469.354*X(PI,MG) + 181.528*X(PI,PA) + 228.586*X(PI,PB) + 606.78*X(PI,PR) + 225.236*X(PI,PE) + 524.524*X(PI,RJ) + 219.822*X(PI,RN) + 752.602*X(PI,RS) + 728.174*X(PI,RO) + 1061.884*X(PI,RR) + 664.638*X(PI,SC) + 530.022*X(PI,SP) + 226.352*X(PI,SE) + 221.884*X(PI,TO) + 778.386*X(RJ,AC) + 415.43*X(RJ,AL) + 689.112*X(RJ,AP) + 853.102*X(RJ,AM) + 325.55*X(RJ,BA) + 520.732*X(RJ,CE) + 111.298*X(RJ,ES) + 268.018*X(RJ,GO) + 610.496*X(RJ,MA) + 384.552*X(RJ,MT) + 286.916*X(RJ,MS) + 87.902*X(RJ,MG) + 617.874*X(RJ,PA) + 486.942*X(RJ,PB) + 167.7*X(RJ,PR) + 463.826*X(RJ,PE) + 524.466*X(RJ,PI) + 520.694*X(RJ,RN) + 313.522*X(RJ,RS) + 675.682*X(RJ,RO) + 1009.392*X(RJ,RR) + 225.558*X(RJ,SC) + 86.066*X(RJ,SP) + 364.252*X(RJ,SE) + 390.826*X(RJ,TO) + 1100.996*X(RN,AC) + 108.38*X(RN,AL) + 525.16*X(RN,AP) + 1175.712*X(RN,AM) + 218.518*X(RN,BA) + 103.082*X(RN,CE) + 425.972*X(RN,ES) + 521.132*X(RN,GO) + 284.458*X(RN,MA) + 707.162*X(RN,MT) + 666.844*X(RN,MS) + 462.906*X(RN,MG) + 412.514*X(RN,PA) + 36.062*X(RN,PB) + 659.592*X(RN,PR) + 56.89*X(RN,PE) + 223.186*X(RN,PI) + 518.078*X(RN,RJ) + 805.414*X(RN,RS) + 998.292*X(RN,RO) + 1332.004*X(RN,RR) + 717.45*X(RN,SC) + 579.828*X(RN,SP) + 156.576*X(RN,SE) + 480.578*X(RN,TO) + 818.364*X(RS,AC) + 704.21*X(RS,AL) + 873.42*X(RS,AP) + 893.08*X(RS,AM) + 614.328*X(RS,BA) + 809.512*X(RS,CE) + 416.38*X(RS,ES) + 410.112*X(RS,GO) + 813.01*X(RS,MA) + 424.53*X(RS,MT) + 284.846*X(RS,MS) + 344.964*X(RS,MG) + 802.182*X(RS,PA) + 775.72*X(RS,PB) + 148.258*X(RS,PR) + 752.606*X(RS,PE) + 751.852*X(RS,PI) + 314.348*X(RS,RJ) + 809.474*X(RS,RN) + 715.66*X(RS,RO) + 1049.37*X(RS,RR) + 91.394*X(RS,SC) + 225.79*X(RS,SP) + 653.032*X(RS,SE) + 575.134*X(RS,TO) + 103.46*X(RO,AC) + 896.414*X(RO,AL) + 791.86*X(RO,AP) + 177.558*X(RO,AM) + 806.534*X(RO,BA) + 941.008*X(RO,CE) + 711.242*X(RO,ES) + 477.764*X(RO,GO) + 746.1*X(RO,MA) + 291.718*X(RO,MT) + 432.118*X(RO,MS) + 609.222*X(RO,MG) + 696.482*X(RO,PA) + 967.926*X(RO,PB) + 631.482*X(RO,PR) + 944.81*X(RO,PE) + 728.146*X(RO,PI) + 676.49*X(RO,RJ) + 1001.678*X(RO,RN) + 779.298*X(RO,RS) + 333.85*X(RO,RR) + 691.334*X(RO,SC) + 598.37*X(RO,SP) + 845.236*X(RO,SE) + 592.452*X(RO,TO) + 437.192*X(RR,AC) + 1230.156*X(RR,AL) + 459.124*X(RR,AP) + 156.44*X(RR,AM) + 1140.276*X(RR,BA) + 1274.752*X(RR,CE) + 1044.984*X(RR,ES) + 811.506*X(RR,GO) + 1079.842*X(RR,MA) + 625.462*X(RR,MT) + 765.86*X(RR,MS) + 942.964*X(RR,MG) + 561.318*X(RR,PA) + 1301.668*X(RR,PB) + 965.224*X(RR,PR) + 1278.552*X(RR,PE) + 1061.888*X(RR,PI) + 1010.232*X(RR,RJ) + 1335.42*X(RR,RN) + 1113.04*X(RR,RS) + 333.776*X(RR,RO) + 1025.076*X(RR,SC) + 932.112*X(RR,SP) + 1178.978*X(RR,SE) + 926.194*X(RR,TO) + 793.65*X(SC,AC) + 616.374*X(SC,AL) + 785.586*X(SC,AP) + 868.364*X(SC,AM) + 526.494*X(SC,BA) + 721.676*X(SC,CE) + 328.544*X(SC,ES) + 322.276*X(SC,GO) + 725.174*X(SC,MA) + 399.816*X(SC,MT) + 260.132*X(SC,MS) + 257.13*X(SC,MG) + 714.346*X(SC,PA) + 687.886*X(SC,PB) + 60.424*X(SC,PR) + 664.77*X(SC,PE) + 664.016*X(SC,PI) + 226.512*X(SC,RJ) + 721.638*X(SC,RN) + 91.344*X(SC,RS) + 690.946*X(SC,RO) + 1024.656*X(SC,RR) + 137.956*X(SC,SP) + 565.196*X(SC,SE) + 487.298*X(SC,TO) + 700.678*X(SP,AC) + 477.084*X(SP,AL) + 651.282*X(SP,AP) + 775.392*X(SP,AM) + 387.202*X(SP,BA) + 582.386*X(SP,CE) + 189.254*X(SP,ES) + 187.972*X(SP,GO) + 590.87*X(SP,MA) + 306.844*X(SP,MT) + 201.862*X(SP,MS) + 117.838*X(SP,MG) + 580.044*X(SP,PA) + 548.594*X(SP,PB) + 80.888*X(SP,PR) + 525.48*X(SP,PE) + 529.714*X(SP,PI) + 87.222*X(SP,RJ) + 582.348*X(SP,RN) + 226.71*X(SP,RS) + 597.972*X(SP,RO) + 931.684*X(SP,RR) + 138.746*X(SP,SC) + 425.906*X(SP,SE) + 352.996*X(SP,TO) + 947.454*X(SE,AC) + 53.796*X(SE,AL) + 567.382*X(SE,AP) + 1022.17*X(SE,AM) + 64.976*X(SE,BA) + 222.416*X(SE,CE) + 272.43*X(SE,ES) + 367.59*X(SE,GO) + 312.18*X(SE,MA) + 553.62*X(SE,MT) + 513.302*X(SE,MS) + 309.364*X(SE,MG) + 407.252*X(SE,PA) + 125.306*X(SE,PB) + 506.05*X(SE,PR) + 102.192*X(SE,PE) + 226.15*X(SE,PI) + 364.536*X(SE,RJ) + 159.06*X(SE,RN) + 651.872*X(SE,RS) + 844.75*X(SE,RO) + 1178.462*X(SE,RR) + 563.908*X(SE,SC) + 426.286*X(SE,SP) + 327.036*X(SE,TO) + 694.864*X(TO,AC) + 378.42*X(TO,AL) + 312.572*X(TO,AP) + 769.58*X(TO,AM) + 288.54*X(TO,BA) + 339.93*X(TO,CE) + 407.48*X(TO,ES) + 165.584*X(TO,GO) + 252.162*X(TO,MA) + 301.03*X(TO,MT) + 332.538*X(TO,MS) + 305.12*X(TO,MG) + 241.334*X(TO,PA) + 449.932*X(TO,PB) + 429.084*X(TO,PR) + 426.816*X(TO,PE) + 222.142*X(TO,PI) + 390.402*X(TO,RJ) + 411.58*X(TO,RN) + 574.906*X(TO,RS) + 592.16*X(TO,RO) + 925.872*X(TO,RR) + 486.94*X(TO,SC) + 352.326*X(TO,SP) + 327.242*X(TO,SE) =L= 1000000 ; (LHS = 0)
+     
+
+---- constr4  =L=  maximum number of warehouses to set-up
+
+constr4..  Y(AC) + Y(AL) + Y(AP) + Y(AM) + Y(BA) + Y(CE) + Y(ES) + Y(GO) + Y(MA) + Y(MT) + Y(MS) + Y(MG) + Y(PA) + Y(PB) + Y(PR) + Y(PE) + Y(PI) + Y(RJ) + Y(RN) + Y(RS) + Y(RO) + Y(RR) + Y(SC) + Y(SP) + Y(SE) + Y(TO) =L= 20 ; (LHS = 0)
+     
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE LocationAllocation Using MIP From line 119
+
+
+---- Z  Optimal value
+
+Z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       of
+
+
+---- Y  Binary variable to indicate whether warehouse is set-up at location i
+
+Y(AC)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -250000       constr1(AC)
+    40000       constr3
+        1       constr4
+
+Y(AL)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -250000       constr1(AL)
+    40000       constr3
+        1       constr4
+
+Y(AP)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -250000       constr1(AP)
+    40000       constr3
+        1       constr4
+
+REMAINING 23 ENTRIES SKIPPED
+
+---- X  quantity of relief aid items shipped from i to j
+
+X(AC,AC)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       of
+        1       constr1(AC)
+        1       constr2(AC)
+
+X(AC,AL)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       of
+        1       constr1(AC)
+        1       constr2(AL)
+      997.954   constr3
+
+X(AC,AP)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       of
+        1       constr1(AC)
+        1       constr2(AP)
+      894.614   constr3
+
+REMAINING 673 ENTRIES SKIPPED
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE LocationAllocation Using MIP From line 119
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.000E+01, 1.000E+06] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 2.500E+05]
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE LocationAllocation Using MIP From line 119
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           5     SINGLE EQUATIONS           55
+BLOCKS OF VARIABLES           3     SINGLE VARIABLES          703
+NON ZERO ELEMENTS         2,757     DISCRETE VARIABLES         26
+
+
+GENERATION TIME      =        0.031 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE LocationAllocation Using MIP From line 119
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   LocationAllocation   OBJECTIVE  Z
+     TYPE    MIP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX                FROM LINE  119
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE          1653165.4915
+
+ RESOURCE USAGE, LIMIT          0.063 10000000000.000
+ ITERATION COUNT, LIMIT       139    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.01 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 0.59 Mb (peak 0.59 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.01 Mb (peak 0.06 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.06sec (det. 16.71 ticks)
+
+--- Returning a primal only solution to GAMS (marginals all set to NA).
+--- Fixing integer variables and solving final LP...
+
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.74 ticks)
+
+
+Proven optimal solution
+MIP Solution:      1653165.491500    (139 iterations, 0 nodes)
+Final Solve:       1653165.491500    (3 iterations)
+
+Best possible:     1653165.491500
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU of                  .              .              .             1.0000      
+
+  of  objective function
+
+---- EQU constr1  capacity constraint & logical constraint
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+AC        -INF      -228950.0000          .              .          
+AL        -INF      -222965.5085          .              .          
+AP        -INF             .              .             1.0000      
+AM        -INF       -80054.0000          .              .          
+BA        -INF      -185201.0000          .              .          
+CE        -INF      -164863.0000          .              .          
+ES        -INF      -186529.0000          .              .          
+GO        -INF             .              .             1.0000      
+MA        -INF       -13941.0000          .              .          
+MT        -INF             .              .             1.0000      
+MS        -INF      -241192.0000          .              .          
+MG        -INF      -164764.0000          .              .          
+PA        -INF      -197405.0000          .              .          
+PB        -INF      -210985.0000          .              .          
+PR        -INF      -193535.0000          .              .          
+PE        -INF      -127870.0000          .              .          
+PI        -INF      -173801.0000          .              .          
+RJ        -INF      -152889.0000          .              .          
+RN        -INF      -216859.0000          .              .          
+RS        -INF       -95403.0000          .              .          
+RO        -INF      -229999.0000          .              .          
+RR        -INF             .              .             1.0000      
+SC        -INF       -60900.0000          .              .          
+SP        -INF      -198729.0000          .              .          
+SE        -INF             .              .             1.0000      
+TO        -INF             .              .             1.0000      
+
+---- EQU constr2  victims' needs constraint
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+AC        -INF        21050.0000     21050.0000         1.0000      
+AL        -INF        23339.0000     23339.0000         1.0000      
+AP        -INF             .          1186.0000          .          
+AM        -INF       169946.0000    169946.0000         1.0000      
+BA        -INF        64799.0000     64799.0000         1.0000      
+CE        -INF        85137.0000     85137.0000         1.0000      
+ES        -INF        63471.0000     63471.0000         1.0000      
+GO        -INF             .          2546.0000          .          
+MA        -INF       236059.0000    236059.0000         1.0000      
+MT        -INF             .          5741.0000          .          
+MS        -INF         8808.0000      8808.0000         1.0000      
+MG        -INF        85236.0000     85236.0000         1.0000      
+PA        -INF        52595.0000     52595.0000         1.0000      
+PB        -INF        39015.0000     39015.0000         1.0000      
+PR        -INF        56465.0000     56465.0000         1.0000      
+PE        -INF       122130.0000    122130.0000         1.0000      
+PI        -INF        76199.0000     76199.0000         1.0000      
+RJ        -INF        97111.0000     97111.0000         1.0000      
+RN        -INF        33141.0000     33141.0000         1.0000      
+RS        -INF       154597.0000    154597.0000         1.0000      
+RO        -INF        20001.0000     20001.0000         1.0000      
+RR        -INF             .           456.0000          .          
+SC        -INF       189100.0000    189100.0000         1.0000      
+SP        -INF        51271.0000     51271.0000         1.0000      
+SE        -INF         3695.4915      5204.0000          .          
+TO        -INF             .           820.0000          .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU constr3           -INF      1000000.0000   1000000.0000         0.0185      
+---- EQU constr4           -INF           20.0000        20.0000          .          
+
+  constr3  investment level
+  constr4  maximum number of warehouses to set-up
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Z                 -INF      1653165.4915        +INF             .          
+
+  Z  Optimal value
+
+---- VAR Y  Binary variable to indicate whether warehouse is set-up at location i
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+AC          .             1.0000         1.0000      -739.0983      
+AL          .             1.0000         1.0000      -739.0983      
+AP          .              .             1.0000    249260.9017      
+AM          .             1.0000         1.0000      -739.0983      
+BA          .             1.0000         1.0000      -739.0983      
+CE          .             1.0000         1.0000      -739.0983      
+ES          .             1.0000         1.0000      -739.0983      
+GO          .              .             1.0000    249260.9017      
+MA          .             1.0000         1.0000      -739.0983      
+MT          .              .             1.0000    249260.9017      
+MS          .             1.0000         1.0000      -739.0983      
+MG          .             1.0000         1.0000      -739.0983      
+PA          .             1.0000         1.0000      -739.0983      
+PB          .             1.0000         1.0000      -739.0983      
+PR          .             1.0000         1.0000      -739.0983      
+PE          .             1.0000         1.0000      -739.0983      
+PI          .             1.0000         1.0000      -739.0983      
+RJ          .             1.0000         1.0000      -739.0983      
+RN          .             1.0000         1.0000      -739.0983      
+RS          .             1.0000         1.0000      -739.0983      
+RO          .             1.0000         1.0000      -739.0983      
+RR          .              .             1.0000    249260.9017      
+SC          .             1.0000         1.0000      -739.0983      
+SP          .             1.0000         1.0000      -739.0983      
+SE          .              .             1.0000    249260.9017      
+TO          .              .             1.0000    249260.9017      
+
+---- VAR X  quantity of relief aid items shipped from i to j
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+AC.AC          .         21050.0000        +INF             .          
+AC.AL          .              .            +INF          -18.4397      
+AC.AP          .              .            +INF          -15.5302      
+AC.AM          .              .            +INF           -5.1795      
+AC.BA          .              .            +INF          -16.7789      
+AC.CE          .              .            +INF          -19.2637      
+AC.ES          .              .            +INF          -15.0182      
+AC.GO          .              .            +INF           -9.7041      
+AC.MA          .              .            +INF          -15.6623      
+AC.MT          .              .            +INF           -6.2664      
+AC.MS          .              .            +INF           -9.8607      
+AC.MG          .              .            +INF          -13.1331      
+AC.PA          .              .            +INF          -14.7455      
+AC.PB          .              .            +INF          -19.7610      
+AC.PR          .              .            +INF          -13.5444      
+AC.PE          .              .            +INF          -19.3339      
+AC.PI          .              .            +INF          -15.3305      
+AC.RJ          .              .            +INF          -14.3760      
+AC.RN          .              .            +INF          -20.3847      
+AC.RS          .              .            +INF          -16.2757      
+AC.RO          .              .            +INF           -1.9012      
+AC.RR          .              .            +INF           -7.0673      
+AC.SC          .              .            +INF          -14.6503      
+AC.SP          .              .            +INF          -12.9326      
+AC.SE          .              .            +INF          -16.4940      
+AC.TO          .              .            +INF          -11.8232      
+AL.AC          .              .            +INF          -18.4505      
+AL.AL          .         23339.0000        +INF             .          
+AL.AP          .              .            +INF           -9.5104      
+AL.AM          .              .            +INF          -19.8310      
+AL.BA          .              .            +INF           -2.1445      
+AL.CE          .              .            +INF           -3.4950      
+AL.ES          .              .            +INF           -5.9778      
+AL.GO          .              .            +INF           -6.7361      
+AL.MA          .              .            +INF           -5.7949      
+AL.MT          .              .            +INF          -10.1734      
+AL.MS          .              .            +INF          -10.4285      
+AL.MG          .              .            +INF           -6.6602      
+AL.PA          .              .            +INF           -7.5516      
+AL.PB          .              .            +INF           -1.3886      
+AL.PR          .              .            +INF          -10.2945      
+AL.PE          .              .            +INF           -0.9615      
+AL.PI          .              .            +INF           -4.2053      
+AL.RJ          .              .            +INF           -7.6796      
+AL.RN          .              .            +INF           -2.0123      
+AL.RS          .              .            +INF          -12.9889      
+AL.RO          .              .            +INF          -16.5528      
+AL.RR          .              .            +INF          -21.7189      
+AL.SC          .              .            +INF          -11.3635      
+AL.SP          .              .            +INF           -8.8206      
+AL.SE          .          3695.4915        +INF             .          
+AL.TO          .              .            +INF           -5.9867      
+AP.AC          .              .            +INF          -17.5423      
+AP.AL          .              .            +INF          -11.5092      
+AP.AP          .              .            +INF             .          
+AP.AM          .              .            +INF          -12.3547      
+AP.BA          .              .            +INF          -11.8278      
+AP.CE          .              .            +INF           -8.7565      
+AP.ES          .              .            +INF          -14.0377      
+AP.GO          .              .            +INF           -8.5681      
+AP.MA          .              .            +INF           -5.2089      
+AP.MT          .              .            +INF           -8.6520      
+AP.MS          .              .            +INF          -12.2541      
+AP.MG          .              .            +INF          -12.1464      
+AP.PA          .              .            +INF           -2.9428      
+AP.PB          .              .            +INF          -11.5266      
+AP.PR          .              .            +INF          -14.4369      
+AP.PE          .              .            +INF          -11.4648      
+AP.PI          .              .            +INF           -6.4391      
+AP.RJ          .              .            +INF          -13.7222      
+AP.RN          .              .            +INF          -10.6286      
+AP.RS          .              .            +INF          -17.1313      
+AP.RO          .              .            +INF          -15.6314      
+AP.RR          .              .            +INF           -8.4830      
+AP.SC          .              .            +INF          -15.5059      
+AP.SP          .              .            +INF          -13.0186      
+AP.SE          .              .            +INF          -10.4854      
+AP.TO          .              .            +INF           -5.7690      
+AM.AC          .              .            +INF           -5.1955      
+AM.AL          .              .            +INF          -19.8475      
+AM.AP          .              .            +INF          -10.3533      
+AM.AM          .        169946.0000        +INF             .          
+AM.BA          .              .            +INF          -18.1867      
+AM.CE          .              .            +INF          -20.6715      
+AM.ES          .              .            +INF          -16.4260      
+AM.GO          .              .            +INF          -11.1119      
+AM.MA          .              .            +INF          -17.0701      
+AM.MT          .              .            +INF           -7.6743      
+AM.MS          .              .            +INF          -11.2685      
+AM.MG          .              .            +INF          -14.5409      
+AM.PA          .              .            +INF          -16.1533      
+AM.PB          .              .            +INF          -21.1688      
+AM.PR          .              .            +INF          -14.9523      
+AM.PE          .              .            +INF          -20.7418      
+AM.PI          .              .            +INF          -16.7384      
+AM.RJ          .              .            +INF          -15.7839      
+AM.RN          .              .            +INF          -21.7925      
+AM.RS          .              .            +INF          -17.6835      
+AM.RO          .              .            +INF           -3.2847      
+AM.RR          .              .            +INF           -1.8905      
+AM.SC          .              .            +INF          -16.0582      
+AM.SP          .              .            +INF          -14.3404      
+AM.SE          .              .            +INF          -17.9019      
+AM.TO          .              .            +INF          -13.2311      
+BA.AC          .              .            +INF          -16.7931      
+BA.AL          .              .            +INF           -2.2161      
+BA.AP          .              .            +INF           -9.8285      
+BA.AM          .              .            +INF          -18.1737      
+BA.BA          .         64799.0000        +INF             .          
+BA.CE          .              .            +INF           -4.4544      
+BA.ES          .              .            +INF           -4.3215      
+BA.GO          .              .            +INF           -5.0787      
+BA.MA          .              .            +INF           -6.1130      
+BA.MT          .              .            +INF           -8.5161      
+BA.MS          .              .            +INF           -8.7711      
+BA.MG          .              .            +INF           -5.0028      
+BA.PA          .              .            +INF           -7.8697      
+BA.PB          .              .            +INF           -3.5375      
+BA.PR          .              .            +INF           -8.6371      
+BA.PE          .              .            +INF           -3.1103      
+BA.PI          .              .            +INF           -4.5233      
+BA.RJ          .              .            +INF           -6.0223      
+BA.RN          .              .            +INF           -4.1611      
+BA.RS          .              .            +INF          -11.3315      
+BA.RO          .              .            +INF          -14.8954      
+BA.RR          .              .            +INF          -20.0616      
+BA.SC          .              .            +INF           -9.7062      
+BA.SP          .              .            +INF           -7.1633      
+BA.SE          .              .            +INF           -0.2705      
+BA.TO          .              .            +INF           -4.3294      
+CE.AC          .              .            +INF          -19.2666      
+CE.AL          .              .            +INF           -3.8075      
+CE.AP          .              .            +INF           -6.7645      
+CE.AM          .              .            +INF          -20.6471      
+CE.BA          .              .            +INF           -4.4548      
+CE.CE          .         85137.0000        +INF             .          
+CE.ES          .              .            +INF           -8.0378      
+CE.GO          .              .            +INF           -7.5521      
+CE.MA          .              .            +INF           -3.3169      
+CE.MT          .              .            +INF          -10.9895      
+CE.MS          .              .            +INF          -11.6511      
+CE.MG          .              .            +INF           -8.6024      
+CE.PA          .              .            +INF           -5.6831      
+CE.PB          .              .            +INF           -2.4713      
+CE.PR          .              .            +INF          -12.2366      
+CE.PE          .              .            +INF           -2.8562      
+CE.PI          .              .            +INF           -2.1880      
+CE.RJ          .              .            +INF           -9.6218      
+CE.RN          .              .            +INF           -1.9078      
+CE.RS          .              .            +INF          -14.9310      
+CE.RO          .              .            +INF          -17.3688      
+CE.RR          .              .            +INF          -22.5350      
+CE.SC          .              .            +INF          -13.3057      
+CE.SP          .              .            +INF          -10.7628      
+CE.SE          .              .            +INF           -3.1123      
+CE.TO          .              .            +INF           -5.2775      
+ES.AC          .              .            +INF          -15.0445      
+ES.AL          .              .            +INF           -5.9772      
+ES.AP          .              .            +INF          -12.0454      
+ES.AM          .              .            +INF          -16.4250      
+ES.BA          .              .            +INF           -4.3178      
+ES.CE          .              .            +INF           -8.0275      
+ES.ES          .         63471.0000        +INF             .          
+ES.GO          .              .            +INF           -4.1360      
+ES.MA          .              .            +INF           -9.6861      
+ES.MT          .              .            +INF           -6.7674      
+ES.MS          .              .            +INF           -7.1853      
+ES.MG          .              .            +INF           -1.9120      
+ES.PA          .              .            +INF          -11.4428      
+ES.PB          .              .            +INF           -7.2985      
+ES.PR          .              .            +INF           -4.9826      
+ES.PE          .              .            +INF           -6.8714      
+ES.PI          .              .            +INF           -8.0965      
+ES.RJ          .              .            +INF           -1.9108      
+ES.RN          .              .            +INF           -7.9222      
+ES.RS          .              .            +INF           -7.6770      
+ES.RO          .              .            +INF          -13.1467      
+ES.RR          .              .            +INF          -18.3129      
+ES.SC          .              .            +INF           -6.0516      
+ES.SP          .              .            +INF           -3.4741      
+ES.SE          .              .            +INF           -4.0315      
+ES.TO          .              .            +INF           -6.5338      
+GO.AC          .              .            +INF          -11.7175      
+GO.AL          .              .            +INF           -8.7383      
+GO.AP          .              .            +INF           -8.5716      
+GO.AM          .              .            +INF          -13.0980      
+GO.BA          .              .            +INF           -7.0776      
+GO.CE          .              .            +INF           -9.5623      
+GO.ES          .              .            +INF           -6.1321      
+GO.GO          .              .            +INF             .          
+GO.MA          .              .            +INF           -8.4554      
+GO.MT          .              .            +INF           -3.4404      
+GO.MS          .              .            +INF           -4.1020      
+GO.MG          .              .            +INF           -4.2408      
+GO.PA          .              .            +INF           -8.2553      
+GO.PB          .              .            +INF          -10.0597      
+GO.PR          .              .            +INF           -5.8789      
+GO.PE          .              .            +INF           -9.6326      
+GO.PI          .              .            +INF           -7.9521      
+GO.RJ          .              .            +INF           -5.9456      
+GO.RN          .              .            +INF          -10.6833      
+GO.RS          .              .            +INF           -8.5733      
+GO.RO          .              .            +INF           -9.8197      
+GO.RR          .              .            +INF          -14.9859      
+GO.SC          .              .            +INF           -6.9479      
+GO.SP          .              .            +INF           -4.4606      
+GO.SE          .              .            +INF           -6.7927      
+GO.TO          .              .            +INF           -3.0600      
+MA.AC          .              .            +INF          -15.6926      
+MA.AL          .              .            +INF           -5.8017      
+MA.AP          .              .            +INF           -3.2119      
+MA.AM          .              .            +INF          -17.0732      
+MA.BA          .              .            +INF           -6.1203      
+MA.CE          .              .            +INF           -3.3131      
+MA.ES          .              .            +INF           -9.7033      
+MA.GO          .              .            +INF           -6.4578      
+MA.MA          .        236059.0000        +INF             .          
+MA.MT          .              .            +INF           -8.9605      
+MA.MS          .              .            +INF          -10.5426      
+MA.MG          .              .            +INF          -10.2679      
+MA.PA          .              .            +INF           -2.1306      
+MA.PB          .              .            +INF           -5.7487      
+MA.PR          .              .            +INF          -12.3266      
+MA.PE          .              .            +INF           -6.1335      
+MA.PI          .              .            +INF           -1.6059      
+MA.RJ          .              .            +INF          -11.2873      
+MA.RN          .              .            +INF           -5.1851      
+MA.RS          .              .            +INF          -15.0210      
+MA.RO          .              .            +INF          -13.7949      
+MA.RR          .              .            +INF          -18.9610      
+MA.SC          .              .            +INF          -13.3956      
+MA.SP          .              .            +INF          -10.9083      
+MA.SE          .              .            +INF           -4.7779      
+MA.TO          .              .            +INF           -3.6587      
+MT.AC          .              .            +INF           -8.2850      
+MT.AL          .              .            +INF          -12.1854      
+MT.AP          .              .            +INF           -8.6529      
+MT.AM          .              .            +INF           -9.6656      
+MT.BA          .              .            +INF          -10.5246      
+MT.CE          .              .            +INF          -13.0094      
+MT.ES          .              .            +INF           -8.7639      
+MT.GO          .              .            +INF           -3.4498      
+MT.MA          .              .            +INF          -10.9643      
+MT.MT          .              .            +INF             .          
+MT.MS          .              .            +INF           -3.6064      
+MT.MG          .              .            +INF           -6.8788      
+MT.PA          .              .            +INF          -10.2360      
+MT.PB          .              .            +INF          -13.5068      
+MT.PR          .              .            +INF           -7.2901      
+MT.PE          .              .            +INF          -13.0796      
+MT.PI          .              .            +INF          -10.4096      
+MT.RJ          .              .            +INF           -8.1218      
+MT.RN          .              .            +INF          -14.1304      
+MT.RS          .              .            +INF          -10.0214      
+MT.RO          .              .            +INF           -6.3873      
+MT.RR          .              .            +INF          -11.5535      
+MT.SC          .              .            +INF           -8.3960      
+MT.SP          .              .            +INF           -6.6783      
+MT.SE          .              .            +INF          -10.2398      
+MT.TO          .              .            +INF           -5.5690      
+MS.AC          .              .            +INF           -9.8734      
+MS.AL          .              .            +INF          -12.4544      
+MS.AP          .              .            +INF          -10.2419      
+MS.AM          .              .            +INF          -11.2539      
+MS.BA          .              .            +INF          -10.7936      
+MS.CE          .              .            +INF          -11.6596      
+MS.ES          .              .            +INF           -7.2114      
+MS.GO          .              .            +INF           -2.1000      
+MS.MA          .              .            +INF          -10.5382      
+MS.MT          .              .            +INF           -1.5963      
+MS.MS          .          8808.0000        +INF             .          
+MS.MG          .              .            +INF           -5.8164      
+MS.PA          .              .            +INF          -10.3381      
+MS.PB          .              .            +INF          -13.7757      
+MS.PR          .              .            +INF           -3.6962      
+MS.PE          .              .            +INF          -13.3486      
+MS.PI          .              .            +INF          -10.0493      
+MS.RJ          .              .            +INF           -5.3261      
+MS.RN          .              .            +INF          -14.3994      
+MS.RS          .              .            +INF           -6.4275      
+MS.RO          .              .            +INF           -7.9757      
+MS.RR          .              .            +INF          -13.1418      
+MS.SC          .              .            +INF           -4.8021      
+MS.SP          .              .            +INF           -3.7292      
+MS.SE          .              .            +INF          -10.5087      
+MS.TO          .              .            +INF           -5.1428      
+MG.AC          .              .            +INF          -13.1486      
+MG.AL          .              .            +INF           -6.6634      
+MG.AP          .              .            +INF          -10.1511      
+MG.AM          .              .            +INF          -14.5291      
+MG.BA          .              .            +INF           -5.0026      
+MG.CE          .              .            +INF           -8.6091      
+MG.ES          .              .            +INF           -1.9106      
+MG.GO          .              .            +INF           -2.2417      
+MG.MA          .              .            +INF          -10.2677      
+MG.MT          .              .            +INF           -4.8715      
+MG.MS          .              .            +INF           -5.8148      
+MG.MG          .         85236.0000        +INF             .          
+MG.PA          .              .            +INF           -9.8348      
+MG.PB          .              .            +INF           -7.9847      
+MG.PR          .              .            +INF           -3.6503      
+MG.PE          .              .            +INF           -7.5576      
+MG.PI          .              .            +INF           -8.6781      
+MG.RJ          .              .            +INF           -1.6214      
+MG.RN          .              .            +INF           -8.6084      
+MG.RS          .              .            +INF           -6.3448      
+MG.RO          .              .            +INF          -11.2508      
+MG.RR          .              .            +INF          -16.4170      
+MG.SC          .              .            +INF           -4.7194      
+MG.SP          .              .            +INF           -2.1765      
+MG.SE          .              .            +INF           -4.7177      
+MG.TO          .              .            +INF           -4.6395      
+PA.AC          .              .            +INF          -14.7643      
+PA.AL          .              .            +INF           -7.5548      
+PA.AP          .              .            +INF           -0.9451      
+PA.AM          .              .            +INF          -16.1448      
+PA.BA          .              .            +INF           -7.8734      
+PA.CE          .              .            +INF           -5.6766      
+PA.ES          .              .            +INF          -11.4564      
+PA.GO          .              .            +INF           -6.2490      
+PA.MA          .              .            +INF           -2.1289      
+PA.MT          .              .            +INF           -8.2214      
+PA.MS          .              .            +INF          -10.3339      
+PA.MG          .              .            +INF           -9.8273      
+PA.PA          .         52595.0000        +INF             .          
+PA.PB          .              .            +INF           -7.5722      
+PA.PR          .              .            +INF          -12.1178      
+PA.PE          .              .            +INF           -7.5104      
+PA.PI          .              .            +INF           -3.3591      
+PA.RJ          .              .            +INF          -11.4031      
+PA.RN          .              .            +INF           -7.5486      
+PA.RS          .              .            +INF          -14.8122      
+PA.RO          .              .            +INF          -12.8666      
+PA.RR          .              .            +INF           -9.3740      
+PA.SC          .              .            +INF          -13.1869      
+PA.SP          .              .            +INF          -10.6995      
+PA.SE          .              .            +INF           -6.5310      
+PA.TO          .              .            +INF           -3.4499      
+PB.AC          .              .            +INF          -19.7239      
+PB.AL          .              .            +INF           -1.3829      
+PB.AP          .              .            +INF           -9.5368      
+PB.AM          .              .            +INF          -21.1045      
+PB.BA          .              .            +INF           -3.4180      
+PB.CE          .              .            +INF           -2.4713      
+PB.ES          .              .            +INF           -7.2512      
+PB.GO          .              .            +INF           -8.0095      
+PB.MA          .              .            +INF           -5.8227      
+PB.MT          .              .            +INF          -11.4469      
+PB.MS          .              .            +INF          -11.7019      
+PB.MG          .              .            +INF           -7.9337      
+PB.PA          .              .            +INF           -7.5780      
+PB.PB          .         39015.0000        +INF             .          
+PB.PR          .              .            +INF          -11.5679      
+PB.PE          .              .            +INF           -0.4315      
+PB.PI          .              .            +INF           -4.2317      
+PB.RJ          .              .            +INF           -8.9531      
+PB.RN          .              .            +INF           -0.6656      
+PB.RS          .              .            +INF          -14.2623      
+PB.RO          .              .            +INF          -17.8262      
+PB.RR          .              .            +INF          -22.9924      
+PB.SC          .              .            +INF          -12.6370      
+PB.SP          .              .            +INF          -10.0941      
+PB.SE          .              .            +INF           -1.2734      
+PB.TO          .              .            +INF           -7.2602      
+PR.AC          .              .            +INF          -13.5552      
+PR.AL          .              .            +INF          -10.3238      
+PR.AP          .              .            +INF          -12.4504      
+PR.AM          .              .            +INF          -14.9358      
+PR.BA          .              .            +INF           -8.6631      
+PR.CE          .              .            +INF          -12.2696      
+PR.ES          .              .            +INF           -5.0055      
+PR.GO          .              .            +INF           -3.8897      
+PR.MA          .              .            +INF          -12.3342      
+PR.MT          .              .            +INF           -5.2782      
+PR.MS          .              .            +INF           -3.6972      
+PR.MG          .              .            +INF           -3.6859      
+PR.PA          .              .            +INF          -12.1341      
+PR.PB          .              .            +INF          -11.6452      
+PR.PR          .         56465.0000        +INF             .          
+PR.PE          .              .            +INF          -11.2181      
+PR.PI          .              .            +INF          -11.2042      
+PR.RJ          .              .            +INF           -3.1202      
+PR.RN          .              .            +INF          -12.2688      
+PR.RS          .              .            +INF           -2.7442      
+PR.RO          .              .            +INF          -11.6575      
+PR.RR          .              .            +INF          -16.8236      
+PR.SC          .              .            +INF           -1.1188      
+PR.SP          .              .            +INF           -1.4839      
+PR.SE          .              .            +INF           -8.3782      
+PR.TO          .              .            +INF           -6.9389      
+PE.AC          .              .            +INF          -19.2946      
+PE.AL          .              .            +INF           -0.9535      
+PE.AP          .              .            +INF           -9.4688      
+PE.AM          .              .            +INF          -20.6751      
+PE.BA          .              .            +INF           -2.9886      
+PE.CE          .              .            +INF           -2.8577      
+PE.ES          .              .            +INF           -6.8218      
+PE.GO          .              .            +INF           -7.5802      
+PE.MA          .              .            +INF           -6.2091      
+PE.MT          .              .            +INF          -11.0175      
+PE.MS          .              .            +INF          -11.2725      
+PE.MG          .              .            +INF           -7.5043      
+PE.PA          .              .            +INF           -7.5100      
+PE.PB          .              .            +INF           -0.4284      
+PE.PR          .              .            +INF          -11.1385      
+PE.PE          .        122130.0000        +INF             .          
+PE.PI          .              .            +INF           -4.1636      
+PE.RJ          .              .            +INF           -8.5237      
+PE.RN          .              .            +INF           -1.0520      
+PE.RS          .              .            +INF          -13.8330      
+PE.RO          .              .            +INF          -17.3969      
+PE.RR          .              .            +INF          -22.5630      
+PE.SC          .              .            +INF          -12.2076      
+PE.SP          .              .            +INF           -9.6647      
+PE.SE          .              .            +INF           -0.8441      
+PE.TO          .              .            +INF           -6.8308      
+PI.AC          .              .            +INF          -15.3525      
+PI.AL          .              .            +INF           -4.2062      
+PI.AP          .              .            +INF           -4.4356      
+PI.AM          .              .            +INF          -16.7330      
+PI.BA          .              .            +INF           -4.5248      
+PI.CE          .              .            +INF           -2.1885      
+PI.ES          .              .            +INF           -8.1079      
+PI.GO          .              .            +INF           -5.9511      
+PI.MA          .              .            +INF           -1.5975      
+PI.MT          .              .            +INF           -8.4017      
+PI.MS          .              .            +INF          -10.0501      
+PI.MG          .              .            +INF           -8.6725      
+PI.PA          .              .            +INF           -3.3542      
+PI.PB          .              .            +INF           -4.2237      
+PI.PR          .              .            +INF          -11.2118      
+PI.PE          .              .            +INF           -4.1618      
+PI.PI          .         76199.0000        +INF             .          
+PI.RJ          .              .            +INF           -9.6919      
+PI.RN          .              .            +INF           -4.0618      
+PI.RS          .              .            +INF          -13.9062      
+PI.RO          .              .            +INF          -13.4548      
+PI.RR          .              .            +INF          -18.6209      
+PI.SC          .              .            +INF          -12.2808      
+PI.SP          .              .            +INF           -9.7935      
+PI.SE          .              .            +INF           -3.1824      
+PI.TO          .              .            +INF           -3.0999      
+RJ.AC          .              .            +INF          -14.3826      
+RJ.AL          .              .            +INF           -7.6761      
+RJ.AP          .              .            +INF          -11.7330      
+RJ.AM          .              .            +INF          -15.7632      
+RJ.BA          .              .            +INF           -6.0153      
+RJ.CE          .              .            +INF           -9.6218      
+RJ.ES          .              .            +INF           -2.0565      
+RJ.GO          .              .            +INF           -3.9523      
+RJ.MA          .              .            +INF          -11.2804      
+RJ.MT          .              .            +INF           -6.1055      
+RJ.MS          .              .            +INF           -5.3015      
+RJ.MG          .              .            +INF           -1.6242      
+RJ.PA          .              .            +INF          -11.4167      
+RJ.PB          .              .            +INF           -8.9975      
+RJ.PR          .              .            +INF           -3.0987      
+RJ.PE          .              .            +INF           -8.5703      
+RJ.PI          .              .            +INF           -9.6908      
+RJ.RJ          .         97111.0000        +INF             .          
+RJ.RN          .              .            +INF           -9.6211      
+RJ.RS          .              .            +INF           -5.7931      
+RJ.RO          .              .            +INF          -12.4849      
+RJ.RR          .              .            +INF          -17.6510      
+RJ.SC          .              .            +INF           -4.1677      
+RJ.SP          .              .            +INF           -1.5903      
+RJ.SE          .              .            +INF           -5.7305      
+RJ.TO          .              .            +INF           -6.2215      
+RN.AC          .              .            +INF          -20.3436      
+RN.AL          .              .            +INF           -2.0026      
+RN.AP          .              .            +INF           -8.7036      
+RN.AM          .              .            +INF          -21.7242      
+RN.BA          .              .            +INF           -4.0377      
+RN.CE          .              .            +INF           -1.9047      
+RN.ES          .              .            +INF           -7.8709      
+RN.GO          .              .            +INF           -8.6292      
+RN.MA          .              .            +INF           -5.2561      
+RN.MT          .              .            +INF          -12.0666      
+RN.MS          .              .            +INF          -12.3216      
+RN.MG          .              .            +INF           -8.5533      
+RN.PA          .              .            +INF           -7.6222      
+RN.PB          .              .            +INF           -0.6663      
+RN.PR          .              .            +INF          -12.1876      
+RN.PE          .              .            +INF           -1.0512      
+RN.PI          .              .            +INF           -4.1239      
+RN.RJ          .              .            +INF           -9.5728      
+RN.RN          .         33141.0000        +INF             .          
+RN.RS          .              .            +INF          -14.8820      
+RN.RO          .              .            +INF          -18.4459      
+RN.RR          .              .            +INF          -23.6120      
+RN.SC          .              .            +INF          -13.2567      
+RN.SP          .              .            +INF          -10.7137      
+RN.SE          .              .            +INF           -1.8931      
+RN.TO          .              .            +INF           -7.8799      
+RS.AC          .              .            +INF          -15.1213      
+RS.AL          .              .            +INF          -13.0120      
+RS.AP          .              .            +INF          -15.1386      
+RS.AM          .              .            +INF          -16.5018      
+RS.BA          .              .            +INF          -11.3512      
+RS.CE          .              .            +INF          -14.9577      
+RS.ES          .              .            +INF           -7.6936      
+RS.GO          .              .            +INF           -6.5778      
+RS.MA          .              .            +INF          -15.0224      
+RS.MT          .              .            +INF           -6.8442      
+RS.MS          .              .            +INF           -5.2632      
+RS.MG          .              .            +INF           -6.3741      
+RS.PA          .              .            +INF          -14.8223      
+RS.PB          .              .            +INF          -14.3333      
+RS.PR          .              .            +INF           -2.7394      
+RS.PE          .              .            +INF          -13.9062      
+RS.PI          .              .            +INF          -13.8923      
+RS.RJ          .              .            +INF           -5.8084      
+RS.RN          .              .            +INF          -14.9570      
+RS.RS          .        154597.0000        +INF             .          
+RS.RO          .              .            +INF          -13.2236      
+RS.RR          .              .            +INF          -18.3897      
+RS.SC          .              .            +INF           -1.6887      
+RS.SP          .              .            +INF           -4.1720      
+RS.SE          .              .            +INF          -11.0664      
+RS.TO          .              .            +INF           -9.6270      
+RO.AC          .              .            +INF           -1.9117      
+RO.AL          .              .            +INF          -16.5635      
+RO.AP          .              .            +INF          -13.6316      
+RO.AM          .              .            +INF           -3.2808      
+RO.BA          .              .            +INF          -14.9027      
+RO.CE          .              .            +INF          -17.3874      
+RO.ES          .              .            +INF          -13.1419      
+RO.GO          .              .            +INF           -7.8279      
+RO.MA          .              .            +INF          -13.7860      
+RO.MT          .              .            +INF           -4.3902      
+RO.MS          .              .            +INF           -7.9844      
+RO.MG          .              .            +INF          -11.2569      
+RO.PA          .              .            +INF          -12.8692      
+RO.PB          .              .            +INF          -17.8848      
+RO.PR          .              .            +INF          -11.6682      
+RO.PE          .              .            +INF          -17.4577      
+RO.PI          .              .            +INF          -13.4543      
+RO.RJ          .              .            +INF          -12.4998      
+RO.RN          .              .            +INF          -18.5085      
+RO.RS          .              .            +INF          -14.3994      
+RO.RO          .         20001.0000        +INF             .          
+RO.RR          .              .            +INF           -5.1687      
+RO.SC          .              .            +INF          -12.7741      
+RO.SP          .              .            +INF          -11.0564      
+RO.SE          .              .            +INF          -14.6178      
+RO.TO          .              .            +INF           -9.9470      
+RR.AC          .              .            +INF           -9.0782      
+RR.AL          .              .            +INF          -23.7302      
+RR.AP          .              .            +INF           -8.4834      
+RR.AM          .              .            +INF           -3.8906      
+RR.BA          .              .            +INF          -22.0694      
+RR.CE          .              .            +INF          -24.5542      
+RR.ES          .              .            +INF          -20.3086      
+RR.GO          .              .            +INF          -14.9946      
+RR.MA          .              .            +INF          -20.9527      
+RR.MT          .              .            +INF          -11.5569      
+RR.MS          .              .            +INF          -15.1511      
+RR.MG          .              .            +INF          -18.4236      
+RR.PA          .              .            +INF          -11.3717      
+RR.PB          .              .            +INF          -25.0515      
+RR.PR          .              .            +INF          -18.8349      
+RR.PE          .              .            +INF          -24.6244      
+RR.PI          .              .            +INF          -20.6210      
+RR.RJ          .              .            +INF          -19.6665      
+RR.RN          .              .            +INF          -25.6752      
+RR.RS          .              .            +INF          -21.5661      
+RR.RO          .              .            +INF           -7.1673      
+RR.RR          .              .            +INF             .          
+RR.SC          .              .            +INF          -19.9408      
+RR.SP          .              .            +INF          -18.2231      
+RR.SE          .              .            +INF          -21.7845      
+RR.TO          .              .            +INF          -17.1137      
+SC.AC          .              .            +INF          -14.6646      
+SC.AL          .              .            +INF          -11.3890      
+SC.AP          .              .            +INF          -13.5156      
+SC.AM          .              .            +INF          -16.0452      
+SC.BA          .              .            +INF           -9.7283      
+SC.CE          .              .            +INF          -13.3347      
+SC.ES          .              .            +INF           -6.0707      
+SC.GO          .              .            +INF           -4.9548      
+SC.MA          .              .            +INF          -13.3994      
+SC.MT          .              .            +INF           -6.3876      
+SC.MS          .              .            +INF           -4.8066      
+SC.MG          .              .            +INF           -4.7511      
+SC.PA          .              .            +INF          -13.1993      
+SC.PB          .              .            +INF          -12.7104      
+SC.PR          .              .            +INF           -1.1165      
+SC.PE          .              .            +INF          -12.2833      
+SC.PI          .              .            +INF          -12.2693      
+SC.RJ          .              .            +INF           -4.1854      
+SC.RN          .              .            +INF          -13.3340      
+SC.RS          .              .            +INF           -1.6878      
+SC.RO          .              .            +INF          -12.7669      
+SC.RR          .              .            +INF          -17.9330      
+SC.SC          .        189100.0000        +INF             .          
+SC.SP          .              .            +INF           -2.5491      
+SC.SE          .              .            +INF           -9.4434      
+SC.TO          .              .            +INF           -8.0040      
+SP.AC          .              .            +INF          -12.9467      
+SP.AL          .              .            +INF           -8.8153      
+SP.AP          .              .            +INF          -11.0340      
+SP.AM          .              .            +INF          -14.3273      
+SP.BA          .              .            +INF           -7.1545      
+SP.CE          .              .            +INF          -10.7610      
+SP.ES          .              .            +INF           -3.4969      
+SP.GO          .              .            +INF           -2.4732      
+SP.MA          .              .            +INF          -10.9178      
+SP.MT          .              .            +INF           -4.6697      
+SP.MS          .              .            +INF           -3.7299      
+SP.MG          .              .            +INF           -2.1773      
+SP.PA          .              .            +INF          -10.7177      
+SP.PB          .              .            +INF          -10.1366      
+SP.PR          .              .            +INF           -1.4946      
+SP.PE          .              .            +INF           -9.7095      
+SP.PI          .              .            +INF           -9.7878      
+SP.RJ          .              .            +INF           -1.6116      
+SP.RN          .              .            +INF          -10.7603      
+SP.RS          .              .            +INF           -4.1890      
+SP.RO          .              .            +INF          -11.0490      
+SP.RR          .              .            +INF          -16.2152      
+SP.SC          .              .            +INF           -2.5637      
+SP.SP          .         51271.0000        +INF             .          
+SP.SE          .              .            +INF           -6.8697      
+SP.TO          .              .            +INF           -5.5225      
+SE.AC          .              .            +INF          -18.5065      
+SE.AL          .              .            +INF           -1.9940      
+SE.AP          .              .            +INF          -10.4838      
+SE.AM          .              .            +INF          -19.8871      
+SE.BA          .              .            +INF           -2.2006      
+SE.CE          .              .            +INF           -5.1097      
+SE.ES          .              .            +INF           -6.0338      
+SE.GO          .              .            +INF           -6.7921      
+SE.MA          .              .            +INF           -6.7683      
+SE.MT          .              .            +INF          -10.2295      
+SE.MS          .              .            +INF          -10.4845      
+SE.MG          .              .            +INF           -6.7163      
+SE.PA          .              .            +INF           -8.5250      
+SE.PB          .              .            +INF           -3.3153      
+SE.PR          .              .            +INF          -10.3505      
+SE.PE          .              .            +INF           -2.8882      
+SE.PI          .              .            +INF           -5.1787      
+SE.RJ          .              .            +INF           -7.7357      
+SE.RN          .              .            +INF           -3.9390      
+SE.RS          .              .            +INF          -13.0449      
+SE.RO          .              .            +INF          -16.6088      
+SE.RR          .              .            +INF          -21.7750      
+SE.SC          .              .            +INF          -11.4196      
+SE.SP          .              .            +INF           -8.8767      
+SE.SE          .              .            +INF             .          
+SE.TO          .              .            +INF           -6.0428      
+TO.AC          .              .            +INF          -13.8393      
+TO.AL          .              .            +INF           -7.9922      
+TO.AP          .              .            +INF           -5.7755      
+TO.AM          .              .            +INF          -15.2199      
+TO.BA          .              .            +INF           -6.3315      
+TO.CE          .              .            +INF           -7.2810      
+TO.ES          .              .            +INF           -8.5292      
+TO.GO          .              .            +INF           -3.0596      
+TO.MA          .              .            +INF           -5.6593      
+TO.MT          .              .            +INF           -5.5623      
+TO.MS          .              .            +INF           -7.1445      
+TO.MG          .              .            +INF           -6.6378      
+TO.PA          .              .            +INF           -5.4592      
+TO.PB          .              .            +INF           -9.3136      
+TO.PR          .              .            +INF           -8.9284      
+TO.PE          .              .            +INF           -8.8865      
+TO.PI          .              .            +INF           -5.1046      
+TO.RJ          .              .            +INF           -8.2136      
+TO.RN          .              .            +INF           -8.6050      
+TO.RS          .              .            +INF          -11.6228      
+TO.RO          .              .            +INF          -11.9416      
+TO.RR          .              .            +INF          -17.1078      
+TO.SC          .              .            +INF           -9.9974      
+TO.SP          .              .            +INF           -7.5101      
+TO.SE          .              .            +INF           -6.0466      
+TO.TO          .              .            +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/04/23 14:06:03 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    124 VARIABLE Y.L  Binary variable to indicate whether warehouse is set-up at location i
+
+AC 1.000,    AL 1.000,    AM 1.000,    BA 1.000,    CE 1.000,    ES 1.000,    MA 1.000,    MS 1.000,    MG 1.000,    PA 1.000,    PB 1.000,    PR 1.000,    PE 1.000,    PI 1.000,    RJ 1.000,    RN 1.000,    RS 1.000,    RO 1.000,    SC 1.000,    SP 1.000
+
+
+----    124 VARIABLE X.L  quantity of relief aid items shipped from i to j
+
+            AC          AL          AM          BA          CE          ES          MA          MS          MG          PA          PB          PR          PE          PI          RJ          RN          RS          RO          SC          SP          SE
+
+AC   21050.000
+AL               23339.000                                                                                                                                                                                                                            3695.492
+AM                          169946.000
+BA                                       64799.000
+CE                                                   85137.000
+ES                                                               63471.000
+MA                                                                          236059.000
+MS                                                                                        8808.000
+MG                                                                                                   85236.000
+PA                                                                                                               52595.000
+PB                                                                                                                           39015.000
+PR                                                                                                                                       56465.000
+PE                                                                                                                                                  122130.000
+PI                                                                                                                                                               76199.000
+RJ                                                                                                                                                                           97111.000
+RN                                                                                                                                                                                       33141.000
+RS                                                                                                                                                                                                  154597.000
+RO                                                                                                                                                                                                               20001.000
+SC                                                                                                                                                                                                                          189100.000
+SP                                                                                                                                                                                                                                       51271.000
+
+
+----    124 VARIABLE Z.L                   =  1653165.492  Optimal value
+
+----    124 PARAMETER service_rate  
+
+AC 100.000,    AL 100.000,    AP     EPS,    AM 100.000,    BA 100.000,    CE 100.000,    ES 100.000,    GO     EPS,    MA 100.000,    MT     EPS,    MS 100.000,    MG 100.000,    PA 100.000,    PB 100.000,    PR 100.000,    PE 100.000,    PI 100.000,    RJ 100.000,    RN 100.000,    RS 100.000,    RO 100.000,    RR     EPS,    SC 100.000,    SP 100.000,    SE  71.013,    TO     EPS
+
+
+----    124 PARAMETER global               =       79.654  
+
+
+EXECUTION TIME       =        0.438 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+
+
+USER: Course License                                 S230704|0002AO-GEN
+      University of Edinburgh, Business School                  DCE2899
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\LocationAllocationBase.gms
+Output     C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\LocationAllocationBase.lst
