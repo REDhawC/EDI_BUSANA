@@ -1,0 +1,26 @@
+B 3 C o m p i l a t i o n
+B 479 Equation Listing    SOLVE crop_profit_model Using MIP From line 465
+D 482 of
+D 489 constr1
+D 500 constr2
+D 511 constr3
+D 522 constr4
+B 534 Column Listing      SOLVE crop_profit_model Using MIP From line 465
+E 537 Profit
+E 544 Reallocated
+E 570 CropPlanted
+B 593 Range Statistics    SOLVE crop_profit_model Using MIP From line 465
+B 604 Model Statistics    SOLVE crop_profit_model Using MIP From line 465
+B 617 Solution Report     SOLVE crop_profit_model Using MIP From line 465
+F 664 of
+F 668 constr1
+F 681 constr2
+F 785 constr3
+F 889 constr4
+G 995 Profit
+G 999 Reallocated
+G 1796 CropPlanted
+B 1906 E x e c u t i o n
+I 1906 Reallocated
+I 1979 CropPlanted
+I 2019 Profit

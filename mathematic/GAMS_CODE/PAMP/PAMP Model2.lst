@@ -1,4 +1,4 @@
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 1
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -548,7 +548,7 @@ C o m p i l a t i o n
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  44.4.0 06604687 WEX-WEI
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 2
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE crop_profit_model Using MIP From line 539
 
@@ -702,7 +702,7 @@ constr13(rice,andaman_and_nicobar_islands,Summer)..  ReallocatedBenefit(rice,and
      
 REMAINING 789 ENTRIES SKIPPED
 
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 3
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE crop_profit_model Using MIP From line 539
 
@@ -783,7 +783,7 @@ CropPlanted(andaman_and_nicobar_islands,Summer)
   -1.000000E-6  constr4(andaman_and_nicobar_islands,Summer)
 
 REMAINING 96 ENTRIES SKIPPED
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 4
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE crop_profit_model Using MIP From line 539
 
@@ -794,7 +794,7 @@ RHS       [min, max] : [ 1.400E+03, 9.536E+07] - Zero values observed as well
 Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E-06, 1.000E+09]
 
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 5
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE crop_profit_model Using MIP From line 539
 
@@ -806,8 +806,8 @@ BLOCKS OF VARIABLES           4     SINGLE VARIABLES        1,420
 NON ZERO ELEMENTS        16,235     DISCRETE VARIABLES         99
 
 
-GENERATION TIME      =        0.047 SECONDS      5 MB  44.4.0 06604687 WEX-WEI
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 6
+GENERATION TIME      =        0.046 SECONDS      5 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE crop_profit_model Using MIP From line 539
 
@@ -822,10 +822,10 @@ Solution Report     SOLVE crop_profit_model Using MIP From line 539
 **** MODEL STATUS      1 Optimal
 **** OBJECTIVE VALUE   47364414153184.1875
 
- RESOURCE USAGE, LIMIT          0.063 10000000000.000
+ RESOURCE USAGE, LIMIT          0.078 10000000000.000
  ITERATION COUNT, LIMIT       134    2147483647
 --- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
+--- GMO setup time: 0.02s
 --- Space for names approximately 0.36 Mb
 --- Use option 'names no' to turn use of names off
 --- GMO memory 1.99 Mb (peak 2.00 Mb)
@@ -842,7 +842,7 @@ Solution Report     SOLVE crop_profit_model Using MIP From line 539
 
 
 --- Fixed MIP status (1): optimal.
---- Cplex Time: 0.00sec (det. 5.92 ticks)
+--- Cplex Time: 0.02sec (det. 5.92 ticks)
 
 
 Proven optimal solution
@@ -9802,7 +9802,7 @@ west_bengal                .Summer          .             1.0000         1.0000 
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 11:49:13 Page 7
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 11/26/23 17:56:05 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -9928,7 +9928,7 @@ cotton   .manipur                      250950.000
 ----    540 VARIABLE Profit.L              =  4.73644E+13  Optimal value
 
 
-EXECUTION TIME       =        0.469 SECONDS      5 MB  44.4.0 06604687 WEX-WEI
+EXECUTION TIME       =        0.234 SECONDS      5 MB  44.4.0 06604687 WEX-WEI
 
 
 USER: Course License                                 S230704|0002AO-GEN
