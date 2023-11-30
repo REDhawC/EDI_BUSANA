@@ -4,12 +4,6 @@
     "nodes": [
         {
             "codecMib": 106,
-            "file": "../../../../#v2_PAMP Model2.csv",
-            "name": "#v2_PAMP Model2.csv",
-            "type": ""
-        },
-        {
-            "codecMib": 106,
             "file": "#v2_PAMP Model2.csv",
             "name": "#v2_PAMP Model2.csv",
             "type": ""

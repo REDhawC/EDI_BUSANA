@@ -1,4 +1,5 @@
---- Job #v2_PAMP Model2.gms Start 11/27/23 13:13:34 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
+
+--- Job #v2_PAMP Model2.gms Start 11/27/23 15:26:56 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     Q:\GAMS\44\gmsprmNT.txt
     C:\Users\redhawc\Documents\GAMS\gamsconfig.yaml
@@ -21,7 +22,7 @@ Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
 --- Starting compilation
 --- #v2_PAMP Model2.gms(554) 3 Mb
---- Starting execution: elapsed 0:00:00.016
+--- Starting execution: elapsed 0:00:00.010
 --- #v2_PAMP Model2.gms(462) 4 Mb
 --- Generating MIP model crop_profit_model
 --- #v2_PAMP Model2.gms(551) 5 Mb
@@ -31,7 +32,7 @@ GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
 --- RHS       [min, max] : [ 9.800E+02, 9.536E+07] - Zero values observed as well
 --- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 --- Matrix    [min, max] : [ 1.000E-06, 1.000E+09]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.047
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.030
 
 IBM ILOG CPLEX   44.4.0 06604687 Sep 19, 2023          WEI x86 64bit/MS Window
 
@@ -103,7 +104,7 @@ Sequential b&c:
 Total (root+branch&cut) =    0.02 sec. (20.94 ticks)
 
 --- MIP status (101): integer optimal solution.
---- Cplex Time: 0.03sec (det. 20.95 ticks)
+--- Cplex Time: 0.02sec (det. 20.95 ticks)
 
 --- Returning a primal only solution to GAMS (marginals all set to NA).
 --- Fixing integer variables and solving final LP...
@@ -124,7 +125,7 @@ Iteration:     1   Scaled dual infeas =        357409.171500
 Iteration:    35   Dual objective     = 58411592248003.312500
 
 --- Fixed MIP status (1): optimal.
---- Cplex Time: 0.02sec (det. 5.67 ticks)
+--- Cplex Time: 0.00sec (det. 5.67 ticks)
 
 
 Proven optimal solution
@@ -136,7 +137,7 @@ Absolute gap:            0.000000
 Relative gap:            0.000000
 
 --- Reading solution for model crop_profit_model
---- Executing after solve: elapsed 0:00:00.436
+--- Executing after solve: elapsed 0:00:00.140
 --- #v2_PAMP Model2.gms(552) 5 Mb
 *** Status: Normal completion
---- Job #v2_PAMP Model2.gms Stop 11/27/23 13:13:35 elapsed 0:00:00.436
+--- Job #v2_PAMP Model2.gms Stop 11/27/23 15:26:56 elapsed 0:00:00.140

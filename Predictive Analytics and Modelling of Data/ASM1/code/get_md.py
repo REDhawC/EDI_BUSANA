@@ -18,7 +18,7 @@ def extract_markdown_from_ipynb(file_path):
 
 
 # Usage
-file_path = "./PAMD_FINAL!.ipynb"  # Replace with the path to your notebook
+file_path = "./Group_4_Code.ipynb"  # Replace with the path to your notebook
 markdown_content = extract_markdown_from_ipynb(file_path)
 
 # Printing the extracted Markdown content
