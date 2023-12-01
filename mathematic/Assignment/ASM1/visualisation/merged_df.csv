@@ -1,0 +1,34 @@
+state,Kharif,Rabi,Summer,Kharif_top_crops,Rabi_top_crops,Summer_top_crops
+uttar_pradesh,25950750,25950750,25950750,soyabean: 4590k<br>rice: 15106k<br>cotton: 14714k,maize: 30409k<br>wheat: 20404k<br>potato: 193343k,maize: 9809k<br>rice: 14910k
+rajasthan,24703500,24703500,0,maize: 9200k<br>soyabean: 8871k<br>rice: 49024k,wheat: 20917k,
+madhya_pradesh,23375750,23375750,0,soyabean: 9941k<br>cotton: 39188k<br>jute: 14226k,horsegram: 2209k<br>wheat: 17805k,
+maharashtra,22706250,22706250,22706250,rice: 19312k<br>cotton: 15535k<br>soyabean: 14291k,maize: 14505k<br>soyabean: 12874k<br>wheat: 11630k,rice: 15750k<br>maize: 12874k
+gujarat,12736500,12736500,12736500,maize: 7510k<br>rice: 7318k<br>soyabean: 1694k,maize: 4959k<br>wheat: 10375k,maize: 5007k<br>rice: 12036k
+karnataka,12080250,12080250,12080250,rice: 7150k<br>cotton: 7009k<br>potato: 59362k,rice: 7680k<br>potato: 66851k<br>cotton: 6142k,potato: 58084k<br>maize: 12694k<br>rice: 11804k
+andhra_pradesh,10806750,10806750,0,cotton: 9375k<br>rice: 7537k<br>soyabean: 2875k,maize: 23060k<br>wheat: 2070k<br>horsegram: 2042k,
+west_bengal,9530000,9530000,9530000,maize: 9392k<br>soyabean: 8123k<br>jute: 39860k,potato: 74118k<br>rice: 4145k<br>horsegram: 3818k,rice: 7439k<br>potato: 24136k<br>maize: 11708k
+punjab,7870000,7870000,0,cotton: 8925k<br>maize: 8181k<br>rice: 7095k,wheat: 11096k,
+bihar,7669500,7669500,7669500,jute: 31208k<br>cotton: 2091k<br>potato: 18612k,wheat: 5363k<br>rice: 3172k<br>potato: 15756k,maize: 9292k<br>rice: 5479k
+haryana,6468000,6468000,0,cotton: 8643k<br>maize: 8520k<br>rice: 7726k,wheat: 6271k,
+telangana,5801500,5801500,0,maize: 6710k<br>cotton: 3816k<br>rice: 2824k,maize: 8520k<br>horsegram: 772k<br>rice: 4353k,
+tamil_nadu,5730500,0,0,maize: 7776k<br>horsegram: 762k<br>cotton: 4397k,,
+chhattisgarh,5695250,5695250,0,cotton: 3800k<br>horsegram: 3337k<br>soyabean: 1515k,potato: 9688k<br>wheat: 2293k<br>horsegram: 2153k,
+odisha,5093500,5093500,5093500,maize: 4573k<br>cotton: 3254k<br>rice: 1477k,horsegram: 677k<br>maize: 5247k<br>rice: 2484k,maize: 5198k<br>rice: 3995k<br>horsegram: 318k
+assam,4108250,4108250,4108250,cotton: 776k<br>maize: 546k<br>rice: 1724k,rice: 1980k<br>wheat: 1530k,rice: 2555k
+kerala,2624000,2624000,2624000,cotton: 798k<br>rice: 1572k,rice: 1537k,rice: 1746k
+jharkhand,1578250,1578250,0,rice: 3135k<br>maize: 1679k,wheat: 650k<br>rice: 594k<br>potato: 26070k,
+jammu_and_kashmir,1169750,1169750,0,cotton: 81k<br>maize: 743k<br>rice: 674k,potato: 8346k<br>wheat: 1105k,
+uttarakhand,1113000,1113000,1113000,potato: 5810k<br>rice: 454k<br>soyabean: 417k,wheat: 837k<br>rice: 696k<br>potato: 5810k,maize: 461k<br>rice: 1006k
+himachal_pradesh,931000,931000,0,maize: 595k<br>potato: 4051k<br>soyabean: 2013k,wheat: 575k<br>potato: 2949k,
+nagaland,490500,490500,0,cotton: 546k<br>potato: 1800k<br>soyabean: 152k,wheat: 295k<br>rice: 222k<br>maize: 163k,
+tripura,475750,475750,0,maize: 89k<br>jute: 819k<br>rice: 250k,wheat: 208k,
+manipur,358500,358500,358500,maize: 542k<br>potato: 262k<br>rice: 226k,cotton: 68k<br>soyabean: 63k<br>potato: 361k,potato: 354k<br>jute: 136k
+meghalaya,341250,341250,341250,cotton: 84k<br>soyabean: 65k<br>jute: 606k,potato: 752k<br>jute: 608k<br>cotton: 59k,rice: 277k
+arunachal_pradesh,280000,280000,0,maize: 159k<br>soyabean: 126k<br>rice: 122k,wheat: 225k,
+goa,160750,160750,0,rice: 88k,rice: 90k,
+sikkim,141000,141000,0,maize: 434k<br>rice: 405k<br>soyabean: 236k,wheat: 52k,
+mizoram,118000,118000,0,soyabean: 80k<br>maize: 57k<br>potato: 312k,potato: 98k<br>wheat: 21k<br>rice: 216k,
+puducherry,26250,26250,26250,cotton: 27k<br>rice: 20k,rice: 33k,cotton: 5k<br>rice: 15k
+dadra_and_nagar_haveli,23750,23750,0,maize: 5k<br>rice: 13k,maize: 5k<br>rice: 11k<br>wheat: 10k,
+andaman_and_nicobar_islands,22750,22750,0,rice: 25k,maize: 20k,
+chandigarh,2000,2000,0,rice: 2k<br>maize: 1k,wheat: 2k,
