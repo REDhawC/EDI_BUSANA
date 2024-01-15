@@ -1,0 +1,22 @@
+B 3 C o m p i l a t i o n
+B 82 Equation Listing    SOLVE transport Using MIP From line 68
+D 85 of
+D 90 constr1
+D 101 constr2
+B 109 Column Listing      SOLVE transport Using MIP From line 68
+E 112 z
+E 119 x
+E 141 u
+B 155 Range Statistics    SOLVE transport Using MIP From line 68
+B 166 Model Statistics    SOLVE transport Using MIP From line 68
+B 179 Solution Report     SOLVE transport Using MIP From line 68
+F 212 of
+F 216 constr1
+F 226 constr2
+G 235 z
+G 239 x
+G 254 u
+B 267 E x e c u t i o n
+I 267 x
+I 279 x
+I 289 u

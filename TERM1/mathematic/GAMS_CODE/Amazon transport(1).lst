@@ -1,0 +1,308 @@
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      How to best move a given mobile phone from Amazon distribution centres to demand zones
+      **Douglas Alem version**
+   5   
+   6  Option optcr = 0.00;
+   7   
+   8  *This command serves to include a list of options for the CPLEX optimisation package
+   9  File fcpx Cplex OPTION FILE /cplex.opt/;
+  10   
+  11  Sets
+  12  i DCs          /Gourock,Bathgate,Dunfermline,Edinburgh,Portlethen/
+  13  j Demand zones /Perth,Dundee/
+  14  ;
+  15   
+  16  Parameter cap(i) weekly capacity of each DC (units)
+  17  /
+  18  Gourock     150
+  19  Bathgate    150
+  20  Dunfermline 100
+  21  Edinburgh   200
+  22  Portlethen  400
+  23  /
+  24  ;
+  25   
+  26  Parameter d(j) demand of units required
+  27  /
+  28  Perth  600
+  29  Dundee 600
+  30  /
+  31  ;
+  32   
+  33  Table distance(i,j) distance in miles
+  34               Perth    Dundee
+  35  Gourock      106      114
+  36  Bathgate      58       70
+  37  Dunfermline   28.2     41.5
+  38  Edinburgh     43.8     63
+  39  Portlethen    76.3     61
+  40  ;
+  41   
+  42  Scalar mile per mile shipping cost in pounds /3/;
+  43  Scalar penalty penalty for unmet demand per unit /500/;
+  44   
+  45  Parameter cost(i,j) shipping cost from i to j;
+  46   cost(i,j) = distance(i,j)*mile;
+  47   
+  48  Variables
+  49  z      total cost
+  50  x(i,j) quantity of mobile phones shipped from i to j
+  51  u(j)   unmet demand in each zone
+  52  Positive Variables x, u;
+  53   
+  54  Equations
+  55  of       objective function
+  56  constr1  capacity constraint
+  57  constr2  demand constraint
+  58  ;
+  59   
+  60  of..    z =e= sum((i,j), cost(i,j)*x(i,j)) + sum(j, penalty*u(j));
+  61  constr1(i)..  sum(j, x(i,j)) =l= cap(i);
+  62  constr2(j)..  sum(i, x(i,j)) + u(j) =e= d(j);
+  63   
+  64  Model transport /of,constr1,constr2/;
+  65   
+  66  **Solving the model :-) **
+  67   
+  68  Solve transport using mip minimizing z;
+  69  Display x.l, x.m, u.l;
+  70   
+  71   
+  72   
+  73   
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE transport Using MIP From line 68
+
+
+---- of  =E=  objective function
+
+of..  z - 318*x(Gourock,Perth) - 342*x(Gourock,Dundee) - 174*x(Bathgate,Perth) - 210*x(Bathgate,Dundee) - 84.6*x(Dunfermline,Perth) - 124.5*x(Dunfermline,Dundee) - 131.4*x(Edinburgh,Perth) - 189*x(Edinburgh,Dundee) - 228.9*x(Portlethen,Perth) - 183*x(Portlethen,Dundee) - 500*u(Perth) - 500*u(Dundee) =E= 0 ; (LHS = 0)
+     
+
+---- constr1  =L=  capacity constraint
+
+constr1(Gourock)..  x(Gourock,Perth) + x(Gourock,Dundee) =L= 150 ; (LHS = 0)
+     
+constr1(Bathgate)..  x(Bathgate,Perth) + x(Bathgate,Dundee) =L= 150 ; (LHS = 0)
+     
+constr1(Dunfermline)..  x(Dunfermline,Perth) + x(Dunfermline,Dundee) =L= 100 ; (LHS = 0)
+     
+REMAINING 2 ENTRIES SKIPPED
+
+
+---- constr2  =E=  demand constraint
+
+constr2(Perth)..  x(Gourock,Perth) + x(Bathgate,Perth) + x(Dunfermline,Perth) + x(Edinburgh,Perth) + x(Portlethen,Perth) + u(Perth) =E= 600 ; (LHS = 0, INFES = 600 ****)
+     
+constr2(Dundee)..  x(Gourock,Dundee) + x(Bathgate,Dundee) + x(Dunfermline,Dundee) + x(Edinburgh,Dundee) + x(Portlethen,Dundee) + u(Dundee) =E= 600 ; (LHS = 0, INFES = 600 ****)
+     
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE transport Using MIP From line 68
+
+
+---- z  total cost
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       of
+
+
+---- x  quantity of mobile phones shipped from i to j
+
+x(Gourock,Perth)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -318       of
+        1       constr1(Gourock)
+        1       constr2(Perth)
+
+x(Gourock,Dundee)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -342       of
+        1       constr1(Gourock)
+        1       constr2(Dundee)
+
+x(Bathgate,Perth)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -174       of
+        1       constr1(Bathgate)
+        1       constr2(Perth)
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- u  unmet demand in each zone
+
+u(Perth)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -500       of
+        1       constr2(Perth)
+
+u(Dundee)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -500       of
+        1       constr2(Dundee)
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE transport Using MIP From line 68
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+02, 6.000E+02] - Zero values observed as well
+Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 5.000E+02]
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE transport Using MIP From line 68
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            8
+BLOCKS OF VARIABLES           3     SINGLE VARIABLES           13
+NON ZERO ELEMENTS            35
+
+
+GENERATION TIME      =        0.000 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE transport Using MIP From line 68
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   transport           OBJECTIVE  z
+     TYPE    MIP                 DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  68
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE           281740.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         7    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.02 ticks)
+
+
+Optimal solution found
+Objective:       281740.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU of                  .              .              .             1.0000      
+
+  of  objective function
+
+---- EQU constr1  capacity constraint
+
+                   LOWER          LEVEL          UPPER         MARGINAL
+
+Gourock            -INF          150.0000       150.0000      -158.0000      
+Bathgate           -INF          150.0000       150.0000      -302.0000      
+Dunfermline        -INF          100.0000       100.0000      -391.4000      
+Edinburgh          -INF          200.0000       200.0000      -344.6000      
+Portlethen         -INF          400.0000       400.0000      -317.0000      
+
+---- EQU constr2  demand constraint
+
+              LOWER          LEVEL          UPPER         MARGINAL
+
+Perth        600.0000       600.0000       600.0000       476.0000      
+Dundee       600.0000       600.0000       600.0000       500.0000      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF       281740.0000        +INF             .          
+
+  z  total cost
+
+---- VAR x  quantity of mobile phones shipped from i to j
+
+                          LOWER          LEVEL          UPPER         MARGINAL
+
+Gourock    .Perth           .           150.0000        +INF             .          
+Gourock    .Dundee          .              .            +INF             .          
+Bathgate   .Perth           .           150.0000        +INF             .          
+Bathgate   .Dundee          .              .            +INF           12.0000      
+Dunfermline.Perth           .           100.0000        +INF             .          
+Dunfermline.Dundee          .              .            +INF           15.9000      
+Edinburgh  .Perth           .           200.0000        +INF             .          
+Edinburgh  .Dundee          .              .            +INF           33.6000      
+Portlethen .Perth           .              .            +INF           69.9000      
+Portlethen .Dundee          .           400.0000        +INF             .          
+
+---- VAR u  unmet demand in each zone
+
+              LOWER          LEVEL          UPPER         MARGINAL
+
+Perth           .              .            +INF           24.0000      
+Dundee          .           200.0000        +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 12/05/23 23:34:17 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----     69 VARIABLE x.L  quantity of mobile phones shipped from i to j
+
+                  Perth      Dundee
+
+Gourock         150.000
+Bathgate        150.000
+Dunfermline     100.000
+Edinburgh       200.000
+Portlethen                  400.000
+
+
+----     69 VARIABLE x.M  quantity of mobile phones shipped from i to j
+
+                  Perth      Dundee
+
+Bathgate                     12.000
+Dunfermline                  15.900
+Edinburgh                    33.600
+Portlethen       69.900
+
+
+----     69 VARIABLE u.L  unmet demand in each zone
+
+Dundee 200.000
+
+
+
+EXECUTION TIME       =        0.047 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+
+
+USER: Course License                                 S230704|0002AO-GEN
+      University of Edinburgh, Business School                  DCE2899
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).gms
+Output     C:\Users\redhawc\Desktop\EDI_BUSANA\mathematic\GAMS_CODE\Amazon transport(1).lst
