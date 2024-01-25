@@ -24,7 +24,7 @@ def fetch_scopus_paper(api_key, query):
 
     # Fetch data in batches due to API limits
     entries = []
-    batch_size = 25  # Adjust batch size as per API limits and your requirements
+    batch_size = 50  # Adjust batch size as per API limits and your requirements
     for start in range(0, total_count, batch_size):
         params = {"query": query, "count": batch_size, "start": start}
         response = requests.get(url, headers=headers, params=params)
@@ -62,7 +62,9 @@ print(data)
 api_key = "014f542e11b109cfb82972c66479341a"
 # 现在你可以像使用普通列表一样使用data变量
 for journal in data:
-    query = f"SRCTITLE({journal}) AND ABS((DEA OR data envelopment) AND (chinese bank))"
+    query = (
+        f"SRCTITLE({journal}) AND ABS(DEA AND Chinese AND (Banking OR Bank OR Banks))"
+    )
     # file_name = "scopus_papers_DEA_Chinese_Banks"  # Name of the CSV file to save
 
     # Fetching papers
