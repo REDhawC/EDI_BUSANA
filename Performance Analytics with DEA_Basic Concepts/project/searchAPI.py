@@ -51,7 +51,7 @@ def save_to_csv(df, file_name):
 import json
 
 # 打开JSON文件
-with open("./AJGlist.json", "r") as file:
+with open("./AJGlist copy.json", "r") as file:
     # 读取文件并将JSON转化为Python列表
     data = json.load(file)
 
@@ -59,13 +59,12 @@ with open("./AJGlist.json", "r") as file:
 print(data)
 
 
-api_key = "014f542e11b109cfb82972c66479341a"
+api_key = "c005d460604dedd7ad37e510268739d2"
 # 现在你可以像使用普通列表一样使用data变量
 for journal in data:
     query = (
         f"SRCTITLE({journal}) AND ABS(DEA AND Chinese AND (Banking OR Bank OR Banks))"
     )
-    # file_name = "scopus_papers_DEA_Chinese_Banks"  # Name of the CSV file to save
 
     # Fetching papers
     entries = fetch_scopus_paper(api_key, query)
