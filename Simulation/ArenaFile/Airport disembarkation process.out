@@ -1,0 +1,80 @@
+SIMAN Run Controller.
+
+0.22910871 Hours>
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 3/21/2024
+Analyst: SDX                                                         Model revision date: 3/21/2024
+
+Replication ended at time      : 0.22910871 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Staff check.WaitTimePerEntity               .00000     (Insuf)    .00000     .00000          3    
+retrieve luggage.TotalTimePerEntity             --         --         --         --          0
+self checkout.VATimePerEntity               .01511     (Insuf)    .00533     .02083         10    
+Staff check.TotalTimePerEntity              .14162     (Insuf)    .10492     .17276          3    
+retrieve luggage.VATimePerEntity                --         --         --         --          0
+self checkout.TotalTimePerEntity            .03454     (Insuf)    .00533     .07168         10    
+Staff check.VATimePerEntity                 .14162     (Insuf)    .10492     .17276          3    
+self checkout.WaitTimePerEntity             .01943     (Insuf)    .00000     .05343         10    
+passenger.VATime                                --         --         --         --          0
+passenger.NVATime                               --         --         --         --          0
+passenger.WaitTime                              --         --         --         --          0
+passenger.TranTime                              --         --         --         --          0
+passenger.OtherTime                             --         --         --         --          0
+passenger.TotalTime                             --         --         --         --          0
+self checkout.Queue.WaitingTime             .01838     (Insuf)    .00000     .05343         11    
+Staff check.Queue.WaitingTime               .00000     (Insuf)    .00000     .00000          8    
+Waiting for your friends.Queue.WaitingTime      --         --         --         --          0
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+passenger.WIP                               12.018     (Insuf)    .00000     24.000     24.000    
+Staff.NumberBusy                            3.2840     (Insuf)    .00000     5.0000     5.0000    
+Staff.NumberScheduled                       5.0000     (Insuf)    5.0000     5.0000     5.0000    
+Staff.Utilization                           .65682     (Insuf)    .00000     1.0000     1.0000    
+machine.NumberBusy                          .67676     (Insuf)    .00000     1.0000     1.0000    
+machine.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+machine.Utilization                         .67676     (Insuf)    .00000     1.0000     1.0000    
+self checkout.Queue.NumberInQueue           .98547     (Insuf)    .00000     5.0000     4.0000    
+Staff check.Queue.NumberInQueue             .00000     (Insuf)    .00000     .00000     .00000    
+Waiting for your friends.Queue.NumberInQue  .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+self checkout Accum VA Time                 .15113    
+self checkout Accum Wait Time               .19428    
+Staff check Accum Wait Time                 .00000    
+self checkout Number In                     15.000    
+self checkout Number Out                    10.000    
+retrieve luggage Accum VA Time              .00000    
+retrieve luggage Number Out                 .00000    
+retrieve luggage Number In                  13.000    
+Staff check Accum VA Time                   .42486    
+Staff check Number Out                      3.0000    
+Staff check Number In                       8.0000    
+passenger.NumberIn                          24.000    
+passenger.NumberOut                         .00000    
+Staff.NumberSeized                          8.0000    
+Staff.ScheduledUtilization                  .65682    
+machine.NumberSeized                        11.000    
+machine.ScheduledUtilization                .67676    
+System.NumberOut                            .00000    
+
+
+Simulation run time: 0.25 minutes.
+Simulation run complete.

@@ -1,0 +1,77 @@
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 3/ 2/2024
+Analyst: redhawc                                                     Model revision date: 3/ 2/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Automatic Application Process.WaitTimePerE  .00000     (Insuf)    .00000     .00000         61    
+Review Applications.WaitTimePerEntity       .05006     (Insuf)    .00000     .28794         74    
+Automatic Application Process.TotalTimePer  1.0340     (Insuf)    .52661     1.4636         61    
+Write Acceptance and Rejection Document.Wa  .07040     (Insuf)    .00000     .27891         59    
+Review Applications.VATimePerEntity         .24938     (Insuf)    .20791     .29665         74    
+Write Acceptance and Rejection Document.VA  .11981     (Insuf)    .08627     .16013         59    
+Write Acceptance and Rejection Document.To  .19021     (Insuf)    .08627     .42278         59    
+Automatic Application Process.VATimePerEnt  1.0340     (Insuf)    .52661     1.4636         61    
+Review Applications.TotalTimePerEntity      .29943     (Insuf)    .20791     .56188         74    
+Auto Loan Application.VATime                1.3131     (Insuf)    .22423     1.8427         64    
+Auto Loan Application.NVATime               .00000     (Insuf)    .00000     .00000         64    
+Auto Loan Application.WaitTime              .10602     (Insuf)    .00000     .37896         64    
+Auto Loan Application.TranTime              .00000     (Insuf)    .00000     .00000         64    
+Auto Loan Application.OtherTime             .00000     (Insuf)    .00000     .00000         64    
+Auto Loan Application.TotalTime             1.4191     (Insuf)    .22423     2.1167         64    
+Review Applications.Queue.WaitingTime       .05894     (Insuf)    .00000     .31250         77    
+Automatic Application Process.Queue.Waitin  .00000     (Insuf)    .00000     .00000         69    
+Write Acceptance and Rejection Document.Qu  .07366     (Insuf)    .00000     .27891         60    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Auto Loan Application.WIP                   12.768     (Insuf)    .00000     18.000     17.000    
+Loan Officer.NumberBusy                     3.2538     (Insuf)    .00000     4.0000     4.0000    
+Loan Officer.NumberScheduled                4.0000     (Insuf)    4.0000     4.0000     4.0000    
+Loan Officer.Utilization                    .81347     (Insuf)    .00000     1.0000     1.0000    
+Automatic Processing Machine.NumberBusy     8.3429     (Insuf)    .00000     14.000     8.0000    
+Review Applications.Queue.NumberInQueue     .61842     (Insuf)    .00000     5.0000     4.0000    
+Automatic Application Process.Queue.Number  .00000     (Insuf)    .00000     .00000     .00000    
+Write Acceptance and Rejection Document.Qu  .55356     (Insuf)    .00000     4.0000     1.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Review Applications Accum Wait Time         3.7043    
+Write Acceptance and Rejection Document Ac  7.0689    
+Automatic Application Process Accum Wait T  .00000    
+Automatic Application Process Accum VA Tim  63.076    
+Write Acceptance and Rejection Document Nu  59.000    
+Write Acceptance and Rejection Document Nu  61.000    
+Automatic Application Process Number In     69.000    
+Automatic Application Process Number Out    61.000    
+Review Applications Number In               81.000    
+Review Applications Number Out              74.000    
+Write Acceptance and Rejection Document Ac  4.1536    
+Review Applications Accum VA Time           18.453    
+Auto Loan Application.NumberIn              81.000    
+Auto Loan Application.NumberOut             64.000    
+Loan Officer.NumberSeized                   137.00    
+Loan Officer.ScheduledUtilization           .81347    
+Automatic Processing Machine.NumberSeized   69.000    
+System.NumberOut                            64.000    
+
+
+Simulation run time: 0.00 minutes.
+Simulation run complete.

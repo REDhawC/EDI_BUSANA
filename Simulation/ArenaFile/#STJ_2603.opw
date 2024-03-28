@@ -1,0 +1,69 @@
+[RESOURCES]
+tray
+Resource 6
+Resource 5
+staff
+table for 4
+Table for 10
+Table for 2
+[VARIABLES]
+number of group size 3 or 4 waiting for table
+total food price for all
+number of gourp size 3 or 4
+total number of arrival
+number of customer final take away
+if need table.NumberOut False
+number of gorup 3 or 4 waiting for tray
+number of customer leave directly
+customer initial sit in
+if there are 10 in queue.NumberOut True
+sit in leave.NumberOut
+if there are 10 in queue.NumberOut False
+coffee price
+fruit price
+if need table.NumberOut True
+anything else price
+food price for one entity
+if less than 2.NumberOut True
+if less than 2.NumberOut False
+if table available.NumberOut True
+number of customer initial take away
+if table available.NumberOut False
+tea price
+still wanna sit in.NumberOut False
+cook.NumberOut
+leave angrily.NumberOut
+take away leave.NumberOut
+still wanna sit in.NumberOut True
+cook.NumberIn
+number of customer towards queue for take order
+hold table for 2 until leave.NumberOut
+hold table for 4 until leave.NumberOut
+total drink price for all
+number of group 1 or 2 waiting for tray
+take order.NumberOut
+hold table for 2 until leave.NumberIn
+hold table for 4 until leave.NumberIn
+cake price
+the total price of drink for one entity
+indi to group A.NumberOut
+indi to group B.NumberOut
+group arrival.NumberOut
+group to indi A.NumberOut Dup
+group to indi B.NumberOut Dup
+group to indi A.NumberOut Orig
+group to indi B.NumberOut Orig
+take order.NumberIn
+number of customer towards second queue
+groupID
+number of group size less than 2
+Variable 2
+Variable 1
+number of customer final sit in
+final total number of customer order sit in
+asking for tray A.NumberOut
+asking for tray B.NumberOut
+asking for tray A.NumberIn
+asking for tray B.NumberIn
+number of gourp 1 or 2 waiting for table
+soft drink price

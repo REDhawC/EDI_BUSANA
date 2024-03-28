@@ -1,0 +1,89 @@
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 3/25/2024
+Analyst: redhawc                                                     Model revision date: 3/25/2024
+
+Replication ended at time      : 48.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .31433     (Insuf)    .00000     2.5067        248    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        248    
+customer.WaitTime                           .86235     (Insuf)    .00000     5.2135        248    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        248    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        248    
+customer.TotalTime                          .80457     (Insuf)    .00000     5.9719        248    
+wait table for 2.Queue.WaitingTime          2.0640     (Insuf)    .00000     5.2091         38    
+take order.Queue.WaitingTime                .11532     (Corr)     .00000     .58640        525    
+wait table for 4.Queue.WaitingTime          .89033     (Insuf)    .00000     3.2137         12    
+asking for tray B.Queue.WaitingTime         .00000     (Insuf)    .00000     .00000         12    
+asking for tray A.Queue.WaitingTime         .00000     (Insuf)    .00000     .00000         38    
+indi to group B.Queue.WaitingTime           .01946     (Corr)     .00000     .14648        525    
+indi to group A.Queue.WaitingTime           .00642     8.1826E-04 .00000     .03159        525    
+cook.Queue.WaitingTime                      .11732     (Corr)     .00000     .59568        525    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                20.198     (Corr)     .00000     93.000     24.000    
+tray.NumberBusy                             1.0830     (Insuf)    .00000     3.0000     2.0000    
+tray.NumberScheduled                        4.0000     (Insuf)    4.0000     4.0000     4.0000    
+tray.Utilization                            .27077     (Insuf)    .00000     .75000     .50000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+Resource 5.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 5.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 5.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            .57584     (Insuf)    .00000     3.0000     .00000    
+staff.NumberScheduled                       1.8329     (Insuf)    1.0000     3.0000     2.0000    
+staff.Utilization                           .35707     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberBusy                      .23120     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .23120     (Insuf)    .00000     1.0000     .00000    
+Table for 2.NumberBusy                      .85187     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .42594     (Insuf)    .00000     1.0000     1.0000    
+wait table for 2.Queue.NumberInQueue        2.0006     (Insuf)    .00000     13.000     4.0000    
+take order.Queue.NumberInQueue              1.2613     (Corr)     .00000     13.000     .00000    
+wait table for 4.Queue.NumberInQueue        .22258     (Insuf)    .00000     3.0000     .00000    
+asking for tray B.Queue.NumberInQueue       .00000     (Insuf)    .00000     .00000     .00000    
+asking for tray A.Queue.NumberInQueue       .00000     (Insuf)    .00000     .00000     .00000    
+indi to group B.Queue.NumberInQueue         .21281     (Corr)     .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .07019     (Corr)     .00000     5.0000     .00000    
+cook.Queue.NumberInQueue                    1.2832     (Corr)     .00000     14.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           1304.0    
+customer.NumberOut                          1280.0    
+tray.NumberSeized                           50.000    
+tray.ScheduledUtilization                   .27077    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+Resource 5.NumberSeized                     .00000    
+Resource 5.ScheduledUtilization             .00000    
+staff.NumberSeized                          1050.0    
+staff.ScheduledUtilization                  .31415    
+table for 4.NumberSeized                    12.000    
+table for 4.ScheduledUtilization            .23120    
+Table for 2.NumberSeized                    38.000    
+Table for 2.ScheduledUtilization            .42594    
+System.NumberOut                            248.00    
+
+
+Simulation run time: 0.03 minutes.
+Simulation run complete.

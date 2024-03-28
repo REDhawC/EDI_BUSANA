@@ -1,0 +1,11 @@
+[RESOURCES]
+staff
+[VARIABLES]
+Decide 1.NumberOut False
+serving.NumberOut
+QueueLength
+Create 1.NumberOut
+Dispose 1.NumberOut
+LEAVE.NumberOut
+serving.NumberIn
+Decide 1.NumberOut True

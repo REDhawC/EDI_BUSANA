@@ -1,0 +1,14 @@
+[RESOURCES]
+staff
+[VARIABLES]
+Decide 1.NumberOut False
+Dispose 1.NumberOut
+LEAVE.NumberOut
+take order.NumberOut
+indi to group A.NumberOut
+group arrival.NumberOut
+group to indi A.NumberOut Dup
+group to indi A.NumberOut Orig
+take order.NumberIn
+groupID
+Decide 1.NumberOut True

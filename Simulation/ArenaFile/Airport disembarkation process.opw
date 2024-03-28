@@ -1,0 +1,25 @@
+[RESOURCES]
+Staff
+machine
+[VARIABLES]
+self checkout.VATime
+passenger disembarkation.NumberOut
+Grouptoindividual.NumberOut Dup
+Grouptoindividual.NumberOut Orig
+self checkout.WaitTime
+Group with children or not.NumberOut True
+Group with children or not.NumberOut False
+Waiting for your friends.NumberOut
+Staff check.WaitTime
+self checkout.NumberIn
+identify staff or slef checkout.NumberOut True
+self checkout.NumberOut
+identify staff or slef checkout.NumberOut False
+retrieve luggage.VATime
+Leave.NumberOut
+retrieve luggage.NumberOut
+retrieve luggage.NumberIn
+Staff check.VATime
+Staff check.NumberOut
+Staff check.NumberIn
+GroupID

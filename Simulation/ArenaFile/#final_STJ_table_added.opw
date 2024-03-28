@@ -1,0 +1,94 @@
+[RESOURCES]
+Resource 6
+staff
+table for 4
+table for 10
+Table for 2
+[VARIABLES]
+number of group size 3 or 4 waiting for table
+total food price for all
+number of gourp size 3 or 4
+if there are empty 2 seat table.NumberOut False
+if there are empty 4 seat table.NumberOut False
+total number of arrival
+hold table for 10 until leave.NumberOut
+number of customer final take away
+hold table for 10 until leave.NumberIn
+if groupsize less than 2.NumberOut False
+if there are empty 2 seat table.NumberOut True
+if there are empty 4 seat table.NumberOut True
+if need table.NumberOut False
+number of gorup 3 or 4 waiting for tray
+number of customer leave directly
+customer initial sit in
+if there are 10 in queue.NumberOut True
+sit in leave.NumberOut
+walk to table for 10.NumberOut
+looking for cleaning staff C.NumberIn
+looking for cleaning staff B.NumberIn
+looking for cleaning staff A.NumberIn
+walk to table for 2.NumberOut
+looking for cleaning staff C.NumberOut
+looking for cleaning staff B.NumberOut
+looking for cleaning staff A.NumberOut
+leave without ordering.NumberOut
+if there are 10 in queue.NumberOut False
+coffee price
+walk to table for 2.NumberIn
+if table for 10 available.NumberOut True
+fruit price
+if need table.NumberOut True
+anything else price
+food price for one entity
+walk to table for 10.NumberIn
+if ok with the menu.NumberOut True
+if less than 2.NumberOut True
+if less than 2.NumberOut False
+if ok with the menu.NumberOut False
+number of customer initial take away
+tea price
+still wanna sit in.NumberOut False
+cook.NumberOut
+take away leave.NumberOut
+still wanna sit in.NumberOut True
+if table for 10 available.NumberOut False
+cook.NumberIn
+number of customer towards queue for take order
+think about ordering what.NumberIn
+think about ordering what.NumberOut
+pay for table 4.NumberIn
+pay for table 2.NumberIn
+hold table for 4 until leave.NumberOut
+hold table for 2 until leave.NumberOut
+total drink price for all
+if groupsize less than 2.NumberOut True
+number of group 1 or 2 waiting for tray
+take order.NumberOut
+hold table for 4 until leave.NumberIn
+walk to table for 4.NumberIn
+hold table for 2 until leave.NumberIn
+cake price
+walk to table for 4.NumberOut
+the total price of drink for one entity
+indi to group A.NumberOut
+indi to group B.NumberOut
+group arrival.NumberOut
+group to indi A.NumberOut Dup
+group to indi B.NumberOut Dup
+pay for table 4.NumberOut
+pay for table 2.NumberOut
+group to indi A.NumberOut Orig
+group to indi B.NumberOut Orig
+pay for table 10.NumberOut
+take order.NumberIn
+pay for table 10.NumberIn
+number of customer towards second queue
+groupID
+number of group size less than 2
+Variable 2
+Variable 1
+number of customer final sit in
+final total number of customer order sit in
+number of gourp 1 or 2 waiting for table
+total income
+soft drink price

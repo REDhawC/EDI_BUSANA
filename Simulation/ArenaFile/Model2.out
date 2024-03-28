@@ -1,0 +1,54 @@
+SIMAN Run Controller.
+
+2.6254191 Hours>
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 3/21/2024
+Analyst: redhawc                                                     Model revision date: 3/21/2024
+
+Replication ended at time      : 2.6254191 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .02777     (Insuf)    .01380     .04745         23    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000         23    
+customer.WaitTime                           .04483     (Insuf)    .00000     .10663         23    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000         23    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000         23    
+customer.TotalTime                          .03047     (Insuf)    .01380     .05587         23    
+take order.Queue.WaitingTime                .01046     (Insuf)    .00000     .03643         57    
+indi to group A.Queue.WaitingTime           .00777     (Insuf)    .00000     .02847         56    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                .65017     (Insuf)    .00000     7.0000     1.0000    
+staff.NumberBusy                            .25742     (Insuf)    .00000     1.0000     1.0000    
+staff.NumberScheduled                       1.0000     (Insuf)    1.0000     1.0000     1.0000    
+staff.Utilization                           .25742     (Insuf)    .00000     1.0000     1.0000    
+take order.Queue.NumberInQueue              .22702     (Insuf)    .00000     5.0000     .00000    
+indi to group A.Queue.NumberInQueue         .16573     (Insuf)    .00000     4.0000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           80.000    
+customer.NumberOut                          79.000    
+staff.NumberSeized                          57.000    
+staff.ScheduledUtilization                  .25742    
+System.NumberOut                            23.000    
+
+
+Simulation run time: 0.47 minutes.
+Simulation run complete.

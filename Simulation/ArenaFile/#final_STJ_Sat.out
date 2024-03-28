@@ -1,0 +1,1000 @@
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .39536     (Insuf)    .00000     2.4925        124    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        124    
+customer.WaitTime                           .46595     (Insuf)    .00000     2.7221        124    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        124    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        124    
+customer.TotalTime                          .51398     (Insuf)    .00000     2.6173        124    
+looking for cleaning staff B.Queue.Waiting  .01834     (Insuf)    .00000     .05186          5    
+looking for cleaning staff A.Queue.Waiting  .01259     (Insuf)    .00000     .03767         19    
+walk to table for 2.Queue.WaitingTime       .07656     (Insuf)    .00000     .35290         19    
+take order.Queue.WaitingTime                .09514     (Insuf)    .00000     .41727        199    
+indi to group B.Queue.WaitingTime           .01530     (Insuf)    .00000     .14423        197    
+indi to group A.Queue.WaitingTime           .04558     (Insuf)    .00000     .38926        197    
+walk to table for 4.Queue.WaitingTime       .05953     (Insuf)    .00000     .17262          6    
+cook.Queue.WaitingTime                      .11514     (Insuf)    .00000     .45626        197    
+hold table for 4 until leave.Queue.Waiting  .08268     (Insuf)    .00000     .49611          6    
+hold table for 2 until leave.Queue.Waiting  .07450     (Insuf)    .00000     .60055         19    
+pay for table 4.Queue.WaitingTime           .09833     (Insuf)    .00501     .14629          5    
+pay for table 2.Queue.WaitingTime           .06163     (Insuf)    .00000     .13471         18    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                21.065     (Corr)     .00000     41.000     15.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.7079     (Insuf)    .00000     2.0000     1.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .85397     (Insuf)    .00000     1.0000     .50000    
+table for 4.NumberBusy                      .57662     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .57662     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.3545     (Insuf)    .00000     2.0000     1.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .67730     (Insuf)    .00000     1.0000     .50000    
+looking for cleaning staff B.Queue.NumberI  .00764     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01994     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .12122     (Insuf)    .00000     2.0000     .00000    
+take order.Queue.NumberInQueue              1.5777     (Insuf)    .00000     10.000     .00000    
+indi to group B.Queue.NumberInQueue         .25112     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .75496     (Insuf)    .00000     6.0000     2.0000    
+walk to table for 4.Queue.NumberInQueue     .02976     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    1.8902     (Insuf)    .00000     10.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .04134     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .11796     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .04097     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .09245     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         27  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           523.00    
+customer.NumberOut                          508.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          468.00    
+staff.ScheduledUtilization                  .85397    
+table for 4.NumberSeized                    6.0000    
+table for 4.ScheduledUtilization            .57662    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    19.000    
+Table for 2.ScheduledUtilization            .67730    
+System.NumberOut                            124.00    
+
+Beginning replication 2 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 2 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .39391     (Insuf)    .00000     2.4327        126    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        126    
+customer.WaitTime                           .76104     (Insuf)    .00000     5.3509        126    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        126    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        126    
+customer.TotalTime                          .59528     (Insuf)    .00000     3.7946        126    
+looking for cleaning staff B.Queue.Waiting  .00733     (Insuf)    .00249     .01493          8    
+looking for cleaning staff A.Queue.Waiting  .01864     (Insuf)    .00000     .09362         18    
+walk to table for 2.Queue.WaitingTime       .10701     (Insuf)    .00000     .38322         18    
+take order.Queue.WaitingTime                .13516     (Insuf)    .00000     .45395        225    
+indi to group B.Queue.WaitingTime           .02123     (Insuf)    .00000     .14506        218    
+indi to group A.Queue.WaitingTime           .05417     (Insuf)    .00000     .47095        222    
+walk to table for 4.Queue.WaitingTime       .16246     (Insuf)    .00000     .40522          8    
+cook.Queue.WaitingTime                      .16673     (Insuf)    .00000     .69371        218    
+hold table for 4 until leave.Queue.Waiting  .63225     (Insuf)    .00000     2.2602          8    
+hold table for 2 until leave.Queue.Waiting  .06721     (Insuf)    .00000     .56690         18    
+pay for table 4.Queue.WaitingTime           .18390     (Insuf)    .03661     .38529          8    
+pay for table 2.Queue.WaitingTime           .14057     (Insuf)    .00000     .34232         18    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                29.363     (Insuf)    .00000     55.000     33.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.8973     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .94865     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .55278     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .55278     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.1352     (Insuf)    .00000     2.0000     .00000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .56760     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff B.Queue.NumberI  .00489     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .02796     (Insuf)    .00000     2.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .16474     (Insuf)    .00000     2.0000     1.0000    
+take order.Queue.NumberInQueue              2.5416     .98325     .00000     15.000     2.0000    
+indi to group B.Queue.NumberInQueue         .38561     (Insuf)    .00000     5.0000     .00000    
+indi to group A.Queue.NumberInQueue         1.0105     (Insuf)    .00000     8.0000     2.0000    
+walk to table for 4.Queue.NumberInQueue     .10831     (Insuf)    .00000     2.0000     .00000    
+cook.Queue.NumberInQueue                    3.0513     (Insuf)    .00000     15.000     4.0000    
+hold table for 4 until leave.Queue.NumberI  .42150     (Insuf)    .00000     2.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .10082     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .12260     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .21086     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         35  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           583.00    
+customer.NumberOut                          550.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          521.00    
+staff.ScheduledUtilization                  .94865    
+table for 4.NumberSeized                    8.0000    
+table for 4.ScheduledUtilization            .55278    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    18.000    
+Table for 2.ScheduledUtilization            .56760    
+System.NumberOut                            126.00    
+
+Beginning replication 3 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 3 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .38271     (Insuf)    .00000     2.8917        145    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        145    
+customer.WaitTime                           .56895     (Insuf)    .00000     3.8029        145    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        145    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        145    
+customer.TotalTime                          .54368     (Insuf)    .00000     3.5898        145    
+looking for cleaning staff B.Queue.Waiting  .00735     (Insuf)    .00000     .02309          5    
+looking for cleaning staff A.Queue.Waiting  .02562     (Insuf)    .00000     .16736         18    
+walk to table for 2.Queue.WaitingTime       .11117     (Insuf)    .00000     .24913         20    
+take order.Queue.WaitingTime                .13428     (Insuf)    .00000     .56922        231    
+indi to group B.Queue.WaitingTime           .01803     (Insuf)    .00000     .14662        230    
+indi to group A.Queue.WaitingTime           .04573     (Insuf)    .00000     .29487        231    
+walk to table for 4.Queue.WaitingTime       .10339     (Insuf)    .00000     .15124          5    
+cook.Queue.WaitingTime                      .12840     (Insuf)    .00000     .45903        231    
+hold table for 4 until leave.Queue.Waiting  .07808     (Insuf)    .00000     .39039          5    
+hold table for 2 until leave.Queue.Waiting  .11583     (Insuf)    .00000     .91573         19    
+pay for table 4.Queue.WaitingTime           .15980     (Insuf)    .02503     .34890          5    
+pay for table 2.Queue.WaitingTime           .10792     (Insuf)    .00000     .42380         18    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                26.208     (Corr)     .00000     45.000     15.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.8820     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .94105     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .67874     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .67874     (Insuf)    .00000     1.0000     .00000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.3577     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .67888     (Insuf)    .00000     1.0000     1.0000    
+looking for cleaning staff B.Queue.NumberI  .00306     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .03843     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .18528     (Insuf)    .00000     3.0000     .00000    
+take order.Queue.NumberInQueue              2.5849     .84668     .00000     11.000     .00000    
+indi to group B.Queue.NumberInQueue         .34563     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .88027     (Insuf)    .00000     7.0000     .00000    
+walk to table for 4.Queue.NumberInQueue     .04308     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.4716     (Insuf)    .00000     12.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .03253     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .20138     (Insuf)    .00000     1.0000     1.0000    
+pay for table 4.Queue.NumberInQueue         .06659     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .16189     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         39  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           610.00    
+customer.NumberOut                          595.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          533.00    
+staff.ScheduledUtilization                  .94105    
+table for 4.NumberSeized                    5.0000    
+table for 4.ScheduledUtilization            .67874    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    19.000    
+Table for 2.ScheduledUtilization            .67888    
+System.NumberOut                            145.00    
+
+Beginning replication 4 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 4 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .41150     (Insuf)    .00000     2.6251        108    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        108    
+customer.WaitTime                           .61525     (Insuf)    .00000     3.4067        108    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        108    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        108    
+customer.TotalTime                          .56619     (Insuf)    .00000     3.3303        108    
+looking for cleaning staff B.Queue.Waiting  .00898     (Insuf)    .00000     .01561          7    
+looking for cleaning staff A.Queue.Waiting  .01669     (Insuf)    .00000     .04008         14    
+walk to table for 2.Queue.WaitingTime       .08797     (Insuf)    .00000     .43317         16    
+take order.Queue.WaitingTime                .11070     (Insuf)    .00000     .41185        194    
+indi to group B.Queue.WaitingTime           .02146     (Insuf)    .00000     .13983        194    
+indi to group A.Queue.WaitingTime           .04942     (Insuf)    .00000     .37711        194    
+walk to table for 4.Queue.WaitingTime       .07561     (Insuf)    .00000     .18924          7    
+cook.Queue.WaitingTime                      .12492     (Insuf)    .00000     .44236        194    
+hold table for 4 until leave.Queue.Waiting  .14861     (Insuf)    .00000     .99010          7    
+hold table for 2 until leave.Queue.Waiting  .06639     (Insuf)    .00000     .48959         16    
+pay for table 4.Queue.WaitingTime           .16157     (Insuf)    .00000     .40921          6    
+pay for table 2.Queue.WaitingTime           .15203     (Insuf)    .01613     .40192         14    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                19.977     (Insuf)    .00000     48.000     17.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.6217     (Insuf)    .00000     2.0000     1.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .81085     (Insuf)    .00000     1.0000     .50000    
+table for 4.NumberBusy                      .38488     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .38488     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.1873     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .59367     (Insuf)    .00000     1.0000     1.0000    
+looking for cleaning staff B.Queue.NumberI  .00524     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01947     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .11729     (Insuf)    .00000     2.0000     .00000    
+take order.Queue.NumberInQueue              1.7896     (Insuf)    .00000     12.000     .00000    
+indi to group B.Queue.NumberInQueue         .34687     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .79889     (Insuf)    .00000     8.0000     .00000    
+walk to table for 4.Queue.NumberInQueue     .04411     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.0195     (Insuf)    .00000     12.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .08669     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .08852     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .08078     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .17737     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         18  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           499.00    
+customer.NumberOut                          482.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          452.00    
+staff.ScheduledUtilization                  .81085    
+table for 4.NumberSeized                    7.0000    
+table for 4.ScheduledUtilization            .38488    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    16.000    
+Table for 2.ScheduledUtilization            .59367    
+System.NumberOut                            108.00    
+
+Beginning replication 5 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 5 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .37752     (Insuf)    .00000     3.1729        130    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        130    
+customer.WaitTime                           .46450     (Insuf)    .00000     3.4498        130    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        130    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        130    
+customer.TotalTime                          .46849     (Insuf)    .00000     3.5121        130    
+looking for cleaning staff B.Queue.Waiting  .01327     (Insuf)    .00000     .03027          5    
+looking for cleaning staff A.Queue.Waiting  .01138     (Insuf)    .00000     .03494         16    
+walk to table for 2.Queue.WaitingTime       .07262     (Insuf)    .00000     .26576         17    
+take order.Queue.WaitingTime                .09401     (Insuf)    .00000     .36615        219    
+indi to group B.Queue.WaitingTime           .01913     (Insuf)    .00000     .16855        212    
+indi to group A.Queue.WaitingTime           .05321     (Insuf)    .00000     .38617        212    
+walk to table for 4.Queue.WaitingTime       .11134     (Insuf)    .00000     .31857          8    
+cook.Queue.WaitingTime                      .12219     (Insuf)    .00000     .41857        212    
+hold table for 4 until leave.Queue.Waiting  .75283     (Insuf)    .00000     2.3699          6    
+hold table for 2 until leave.Queue.Waiting  .00000     (Insuf)    .00000     .00000         17    
+pay for table 4.Queue.WaitingTime           .04809     (Insuf)    .00000     .09009          5    
+pay for table 2.Queue.WaitingTime           .07847     (Insuf)    .00000     .29119         16    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                29.061     (Insuf)    .00000     65.000     45.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.7613     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .88067     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .56976     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .56976     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.2510     (Insuf)    .00000     2.0000     1.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .62553     (Insuf)    .00000     1.0000     .50000    
+looking for cleaning staff B.Queue.NumberI  .00553     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01517     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .10288     (Insuf)    .00000     1.0000     .00000    
+take order.Queue.NumberInQueue              1.7372     .80759     .00000     14.000     3.0000    
+indi to group B.Queue.NumberInQueue         .33804     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .98901     (Insuf)    .00000     9.0000     5.0000    
+walk to table for 4.Queue.NumberInQueue     .09044     (Insuf)    .00000     2.0000     1.0000    
+cook.Queue.NumberInQueue                    2.1586     (Insuf)    .00000     16.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .88914     (Insuf)    .00000     4.0000     2.0000    
+hold table for 2 until leave.Queue.NumberI  .00000     (Insuf)    .00000     .00000     .00000    
+pay for table 4.Queue.NumberInQueue         .02004     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .10463     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         39  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           569.00    
+customer.NumberOut                          524.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          498.00    
+staff.ScheduledUtilization                  .88067    
+table for 4.NumberSeized                    6.0000    
+table for 4.ScheduledUtilization            .56976    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    17.000    
+Table for 2.ScheduledUtilization            .62553    
+System.NumberOut                            130.00    
+
+Beginning replication 6 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 6 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .32710     (Insuf)    .00000     1.7382        144    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        144    
+customer.WaitTime                           .60915     (Insuf)    .00000     3.0932        144    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        144    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        144    
+customer.TotalTime                          .51643     (Insuf)    .00000     2.2082        144    
+looking for cleaning staff B.Queue.Waiting  .01446     (Insuf)    .00000     .03329          4    
+looking for cleaning staff A.Queue.Waiting  .01529     (Insuf)    .00000     .10386         22    
+walk to table for 2.Queue.WaitingTime       .11926     (Insuf)    .00000     .39900         24    
+take order.Queue.WaitingTime                .14495     (Insuf)    .00000     .46015        218    
+indi to group B.Queue.WaitingTime           .01916     (Insuf)    .00000     .25426        218    
+indi to group A.Queue.WaitingTime           .04060     (Insuf)    .00000     .35718        218    
+walk to table for 4.Queue.WaitingTime       .08891     (Insuf)    .00295     .12260          4    
+cook.Queue.WaitingTime                      .15589     (Insuf)    .00000     .40369        218    
+hold table for 4 until leave.Queue.Waiting  .00000     (Insuf)    .00000     .00000          4    
+hold table for 2 until leave.Queue.Waiting  .15182     (Insuf)    .00000     .58657         24    
+pay for table 4.Queue.WaitingTime           .12586     (Insuf)    .00000     .20382          4    
+pay for table 2.Queue.WaitingTime           .14562     (Insuf)    .00000     .29552         22    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                23.600     (Corr)     .00000     42.000     17.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.8172     (Insuf)    .00000     2.0000     1.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .90864     (Insuf)    .00000     1.0000     .50000    
+table for 4.NumberBusy                      .27914     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .27914     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.4342     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .71710     (Insuf)    .00000     1.0000     1.0000    
+looking for cleaning staff B.Queue.NumberI  .00482     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .02804     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .23853     (Insuf)    .00000     3.0000     .00000    
+take order.Queue.NumberInQueue              2.6333     (Corr)     .00000     10.000     .00000    
+indi to group B.Queue.NumberInQueue         .34803     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .73764     (Insuf)    .00000     7.0000     .00000    
+walk to table for 4.Queue.NumberInQueue     .02964     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.8320     (Insuf)    .00000     12.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .00000     (Insuf)    .00000     .00000     .00000    
+hold table for 2 until leave.Queue.NumberI  .30365     (Insuf)    .00000     2.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .04195     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .26697     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         44  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           583.00    
+customer.NumberOut                          566.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          516.00    
+staff.ScheduledUtilization                  .90864    
+table for 4.NumberSeized                    4.0000    
+table for 4.ScheduledUtilization            .27914    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    24.000    
+Table for 2.ScheduledUtilization            .71710    
+System.NumberOut                            144.00    
+
+Beginning replication 7 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 7 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .38541     (Insuf)    .00000     3.4874        118    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        118    
+customer.WaitTime                           .54230     (Insuf)    .00000     2.9169        118    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        118    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        118    
+customer.TotalTime                          .47980     (Insuf)    .00000     3.3596        118    
+looking for cleaning staff B.Queue.Waiting  .00597     (Insuf)    .00000     .01808          5    
+looking for cleaning staff A.Queue.Waiting  .01562     (Insuf)    .00000     .03835         10    
+walk to table for 2.Queue.WaitingTime       .05434     (Insuf)    .00000     .18491         12    
+take order.Queue.WaitingTime                .09410     (Insuf)    .00000     .44731        212    
+indi to group B.Queue.WaitingTime           .01572     (Insuf)    .00000     .16612        208    
+indi to group A.Queue.WaitingTime           .05942     (Insuf)    .00000     .44905        208    
+walk to table for 4.Queue.WaitingTime       .08007     (Insuf)    .00000     .17759          5    
+cook.Queue.WaitingTime                      .12279     (Insuf)    .00000     .46202        208    
+hold table for 4 until leave.Queue.Waiting  .00000     (Insuf)    .00000     .00000          5    
+hold table for 2 until leave.Queue.Waiting  .10144     (Insuf)    .00000     .71841         12    
+pay for table 4.Queue.WaitingTime           .17725     (Insuf)    .00000     .39659          4    
+pay for table 2.Queue.WaitingTime           .10761     (Insuf)    .00000     .34514         10    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                19.953     (Insuf)    .00000     47.000     25.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.5221     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .76107     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .48358     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .48358     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      .99297     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .49648     (Insuf)    .00000     1.0000     1.0000    
+looking for cleaning staff B.Queue.NumberI  .00249     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01302     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .05434     (Insuf)    .00000     1.0000     .00000    
+take order.Queue.NumberInQueue              1.6853     (Insuf)    .00000     16.000     4.0000    
+indi to group B.Queue.NumberInQueue         .27241     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         1.0591     (Insuf)    .00000     8.0000     3.0000    
+walk to table for 4.Queue.NumberInQueue     .03336     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.1283     (Insuf)    .00000     17.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .00000     (Insuf)    .00000     .00000     .00000    
+hold table for 2 until leave.Queue.NumberI  .10144     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .05908     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .08967     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         29  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           545.00    
+customer.NumberOut                          520.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          466.00    
+staff.ScheduledUtilization                  .76107    
+table for 4.NumberSeized                    5.0000    
+table for 4.ScheduledUtilization            .48358    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    12.000    
+Table for 2.ScheduledUtilization            .49648    
+System.NumberOut                            118.00    
+
+Beginning replication 8 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 8 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .41174     (Insuf)    .00000     2.2676        125    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        125    
+customer.WaitTime                           .63136     (Insuf)    .00000     2.9907        125    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        125    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        125    
+customer.TotalTime                          .57660     (Insuf)    .00000     2.6609        125    
+looking for cleaning staff B.Queue.Waiting  .00957     (Insuf)    .00000     .02566         10    
+looking for cleaning staff A.Queue.Waiting  .01408     (Insuf)    2.3738E-04 .04640         13    
+walk to table for 2.Queue.WaitingTime       .10955     (Insuf)    .00000     .41710         16    
+take order.Queue.WaitingTime                .11996     (Insuf)    .00000     .49197        221    
+indi to group B.Queue.WaitingTime           .01871     (Insuf)    .00000     .23144        216    
+indi to group A.Queue.WaitingTime           .05290     (Insuf)    .00000     .49118        221    
+walk to table for 4.Queue.WaitingTime       .10571     (Insuf)    .00000     .31758         10    
+cook.Queue.WaitingTime                      .14101     (Insuf)    .00000     .49128        218    
+hold table for 4 until leave.Queue.Waiting  .06647     (Insuf)    .00000     .47518         10    
+hold table for 2 until leave.Queue.Waiting  .01070     (Insuf)    .00000     .16057         15    
+pay for table 4.Queue.WaitingTime           .11240     (Insuf)    .00000     .35884         10    
+pay for table 2.Queue.WaitingTime           .15545     (Insuf)    .06486     .27552         13    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                24.540     3.3725     .00000     47.000     23.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.8224     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .91124     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .58968     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .58968     (Insuf)    .00000     1.0000     .00000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.1477     (Insuf)    .00000     2.0000     2.0000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .57390     (Insuf)    .00000     1.0000     1.0000    
+looking for cleaning staff B.Queue.NumberI  .00797     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01525     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .14606     (Insuf)    .00000     1.0000     .00000    
+take order.Queue.NumberInQueue              2.2092     (Corr)     .00000     12.000     .00000    
+indi to group B.Queue.NumberInQueue         .33679     (Insuf)    .00000     5.0000     .00000    
+indi to group A.Queue.NumberInQueue         .97431     (Insuf)    .00000     7.0000     .00000    
+walk to table for 4.Queue.NumberInQueue     .08809     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.5673     (Insuf)    .00000     14.000     3.0000    
+hold table for 4 until leave.Queue.NumberI  .05540     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .01543     (Insuf)    .00000     1.0000     1.0000    
+pay for table 4.Queue.NumberInQueue         .09367     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .16841     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         26  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           570.00    
+customer.NumberOut                          547.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          511.00    
+staff.ScheduledUtilization                  .91124    
+table for 4.NumberSeized                    10.000    
+table for 4.ScheduledUtilization            .58968    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    15.000    
+Table for 2.ScheduledUtilization            .57390    
+System.NumberOut                            125.00    
+
+Beginning replication 9 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 9 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .43846     (Insuf)    .00000     3.1979        116    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        116    
+customer.WaitTime                           .68454     (Insuf)    .00000     2.9811        116    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        116    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        116    
+customer.TotalTime                          .63742     (Insuf)    .00000     3.9108        116    
+looking for cleaning staff B.Queue.Waiting  .00684     (Insuf)    .00000     .01822          7    
+looking for cleaning staff A.Queue.Waiting  .01202     (Insuf)    .00000     .03468         17    
+walk to table for 2.Queue.WaitingTime       .13250     (Insuf)    .00000     .29405         17    
+take order.Queue.WaitingTime                .13707     (Insuf)    .00000     .42657        202    
+indi to group B.Queue.WaitingTime           .01663     (Insuf)    .00000     .16880        199    
+indi to group A.Queue.WaitingTime           .05320     (Insuf)    .00000     .33264        200    
+walk to table for 4.Queue.WaitingTime       .10243     (Insuf)    .00000     .28396          8    
+cook.Queue.WaitingTime                      .14709     (Insuf)    .00000     .46934        200    
+hold table for 4 until leave.Queue.Waiting  .06225     (Insuf)    .00000     .44103          8    
+hold table for 2 until leave.Queue.Waiting  .13032     (Insuf)    .00000     .75564         17    
+pay for table 4.Queue.WaitingTime           .15122     (Insuf)    .00000     .34611          7    
+pay for table 2.Queue.WaitingTime           .12493     (Insuf)    .00000     .34498         17    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                25.132     (Insuf)    .00000     48.000     16.000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.7644     (Insuf)    .00000     2.0000     2.0000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .88222     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .69368     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .69368     (Insuf)    .00000     1.0000     1.0000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.3384     (Insuf)    .00000     2.0000     .00000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .66922     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff B.Queue.NumberI  .00399     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01703     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .18771     (Insuf)    .00000     2.0000     .00000    
+take order.Queue.NumberInQueue              2.3149     (Corr)     .00000     11.000     4.0000    
+indi to group B.Queue.NumberInQueue         .27581     (Insuf)    .00000     4.0000     .00000    
+indi to group A.Queue.NumberInQueue         .88807     (Insuf)    .00000     9.0000     1.0000    
+walk to table for 4.Queue.NumberInQueue     .06829     (Insuf)    .00000     1.0000     .00000    
+cook.Queue.NumberInQueue                    2.4514     (Insuf)    .00000     10.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .04150     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .18463     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .08821     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .17698     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         23  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           524.00    
+customer.NumberOut                          508.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          475.00    
+staff.ScheduledUtilization                  .88222    
+table for 4.NumberSeized                    8.0000    
+table for 4.ScheduledUtilization            .69368    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    17.000    
+Table for 2.ScheduledUtilization            .66922    
+System.NumberOut                            116.00    
+
+Beginning replication 10 of 10
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 10 of 10
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+Replication ended at time      : 12.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .39131     (Insuf)    .00000     2.2210        135    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000        135    
+customer.WaitTime                           .63466     (Insuf)    .00000     2.9464        135    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000        135    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000        135    
+customer.TotalTime                          .56669     (Insuf)    .00000     2.6943        135    
+looking for cleaning staff B.Queue.Waiting  .01744     (Insuf)    .00000     .04598          7    
+looking for cleaning staff A.Queue.Waiting  .01101     (Insuf)    .00000     .02921         16    
+walk to table for 2.Queue.WaitingTime       .09229     (Insuf)    .00000     .20808         16    
+take order.Queue.WaitingTime                .13132     (Insuf)    .00000     .40588        220    
+indi to group B.Queue.WaitingTime           .02216     (Insuf)    .00000     .24454        219    
+indi to group A.Queue.WaitingTime           .04878     (Insuf)    .00000     .33978        219    
+walk to table for 4.Queue.WaitingTime       .17377     (Insuf)    .00571     .40210          7    
+cook.Queue.WaitingTime                      .14783     (Insuf)    .00000     .51310        219    
+hold table for 4 until leave.Queue.Waiting  .22545     (Insuf)    .00000     .91137          7    
+hold table for 2 until leave.Queue.Waiting  .10288     (Insuf)    .00000     .85893         16    
+pay for table 4.Queue.WaitingTime           .13109     (Insuf)    .00000     .23659          7    
+pay for table 2.Queue.WaitingTime           .11573     (Insuf)    .00000     .47241         16    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                24.714     (Corr)     .00000     47.000     1.0000    
+Resource 6.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+Resource 6.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Resource 6.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+staff.NumberBusy                            1.8582     (Insuf)    .00000     2.0000     .00000    
+staff.NumberScheduled                       2.0000     (Insuf)    2.0000     2.0000     2.0000    
+staff.Utilization                           .92914     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberBusy                      .51775     (Insuf)    .00000     1.0000     .00000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .51775     (Insuf)    .00000     1.0000     .00000    
+table for 10.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+table for 10.NumberScheduled                20.000     (Insuf)    20.000     20.000     20.000    
+table for 10.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+Table for 2.NumberBusy                      1.2784     (Insuf)    .00000     2.0000     .00000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .63925     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff B.Queue.NumberI  .01017     (Insuf)    .00000     1.0000     .00000    
+looking for cleaning staff A.Queue.NumberI  .01468     (Insuf)    .00000     1.0000     .00000    
+walk to table for 2.Queue.NumberInQueue     .12306     (Insuf)    .00000     2.0000     .00000    
+take order.Queue.NumberInQueue              2.4075     .74142     .00000     12.000     .00000    
+indi to group B.Queue.NumberInQueue         .40451     (Insuf)    .00000     6.0000     .00000    
+indi to group A.Queue.NumberInQueue         1.1101     (Insuf)    .00000     9.0000     1.0000    
+walk to table for 4.Queue.NumberInQueue     .10136     (Insuf)    .00000     2.0000     .00000    
+cook.Queue.NumberInQueue                    2.6978     (Insuf)    .00000     14.000     .00000    
+hold table for 4 until leave.Queue.NumberI  .13151     (Insuf)    .00000     1.0000     .00000    
+hold table for 2 until leave.Queue.NumberI  .13718     (Insuf)    .00000     1.0000     .00000    
+pay for table 4.Queue.NumberInQueue         .07647     (Insuf)    .00000     1.0000     .00000    
+pay for table 2.Queue.NumberInQueue         .15431     (Insuf)    .00000     2.0000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+number of people leaving                         32  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           574.00    
+customer.NumberOut                          573.00    
+Resource 6.NumberSeized                     .00000    
+Resource 6.ScheduledUtilization             .00000    
+staff.NumberSeized                          508.00    
+staff.ScheduledUtilization                  .92914    
+table for 4.NumberSeized                    7.0000    
+table for 4.ScheduledUtilization            .51775    
+table for 10.NumberSeized                   .00000    
+table for 10.ScheduledUtilization           .00000    
+Table for 2.NumberSeized                    16.000    
+Table for 2.ScheduledUtilization            .63925    
+System.NumberOut                            135.00    
+
+
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                 Output Summary for 10 Replications
+
+Project: Unnamed Project                                             Run execution date : 3/28/2024
+Analyst: redhawc                                                     Model revision date: 3/28/2024
+
+
+                                             OUTPUTS
+
+Identifier                                 Average    Half-width Minimum    Maximum # Replications
+___________________________________________________________________________________________________
+
+customer.NumberIn                           558.00     24.439     499.00     610.00     10
+customer.NumberOut                          537.30     24.932     482.00     595.00     10
+Resource 6.NumberSeized                     .00000     .00000     .00000     .00000     10
+Resource 6.ScheduledUtilization             .00000     .00000     .00000     .00000     10
+staff.NumberSeized                          494.80     19.681     452.00     533.00     10
+staff.ScheduledUtilization                  .88275     .04277     .76107     .94865     10
+table for 4.NumberSeized                    6.6000     1.2706     4.0000     10.000     10
+table for 4.ScheduledUtilization            .53266     .09016     .27914     .69368     10
+table for 10.NumberSeized                   .00000     .00000     .00000     .00000     10
+table for 10.ScheduledUtilization           .00000     .00000     .00000     .00000     10
+Table for 2.NumberSeized                    17.300     2.2380     12.000     24.000     10
+Table for 2.ScheduledUtilization            .62389     .04749     .49648     .71710     10
+System.NumberOut                            127.10     8.4733     108.00     145.00     10
+
+Simulation run time: 0.57 minutes.
+Simulation run complete.

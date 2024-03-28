@@ -1,0 +1,20 @@
+[RESOURCES]
+Loan Officer
+Automatic Processing Machine
+[VARIABLES]
+Review Applications.WaitTime
+Write Acceptance and Rejection Document.VATime
+Application is complete???.NumberOut False
+Application is complete???.NumberOut True
+Loan_Applications_Arrive.NumberOut
+Send document to customers.NumberOut
+Automatic Application Process.WaitTime
+Automatic Application Process.VATime
+Write Acceptance and Rejection Document.NumberIn
+Write Acceptance and Rejection Document.NumberOut
+Automatic Application Process.NumberIn
+Automatic Application Process.NumberOut
+Review Applications.NumberIn
+Review Applications.NumberOut
+Write Acceptance and Rejection Document.WaitTime
+Review Applications.VATime

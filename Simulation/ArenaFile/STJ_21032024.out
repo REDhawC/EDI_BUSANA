@@ -1,0 +1,103 @@
+
+----------------------------------------------------------------------
+17114:CCREAT
+A runtime error was detected at time 3.4342593 at the following block:
+
+ *    1 20$             CREATE,1,NSEXPO(arrival),customer:
+                            NSEXPO(arrival):
+                            NEXT(21$);
+
+Maximum of 150 entities exceeded.
+Possible causes:
+- A logic problem in your model is creating too many entities or not
+  disposing them. The run controller may be helpful in finding the problem.
+- You are in demo mode and have exceeded the entity limit. The commercial
+  version is required to run large models.
+- You have set an entity limit on the DISCRETE element that is too small.
+  Remove the limit or set it to a larger number.
+- You have exceeded the standard array s 
+pace for models. Use the Array Sizes
+  page in the Run/Setup dialog to increase the RSET space allocated and
+  recheck your model.
+----------------------------------------------------------------------
+
+
+SIMAN Run Controller.
+
+3.4342593 Hours>
+                                      ARENA Simulation Results
+                                     redhawc - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 3/21/2024
+Analyst: redhawc                                                     Model revision date: 3/21/2024
+
+Replication ended at time      : 3.4342593 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+customer.VATime                             .62368     (Insuf)    .54704     .85714          6    
+customer.NVATime                            .00000     (Insuf)    .00000     .00000          6    
+customer.WaitTime                           1.4123     (Insuf)    .00000     4.0311          6    
+customer.TranTime                           .00000     (Insuf)    .00000     .00000          6    
+customer.OtherTime                          .00000     (Insuf)    .00000     .00000          6    
+customer.TotalTime                          1.5080     (Insuf)    .57500     2.3120          6    
+take order.Queue.WaitingTime                .12718     (Insuf)    .00000     .41818         45    
+wait for tray.Queue.WaitingTime             1.0102     (Insuf)    .00000     1.9594          7    
+indi to group B.Queue.WaitingTime           .06976     (Insuf)    .00000     .27763         60    
+indi to group A.Queue.WaitingTime           .00777     (Insuf)    .00000     .02756         45    
+cook.Queue.WaitingTime                      .14677     (Insuf)    .00000     .42514         61    
+eat on table for 4.Queue.WaitingTime        .00000     (Insuf)    .00000     .00000          3    
+eat on table for 2.Queue.WaitingTime        .00000     (Insuf)    .00000     .00000          4    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+customer.WIP                                53.513     (Insuf)    .00000     147.00     147.00    
+tray.NumberBusy                             .96976     (Insuf)    .00000     1.0000     1.0000    
+tray.NumberScheduled                        1.0000     (Insuf)    1.0000     1.0000     1.0000    
+tray.Utilization                            .96976     (Insuf)    .00000     1.0000     1.0000    
+staff.NumberBusy                            .87119     (Insuf)    .00000     1.0000     1.0000    
+staff.NumberScheduled                       1.0000     (Insuf)    1.0000     1.0000     1.0000    
+staff.Utilization                           .87119     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberBusy                      .38739     (Insuf)    .00000     1.0000     1.0000    
+table for 4.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+table for 4.Utilization                     .38739     (Insuf)    .00000     1.0000     1.0000    
+Table for 2.NumberBusy                      .58237     (Insuf)    .00000     1.0000     .00000    
+Table for 2.NumberScheduled                 2.0000     (Insuf)    2.0000     2.0000     2.0000    
+Table for 2.Utilization                     .29118     (Insuf)    .00000     .50000     .00000    
+take order.Queue.NumberInQueue              2.2290     (Insuf)    .00000     12.000     9.0000    
+wait for tray.Queue.NumberInQueue           6.3528     (Insuf)    .00000     13.000     13.000    
+indi to group B.Queue.NumberInQueue         1.2188     (Insuf)    .00000     9.0000     .00000    
+indi to group A.Queue.NumberInQueue         .10185     (Insuf)    .00000     4.0000     .00000    
+cook.Queue.NumberInQueue                    6.6930     (Insuf)    .00000     44.000     44.000    
+eat on table for 4.Queue.NumberInQueue      .00000     (Insuf)    .00000     .00000     .00000    
+eat on table for 2.Queue.NumberInQueue      .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+customer.NumberIn                           179.00    
+customer.NumberOut                          32.000    
+tray.NumberSeized                           7.0000    
+tray.ScheduledUtilization                   .96976    
+staff.NumberSeized                          106.00    
+staff.ScheduledUtilization                  .87119    
+table for 4.NumberSeized                    3.0000    
+table for 4.ScheduledUtilization            .38739    
+Table for 2.NumberSeized                    4.0000    
+Table for 2.ScheduledUtilization            .29118    
+System.NumberOut                            6.0000    
+
+
+Simulation run time: 1.10 minutes.
+Simulation run completed with 1 error(s) and 0 warning(s).
